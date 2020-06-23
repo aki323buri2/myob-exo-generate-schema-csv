@@ -1,5 +1,5 @@
 {
-  "watch": ["api/"], 
+  "watch": ["api/**/*"], 
   "ext": "py", 
   "exec": "pipenv run python api/main.py"
 }
