@@ -1,0 +1,30 @@
+,Name,Primary key columns,Number of columns,Comment
+1,GLACCS,ACCNO,20,This table contains details of all General Ledger accounts.
+2,JOBCOST_FLAGS,,20,This table records the statuses for the various Job Flags on each job.
+3,JOBCOST_FLAGSDESC,FLAGCODE,2,This table records descriptions for the customisable Job Flags.
+4,JOBCOST_GENERAL_INFO,SEQNO,39,This table is no longer used - Job Costing configuration options are now stored as profile settings.
+5,JOBCOST_HDR,JOBNO,66,This table contains header information for all jobs.
+6,JOBCOST_LINES,SEQNO,65,This table contains the details of all job quote lines.
+7,JOBCOST_PROJ,SEQNO,5,This table contains details of the projects that jobs can be grouped under.
+8,JOBCOST_RESOURCE,SEQNO,19,This table contains details of all job resources.
+9,JOB_CATEGORIES,CATNO,5,This table contains details of all Job Categories.
+10,JOB_CONTRACT_BILLINGS,SEQNO,30,This table contains details of Progress Billing records on jobs.
+11,JOB_COSTGROUPS,SEQNO,8,This table records details of the Job Cost Groups.
+12,JOB_COSTTYPES,SEQNO,13,This table records details of the Job Cost Types
+13,JOB_HIST,SEQNO,8,This table contains details of the History Notes attached to jobs.
+14,JOB_OTHER_REPORTS,REPORTNO,3,This is a legacy table that is no longer used.
+15,JOB_OUTPUT_ITEMS,SEQNO,6,This table records details of any items specified on the Output Items sub-tab of a job.
+16,JOB_QUOTE_OPTIONS,SEQNO,5,This table records details of the Quote Options available for job quotes.
+17,JOB_RESOURCE_ALLOCATION,SEQNO,11,This table records all allocations of resources to jobs.
+18,JOB_RETENTION_LEVELS,SEQNO,5,This table records the default retention levels used by EXO Job Costing.
+19,JOB_STATUS,STATUSKEY,11,This table contains details of Job Statuses.
+20,JOB_STATUS_CONSTRAINT,SEQNO,7,This table contains details of job workflow constraints.
+21,JOB_TIMESHEETS,SEQNO,38,This table records the timesheet lines entered in the EXO Job Costing Timesheets add-on.
+22,JOB_TIMESHEETS_RATES,SEQNO,8,This table records all Timesheet Rates used by the EXO Job Costing Timesheets add-on.
+23,JOB_TIMESHEET_ALLOWANCE,SEQNO,6,This table contains details of all allowances added to timesheet lines.
+24,JOB_TIMESHEET_ALLOWANCE_TYPES,SEQNO,6,This table records all Allowance Types used by the EXO Job Costing Timesheets add-on.
+25,JOB_TRANSACTIONS,SEQNO,106,This table contains line-level information on job transactions.
+26,JOB_TYPES,TYPENO,4,This table contains details of the available Job Types.
+27,NARRATIVES,SEQNO,2,This table contains the narratives attached to transactions.
+28,STAFF,STAFFNO,36,This table stores details of all EXO Business staff members. These are the people who are authorised to log in to and use the EXO Business system.
+29,STOCK_ITEMS,STOCKCODE,85,This table contains details of all stock items.

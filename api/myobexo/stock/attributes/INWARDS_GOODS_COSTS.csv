@@ -1,0 +1,24 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,INWARDS_GOODS_SEQNO,No,INTEGER,Yes,The ID number of the Inwards Goods header record.
+3,COSTCODE,No,VARCHAR(15),No,The on cost code for the record.
+4,DETAILS,No,VARCHAR(40),No,Details of the on cost.
+5,SPREAD_TYPE,No,INTEGER,Yes,The spread type for on costs:0 = Quantity1 = Value2 = Weight3 = Cubic
+6,FC_COST,No,FLOAT(53),Yes,The cost in the currency of the supplier account.
+7,EXCHRATE,No,FLOAT(53),Yes,The exchange rate.
+8,COST,No,FLOAT(53),Yes,The cost in local currency.
+9,SHIPMENTNO,No,INTEGER,No,The shipment number on the record.
+10,ACCNO,No,INTEGER,No,The supplier (Creditor account ID).
+11,INVOICE_NOW,No,FLOAT(53),No,
+12,GLBATCH,No,INTEGER,No,GL batch number.
+13,FX_VAR,No,FLOAT(53),No,The foreign exchange variance applicable to the invoice raised against this record.
+14,INV_FC_COST,No,FLOAT(53),No,The invoiced amount in the currency of the supplier account.
+15,INV_EXCHRATE,No,FLOAT(53),No,The exchange rate applicable to the invoice.
+16,INV_COST,No,FLOAT(53),No,The invoiced amount in local currency.
+17,COMPLETE,No,CHAR(1),Yes,"Indicates if the line has been marked as completed, which controls whether or not the line can be edited."
+18,GLPOSTED,No,CHAR(1),Yes,This field contains 'Y' if a GL journal exists for the record.
+19,CAN_SPREAD,No,CHAR(1),Yes,
+20,TRANSDATE,No,DATETIME,No,The transaction date of the invoice linked to this record.
+21,PERIOD_SEQNO,No,INTEGER,Yes,The period ID of the invoice linked to this record.
+22,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+23,AGE,No,AS,No,The invoice's age. This is calculated based on PERIOD_SEQNO.

@@ -1,0 +1,24 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the stock transfer request line.
+2,HDR_SEQNO,No,INTEGER,Yes,The ID number of the stock transfer request that the line belongs to (from STOCK_REQUESTS).
+3,STOCKCODE,No,VARCHAR(23),Yes,The ID code of the stock item on the line.
+4,DESCRIPTION,No,VARCHAR(40),Yes,The description of the stock item on the line.
+5,PACK_SIZE,No,FLOAT(53),No,The pack size of the stock item on the line.
+6,REQ_QUANT,No,FLOAT(53),No,The Requested Qty on the line.
+7,SUP_QUANT,No,FLOAT(53),No,The Received Qty on the line.
+8,COMMENT,No,VARCHAR(30),No,"The comment entered on the line, if any."
+9,BATCHCODE,No,VARCHAR(20),No,The batch code on the line.
+10,LINETYPE,No,INTEGER,No,This field indicates the type of line. Will be one of:0 = Normal stockline1 = BOM header line2 = BOM component line4 = Narrative line5 = GL code
+11,LINKED_STOCKCODE,No,VARCHAR(23),No,The physical stock unit.
+12,LINKED_QTY,No,FLOAT(53),No,The physical stock unit quantity.
+13,BOMTYPE,No,CHAR(1),No,The type of Bill of Materials that the line relates to:N = Normal stock itemB = BuildK = KitL = Lookup
+14,SHOWLINE,No,CHAR(1),No,"This field applies to Bills of Materials, and is used by Clarity to determine if the line can be printed."
+15,LINKEDSTATUS,No,CHAR(1),No,Will be one of:S = StockedL = LookupN = Not applicable
+16,BOMPRICING,No,CHAR(1),No,How Bills of Materials are priced. Will be one of:C = Pricing by ComponentT = Pricing by total
+17,NARRATIVE_SEQNO,No,INTEGER,No,The ID number for the narrative on this line.
+18,LOST_QUANT,No,FLOAT(53),No,
+19,SENT_QUANT,No,FLOAT(53),No,The Sent Qty on the line.
+20,SEND_NOW,No,FLOAT(53),No,The Send Now quantity on the line.
+21,SUP_NOW,No,FLOAT(53),No,The Receive Now quantity on the line.
+22,INTRANS_QUANT,No,AS,No,The In Transit Qty on the line.
+23,SOLINEID,No,INTEGER,Yes,

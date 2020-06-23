@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,No,INTEGER,Yes,A unique ID number for the type.
+2,DESCRIPT,No,VARCHAR(60),No,The name/description of the type.

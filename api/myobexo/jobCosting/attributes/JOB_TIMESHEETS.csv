@@ -1,0 +1,39 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the timesheet line.
+2,STAFFNO,No,INTEGER,No,The ID number of the staff member on the timesheet line.
+3,JOBNO,No,INTEGER,No,The ID number of the job that the line relates to.
+4,TITLE,No,VARCHAR(60),No,The title of the job that the line relates to.
+5,STOCKCODE,No,VARCHAR(23),Yes,The stockcode of the labour pay item for this line.
+6,DESCRIPTION,No,VARCHAR(60),No,The description of the labour pay item for this line.
+7,UNITPRICE,No,FLOAT(53),No,
+8,WEEK_START_DATE,No,DATETIME,No,The start date of the week that times are being entered for.
+9,DAY1,No,FLOAT(53),No,The number of hours entered for day 1.
+10,DAY1_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+11,DAY1_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+12,DAY2,No,FLOAT(53),No,The number of hours entered for day 2.
+13,DAY2_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+14,DAY2_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+15,DAY3,No,FLOAT(53),No,The number of hours entered for day 3.
+16,DAY3_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+17,DAY3_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+18,DAY4,No,FLOAT(53),No,The number of hours entered for day 4.
+19,DAY4_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+20,DAY4_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+21,DAY5,No,FLOAT(53),No,The number of hours entered for day 5.
+22,DAY5_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+23,DAY5_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+24,DAY6,No,FLOAT(53),No,The number of hours entered for day 6.
+25,DAY6_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+26,DAY6_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+27,DAY7,No,FLOAT(53),No,The number of hours entered for day 7.
+28,DAY7_POSTED,No,CHAR(1),No,This field contain 'Y' day's times have been approved.
+29,DAY7_NARRATIVE,No,INTEGER,No,"If a narrative has been entered for the day, its ID number is recorded here."
+30,IS_OVERTIME,No,CHAR(1),No,This field contains 'Y' if the line is a Special Hours rate.
+31,LINE_ID,No,INTEGER,No,
+32,RATE_SEQNO,No,INTEGER,No,The ID number of the Timesheet Rate in the line.
+33,RATE_FACTOR,No,FLOAT(53),No,
+34,COST_GROUP,No,INTEGER,No,
+35,COST_TYPE,No,INTEGER,No,
+36,LABOUR_ALLOWANCE,No,FLOAT(53),No,
+37,HAS_ALLOWANCE,No,CHAR(1),No,This field contains 'Y' if allowances/deductions have been added to the line.
+38,SOURCE_REF,No,VARCHAR(20),No,

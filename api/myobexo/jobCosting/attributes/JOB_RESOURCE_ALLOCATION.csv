@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the allocation.
+2,RESOURCE_SEQNO,No,INTEGER,Yes,The ID number of the resource being allocated.
+3,JOBNO,No,INTEGER,Yes,The ID number of the job that the resource is allocated to.
+4,SUBJECT_NOTES,No,VARCHAR(255),No,Any notes entered into the allocation's Subject field.
+5,LOCATION,No,INTEGER,No,The Location code entered for the allocation.
+6,START_DATE,No,DATETIME,No,The allocation's start date.
+7,START_TIME,No,DATETIME,No,The allocation's start time.
+8,END_DATE,No,DATETIME,No,The allocation's end date.
+9,END_TIME,No,DATETIME,No,The allocation's end time.
+10,TOTAL_HOURS,No,FLOAT(53),No,The total number of hours that the resource was allocated for.
+11,APPOINTMENT_SCHEDULED,No,CHAR(1),Yes,This field contains 'Y' if an appointment has been scheduled for the allocation.

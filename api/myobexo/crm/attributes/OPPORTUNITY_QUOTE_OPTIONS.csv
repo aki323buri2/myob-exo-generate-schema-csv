@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Quote Option.
+2,HDR_SEQNO,No,INTEGER,No,The ID number of the Opportunity that this option applies to.
+3,OPTION_NO,No,INTEGER,No,An Opportunity-specific ID number for the option.
+4,OPTION_NAME,No,VARCHAR(30),No,The option's name.
+5,OPTION_SELECTED,No,CHAR(1),Yes,This field contains 'Y' if the option is currently selected for the Opportunity.

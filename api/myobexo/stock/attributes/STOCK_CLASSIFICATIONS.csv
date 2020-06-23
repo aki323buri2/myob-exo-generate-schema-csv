@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,CLASSNO,Yes,INTEGER,Yes,A unique ID number for the classification.
+2,CLASSNAME,No,VARCHAR(100),Yes,The name of the classification.

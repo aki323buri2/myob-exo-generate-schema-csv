@@ -1,0 +1,14 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Cost Type.
+2,DEF_MARKUP,No,FLOAT(53),No,The default markup percentage for the type.
+3,DEF_OVERHEAD,No,FLOAT(53),No,The default overhead percentage for the type.
+4,COSTDESC,No,VARCHAR(50),No,A descriptive name for the type.
+5,GLCODE,No,INTEGER,No,The General Ledger code for the Sales Account related to this type.
+6,GLSUBCODE,No,INTEGER,No,The General Ledger sub-account code for the Sales Account related to this type.
+7,SHOWONQUOTE,No,CHAR(1),No,"This field contains 'T' if the type's ""Show on quote"" option is ticked; otherwise 'F'."
+8,SHORTCODE,No,VARCHAR(3),Yes,A short (max. three characters) code for the type
+9,DEF_COSTGROUP,No,INTEGER,No,The ID number of the Cost Group that this type belongs to.
+10,DEF_PURCH_GLCODE,No,INTEGER,No,The General Ledger code for the Purchasing Account related to this type.
+11,DEF_PURCH_GLSUBCODE,No,INTEGER,No,The General Ledger sub-account code for the Purchasing Account related to this type.
+12,CONSOLIDATE,No,CHAR(1),No,"This field contains 'T' if the type's ""Consolidate"" option is ticked; otherwise 'F'."
+13,COPY_FROM_QUOTE,No,CHAR(1),No,"This field indicates what the group's ""Copy from quote to:"" option is set to. Will be one of:N = NoneC = CostsT = TimesheetP = Purchase"

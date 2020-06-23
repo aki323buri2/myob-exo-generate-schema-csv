@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STOCKCODE,Yes,VARCHAR(23),Yes,The unique ID code of the stock item.
+2,LOCATION,No,INTEGER,Yes,The ID number of the location.
+3,BINCODE,No,VARCHAR(12),No,The stock item's bin or shelf code at the location.
+4,MINSTOCK,No,FLOAT(53),No,The minimum stock quantity for the stock code at the location.
+5,MAXSTOCK,No,FLOAT(53),No,The maximum stock quantity for the stock code at the location.
+6,QTY,No,FLOAT(53),Yes,The current stock quantity for the stock code at the location.

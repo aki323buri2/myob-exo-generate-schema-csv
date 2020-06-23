@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SIZEID,Yes,INTEGER,Yes,A unique ID number for the size.
+2,SIZECODE,No,VARCHAR(5),Yes,A user-defined code number for the size.
+3,SIZENAME,No,VARCHAR(30),No,A descriptive name for the size.
+4,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the size is currently active.
+5,SORTORDER,No,INTEGER,No,"This field contains the sort order value, which is used to order sizes on the Style Picker window."

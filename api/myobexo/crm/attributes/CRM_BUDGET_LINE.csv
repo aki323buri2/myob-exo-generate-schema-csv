@@ -1,0 +1,22 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the budget line record.
+2,BUDGET_SEQNO,No,INTEGER,Yes,The ID number of the budget that the line record belongs to.
+3,VALUE,No,"DECIMAL(19, 4)",Yes,The budget value.
+4,LYACTUAL,No,"DECIMAL(19, 4)",No,Last year actuals for the budget line.
+5,ACCGROUP,No,INTEGER,No,The ID number of the Account Group that the line applies to (if there is one).
+6,ACCGROUP_EXPANSION,No,BIT,No,
+7,ACCGROUP2,No,INTEGER,No,The ID number of the Alternate Account Group that the line applies to (if there is one).
+8,ACCGROUP2_EXPANSION,No,BIT,No,
+9,ACCNO,No,INTEGER,No,The ID number of the Debtor account that the line applies to (if there is one).
+10,ACCNO_EXPANSION,No,BIT,No,
+11,STOCK_GROUPNO,No,INTEGER,No,The ID number of the Stock Group that the line applies to (if there is one).
+12,STOCK_GROUPNO_EXPANSION,No,BIT,No,
+13,STOCK_GROUPNO2,No,INTEGER,No,The ID number of the Alternate Stock Group that the line applies to (if there is one).
+14,STOCK_GROUPNO2_EXPANSION,No,BIT,No,
+15,STOCKCODE,No,VARCHAR(23),No,The ID number of the Stock item that the line applies to (if there is one).
+16,STOCKCODE_EXPANSION,No,BIT,No,
+17,BRANCHNO,No,INTEGER,No,The ID number of the branch that the line applies to (if there is one).
+18,BRANCHNO_EXPANSION,No,BIT,No,
+19,SALESNO,No,INTEGER,No,The ID number of the staff member that the line applies to (if there is one).
+20,SALESNO_EXPANSION,No,BIT,No,
+21,ACTUAL,No,"DECIMAL(19, 4)",No,Actuals for the budget line.

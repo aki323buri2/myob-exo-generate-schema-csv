@@ -1,0 +1,67 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,JOBNO,Yes,INTEGER,Yes,A unique ID number for the job.
+2,QUOTEDATE,No,DATETIME,No,The quote date on the job.
+3,STARTDATE,No,DATETIME,No,The job's start date.
+4,DUEDATE,No,DATETIME,No,The date when the job is due.
+5,COMPLETED,No,DATETIME,No,The date when the job was completed.
+6,ESTIMATE,No,FLOAT(53),No,An estimate of the job's value.
+7,INVOICED,No,FLOAT(53),No,The amount of the job that has been invoiced.
+8,THETIME,No,FLOAT(53),No,Total amount on timesheets for the job.
+9,MATERIALS,No,FLOAT(53),No,Total amount on the Costs tab for the job.
+10,DEF_OVERHEAD,No,FLOAT(53),No,The default overhead on the job.
+11,MATERIALSCOST,No,FLOAT(53),No,The total costs on the Costs tab.
+12,ESTIMATECOST,No,FLOAT(53),No,The estimated cost of the job.
+13,THETIMECOST,No,FLOAT(53),No,The total costs on the Timesheets tab.
+14,INVOICEDCOST,No,FLOAT(53),No,The total cost of all invoiced lines on the job.
+15,JOBCODE,No,VARCHAR(15),No,An alphanumeric ID code for the job.
+16,ACCNO,No,INTEGER,No,The number of the Debtor account that the job belongs to.
+17,CUSTORDNO,No,VARCHAR(15),No,The customer's order number.
+18,STATUS,No,CHAR(1),No,The ID code of the job's status (from JOB_STATUS).
+19,TITLE,No,VARCHAR(60),No,A descriptive title for the job.
+20,CATEGORY,No,INTEGER,No,The ID number of the job's category (from JOB_CATEGORIES).
+21,JOBTYPE,No,INTEGER,No,The ID number of the job's type (from JOB_TYPES).
+22,STAFFNO,No,INTEGER,No,The EXO Business staff member responsible for entering the job.
+23,ACTIONBY,No,INTEGER,No,The staff member who is the Job Manager for the job.
+24,MASTER_JOBNO,No,INTEGER,Yes,"If the job is a sub-job, this field stores the ID number of the master job."
+25,COSTGL,No,INTEGER,No,The Cost GL account.
+26,SALESGL,No,INTEGER,No,The P&L revenue account for journals when invoicing.
+27,SERIALNO,No,VARCHAR(50),No,Reference.
+28,CONTACT,No,VARCHAR(50),No,The contact person associated with the job.
+29,PRIVATE_NOTE,No,CHAR(1000),No,Any notes on the job.
+30,COSTSUBGL,No,INTEGER,No,The Cost GL sub-account.
+31,SALESSUBGL,No,INTEGER,No,The P&L revenue sub-account for journals when invoicing.
+32,DEL_ADDR,No,INTEGER,No,Delivery address.
+33,CONTACTNO,No,INTEGER,No,The ID number of the contact person on the job.
+34,DELADDR1,No,VARCHAR(30),No,Delivery address line 1.
+35,DELADDR2,No,VARCHAR(30),No,Delivery address line 2.
+36,DELADDR3,No,VARCHAR(30),No,Delivery address line 3.
+37,DELADDR4,No,VARCHAR(30),No,Delivery address line 4.
+38,DELADDR5,No,VARCHAR(30),No,Delivery address line 5.
+39,DELADDR6,No,VARCHAR(30),No,Delivery address line 6.
+40,WRITE_OFF_COST,No,FLOAT(53),No,The total cost of all written off lines on the job.
+41,TOTAL_HOURS,No,FLOAT(53),No,The total hours on the job.
+42,EST_HOURS,No,FLOAT(53),No,Estimated hours on the job.
+43,ASSET_COST,No,FLOAT(53),No,The cost of the asset(s) created on the job.
+44,ASSET_VALUE,No,FLOAT(53),No,The value of the asset(s) created on the job.
+45,BRANCHNO,No,INTEGER,No,The job's branch.
+46,ISACTIVE,No,CHAR(1),Yes,This field contains 'Y' if the job is currently active.
+47,HASUNBILLED,No,CHAR(1),Yes,
+48,INVOICEREADY,No,CHAR(1),Yes,
+49,CALLBACKDATE,No,DATETIME,No,The Follow Up date on the job.
+50,ENTRYDATE,No,DATETIME,No,The date and time when the job was entered.
+51,TOTALVALUE,No,AS,No,The total value of the job (Timesheets and Costs tabs).
+52,TOTALCOST,No,AS,No,The total cost of the job (Timesheets and Costs tabs).
+53,WIPLOC,No,INTEGER,No,The Work in Progress location for the job.
+54,EXCHRATE,No,FLOAT(53),Yes,The exchange rate used by the job.
+55,RETENTION_RATE,No,FLOAT(53),Yes,The base retention rate on the job.
+56,RETENTION2_RATE,No,FLOAT(53),Yes,The Level 2 retention rate on the job.
+57,RETENTION2_MIN,No,FLOAT(53),Yes,The Minimum Value for the Level 2 Retention on the job.
+58,RETENTION3_RATE,No,FLOAT(53),Yes,The Level 3 retention rate on the job.
+59,RETENTION3_MIN,No,FLOAT(53),Yes,The Minimum Value for the Level 3 Retention on the job.
+60,ALLOWANCE,No,FLOAT(53),Yes,
+61,BILLINGMODE,No,INTEGER,No,The billing mode on the job. Will be one of:0 = Charge-up1 = Invoice ex-quote2 = Manufacture - output items3 = Progress invoices
+62,PROJ_SEQNO,No,INTEGER,No,The ID number of the project that the job belongs to.
+63,DESCRIPTION,No,VARCHAR(5000),No,The job's description.
+64,OPPORTUNITY_SEQNO,No,INTEGER,No,"The ID number of the Opportunity (EXO CRM) that the job is associated with, if there is one."
+65,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"The ID number of the campaign wave (EXO CRM) that the job is associated with, if there is one."
+66,LINECHARGE_WRITEOFF,No,FLOAT(53),No,This field stores the sum of value of all JOB_TRANSACTIONS.LINECHARGE_WRITEOFF values on the transaction lines.

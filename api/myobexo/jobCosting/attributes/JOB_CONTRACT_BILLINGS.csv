@@ -1,0 +1,31 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the billing record.
+2,JOBNO,No,INTEGER,No,The ID number of the job that the billing record is attached to.
+3,DESCRIPTION,No,VARCHAR(60),Yes,A descriptive name for the billing record.
+4,DUE_DATE,No,DATETIME,No,The date that this billing entry is due on.
+5,SUBTOTAL,No,FLOAT(53),No,The subtotal on the billing record.
+6,TAXTOTAL,No,FLOAT(53),No,The total tax amount on the billing record.
+7,RETENTION,No,FLOAT(53),No,The base retention percentage for the line.
+8,RETENTION_RATE,No,FLOAT(53),No,The base retention rate for the line.
+9,INV_SEQNO,No,INTEGER,No,"If the line has been invoiced, this field contains the ID number (SEQNO) of the invoice in the DR_TRANS table."
+10,INVNO,No,VARCHAR(20),No,"If the line has been invoiced, this field contains the invoice number for the invoice."
+11,MASTER_JOBNO,No,INTEGER,Yes,"If the job is a sub-job, this field contains the ID number of the master job."
+12,CURRENCYNO,No,INTEGER,Yes,This field displays the ID number of the currency that the billing record is in.
+13,EXCHRATE,No,FLOAT(53),Yes,The exchange rate for the line at the time of the transaction.
+14,RETENTION_DUE_DATE,No,DATETIME,No,The retention due date.
+15,PROFORMA_NO,No,VARCHAR(20),No,
+16,RETENTION_INV_SEQNO,No,INTEGER,Yes,
+17,RETENTION_INVNO,No,VARCHAR(20),No,
+18,ALLOW_ALLOCATION,No,CHAR(1),Yes,
+19,RETENTION2,No,FLOAT(53),Yes,The Retention 2 rate for the line.
+20,RETENTION2_RATE,No,FLOAT(53),Yes,The Retention 2 percentage for the line.
+21,RETENTION3,No,FLOAT(53),Yes,The Retention 3 rate for the line.
+22,RETENTION3_RATE,No,FLOAT(53),Yes,The Retention 3 percentage for the line.
+23,GLCODE,No,INTEGER,Yes,The ID number of the GL account for this line.
+24,GLSUBCODE,No,INTEGER,Yes,The ID number of the GL sub-account for this line.
+25,RETENTION_REALISED,No,FLOAT(53),Yes,The retention amount realised on the line.
+26,PERCENTAGE_COMPLETE,No,FLOAT(53),Yes,The Percentage Complete amount for the line.
+27,STOCKCODE,No,VARCHAR(23),No,The stockcode for the billing record.
+28,NARRATIVE_SEQNO,No,INTEGER,No,"The ID number of the narrative on the line, if there is one."
+29,INVOICED,No,CHAR(1),Yes,This field contains 'Y' if the line has been invoiced.
+30,ALLOCATED_COSTS,No,FLOAT(53),Yes,The Allocated Costs amount on the line.

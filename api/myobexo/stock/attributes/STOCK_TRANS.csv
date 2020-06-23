@@ -1,0 +1,52 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID for the record.
+2,POSTTIME,No,DATETIME,No,A timestamp of when the record was entered.
+3,TRANSDATE,No,DATETIME,No,The date when the stock movement took place.
+4,STOCKCODE,No,VARCHAR(23),No,The ID code of the stock item.
+5,TRANSTYPE,No,INTEGER,No,The type of the transaction. Will be one of: 0=Sales 1=Receipt 2=Transfer 3=Adjust Out 4=Adjust In 5=Average Cost Adjustment
+6,REF1,No,VARCHAR(30),No,"Source transaction reference. Usually contains the Debtor/Creditor's invoice number, Purchase Order number, Sales Order number, job number, etc."
+7,REF2,No,VARCHAR(30),No,Reference text with details of source of this stock movement.
+8,QUANTITY,No,FLOAT(53),No,Quantity of stock.
+9,UNITPRICE,No,FLOAT(53),No,Unit price of the stock item.
+10,LOCATION,No,INTEGER,No,ID number of the Location involved in the stock movement.
+11,TOLOCATION,No,INTEGER,No,ID of the Destination location (applies in case of stock transfers).
+12,FROM_LEDGER,No,CHAR(1),No,d = Debtorc = Creditors = Stockj = Job Costingi = Inwards Goods Receipto = Sales Ordersp = Purchase Orders
+13,FROM_HDR,No,INTEGER,No,"For manual stock movements this field contains STOCK_TRANS_HDR.SEQNO. For other types of movements, it contains the SEQNO of the header table of source transactions."
+14,BATCHCODE,No,VARCHAR(20),No,The batch number.
+15,ACCNO,No,INTEGER,No,"For manual stock movements this field is NULL. For movements originating from other ledgers, this contains the account number against the source transaction."
+16,LINE_SEQNO,No,INTEGER,No,"For manual stock movements this field is NULL. For movements originating from other ledgers, this contains the Line ID of the source line."
+17,JOBNO,No,INTEGER,No,Job Number if the stock movement sources from a job.
+18,RECEIPT_NO,No,INTEGER,No,Receipt number when the source of the transaction is an Inwards Goods Receipt.
+19,GLPOSTED,No,CHAR(1),No,This field contains 'Y' if the transaction has been posted to the General Ledger.
+20,GLACC,No,INTEGER,No,The General Ledger Account that is affected when the transaction is posted to GL.
+21,GLSUBACC,No,INTEGER,No,The General Ledger Sub Account that is affected when the transaction is posted to GL.
+22,GLBRANCH,No,INTEGER,No,The Branch used for posting to the General Ledger.
+23,UNITCOST,No,FLOAT(53),No,The unit cost price of the stock item.
+24,UPDATEITEM_FLAG,No,CHAR(1),Yes,"This field contains 'Y' for a normal stocked item, 'T' for a linked stock code, or 'U' for a transaction created for the SKU of the linked stock code."
+25,INC_FIFO_STOCKTAKE,No,CHAR(1),No,Not supported.
+26,REVERSED,No,CHAR(1),No,This field contains 'Y' if the transaction has been reversed.
+27,ON_COSTS,No,FLOAT(53),No,On costs (only applicable to lines sourcing from inwards goods receipts).
+28,POST_LOOKUP_TO_GL,No,CHAR(1),No,"If this field contains 'N' and the stock item is a lookup item, there is no journal against the transaction."
+29,EXPIRY_DATE,No,DATETIME,No,The Expiry Date for a batch tracked item.
+30,GLBATCHNO,No,INTEGER,No,ID number of the GL Batch that the posted stock journal belongs to.
+31,KITSEQNO,No,INTEGER,Yes,"ID number of the Kit/Bill of Materials, if in this specific transaction, the stock item belonged to a Kit/BOM."
+32,KITCODE,No,VARCHAR(23),No,"Code of the Kit/Bill of Materials, if in this specific transaction, the stock item belonged to a Kit/BOM."
+33,PLU,No,VARCHAR(23),No,Price Lookup Unit (applies to lookup items).
+34,POST_TO_GL,No,CHAR(1),No,"If this field is set to 'Y', the stock line is posted to GL; otherwise it is not."
+35,PREV_QUANTITY,No,FLOAT(53),No,Quantity of the stock item before the transaction.
+36,PREV_AVECOST,No,FLOAT(53),No,Average cost of the stock item before this transaction.
+37,ALT_QUANTITY,No,FLOAT(53),No,Alternate quantity.
+38,ALT_AVECOST,No,FLOAT(53),No,Alternate weighted average cost.
+39,ALT_SEQNO,No,INTEGER,No,Alternate SEQNO.
+40,SESSION_ID,No,INTEGER,No,Session ID
+41,PERIOD_SEQNO,No,INTEGER,Yes,ID number of the period the transaction belongs to.
+42,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+43,AGE,No,AS,No,Calculated field that indicates the age of the transaction.
+44,QTY_TRADED_IN_NEG,No,FLOAT(53),No,Quantity traded when total stock on hand for the item was in negative at the time of the transaction.
+45,VALUE_TRADED_IN_NEG,No,FLOAT(53),No,Value traded when total stock on hand for the item was in negative at the time of the transaction.
+46,PERIOD_TRADED_IN_SEQ,No,CHAR(1),No,This field contains 'N' if the transaction was in a prior period.
+47,NEW_AVECOST,No,FLOAT(53),No,Average cost of the item after this transaction.
+48,NEW_QUANTITY,No,FLOAT(53),No,Stock on hand of the item after this transaction.
+49,NEW_LOC_QTY,No,FLOAT(53),No,Quantity of the item in the location the movement took place after this transaction.
+50,NEW_SEQORDER,No,INTEGER,No,New sequence order of the transaction.
+51,LOOKUP_RECOVERABLE,No,CHAR(1),No,This field contains 'Y' if lookup items are recoverable against expenses in EXO Job Costing.

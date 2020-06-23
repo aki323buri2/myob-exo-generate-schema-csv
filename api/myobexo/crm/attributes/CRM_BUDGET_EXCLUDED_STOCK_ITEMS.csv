@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,BUDGET_SEQNO,No,INTEGER,Yes,The ID number of the budget (Links to CRM_BUDGET.SEQNO).
+2,STOCKCODE,No,VARCHAR(23),Yes,The Stock item ID to be excluded when generating budgets.

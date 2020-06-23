@@ -1,0 +1,9 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,LOCNO,Yes,INTEGER,Yes,The ID number of the stock location.
+2,LOCNAME,No,VARCHAR(30),No,The name of the stock location.
+3,ISACTIVE,No,CHAR(1),No,This field contains 'Y' is the location is currently active.
+4,TIME_INITIALISED,No,DATETIME,No,The date and time when the location was initialised for stocktake.
+5,TIME_COUNTSHEETS,No,DATETIME,No,The date and time when count sheets were printed for the location.
+6,TIME_KEYED,No,DATETIME,No,The date and time when counted quantities were keyed for the location.
+7,TIME_UPLOADED,No,DATETIME,No,The date and time when stock transactions were uploaded to the Stock ledger.
+8,CUSTOM_FILTER,No,VARCHAR(100),No,"This field contains the custom SQL filter defined for the location, if there is one."

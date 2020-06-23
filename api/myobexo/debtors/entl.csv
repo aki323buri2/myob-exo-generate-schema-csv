@@ -1,0 +1,27 @@
+,Name,Primary key columns,Number of columns,Comment
+1,CAMPAIGN_WAVE,SEQNO,19,This table contains details of all campaign waves setup in EXO Business CRM.
+2,CONTACTS,SEQNO,68,This table contains information about Contacts.
+3,CURRENCIES,CURRENCYNO,10,This table contains details of all currencies used in the EXO Business system.
+4,DR_ACCGROUP2S,ACCGROUP,3,This table stores the Secondary Groups for Debtors (a grouping on top of the primary grouping - see DR_ACCGROUPS).
+5,DR_ACCGROUPS,ACCGROUP,3,This table stores the Primary Groups for Debtors (the finer level of grouping - compare DR_ACCGROUP2S).
+6,DR_ACCS,ACCNO,90,This table contains information about Debtor accounts.
+7,DR_ADDRESSES,SEQNO,9,"This table stores the additional delivery addresses for a Debtor account. These are used in places like Sales Orders, where the user can select a delivery address for the order."
+8,DR_ALLOCATIONS,"SEQNO, ALLOCNO",11,This table stores details of Debtor allocations.
+9,DR_CONTACTS,SEQNO,56,This table contains details of Contact records that are associated with Debtor accounts. Contact details are taken from the relevant entry in the CONTACTS table.
+10,DR_CONT_HIST,SEQNO,14,This table contains information about the History Notes attached to Debtor accounts.
+11,DR_INVLINES,SEQNO,55,This table contains line information for all Debtor transactions.
+12,DR_INVLINES_SERIALS,SEQNO,4,This table contains details of serial numbers on Debtor Invoice lines.
+13,DR_PRICEGROUPS,GROUPNO,3,This table stores details of all Debtor Price Policy Groups. These are set up in the EXO Business Configurator at Admin > Debtors > Debtor Price Policy Groups.
+14,DR_PRICES,SEQNO,16,This table contains information on Debtor price rules.
+15,DR_PRICE_POLICY,POLICY_HDR,11,This table contains information on Debtor price policies.
+16,DR_PRICE_POLICY_ACC,SEQNO,4,This table defines the members of Debtor price policies.
+17,DR_TRANS,SEQNO,78,This table contains header information for all Debtor transactions.
+18,GLACCS,ACCNO,20,This table contains details of all General Ledger accounts.
+19,NARRATIVES,SEQNO,2,This table contains the narratives attached to transactions.
+20,OPPORTUNITY,SEQNO,30,This table contains details of all Opportunities used by the EXO CRM module.
+21,PAYMENT_TYPES,PTNO,43,This table contains details of all Payment Types.
+22,PERIOD_STATUS,SEQNO,18,This table contains details of the age periods set up in the system.
+23,SALESORD_HDR,SEQNO,55,This table contains header information for all Sales Orders.
+24,STAFF,STAFFNO,36,This table stores details of all EXO Business staff members. These are the people who are authorised to log in to and use the EXO Business system.
+25,STOCK_ITEMS,STOCKCODE,85,This table contains details of all stock items.
+26,TAX_RATES,SEQNO,8,This table contains all tax rates used by the system.

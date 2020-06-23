@@ -1,0 +1,17 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the price record.
+2,ACCNO,No,INTEGER,No,The Debtor account that the price rule is defined for. Has the value -1 if the price rule belongs to a generic price policy.
+3,STOCKCODE,No,VARCHAR(23),No,"If the price rule is defined for an individual Stock item, this field stores the item's stockcode."
+4,PRICE,No,FLOAT(53),No,The substitute price to be applied to the stockcode/group.
+5,STARTDATE,No,DATETIME,No,Date from which the price rule is active.
+6,STOPDATE,No,DATETIME,No,Date to which the price rule remains active.
+7,MINQTY,No,FLOAT(53),No,Minimum quantity for the price rule to apply.
+8,ACCGROUP,No,INTEGER,No,The Debtors Account Group that the price rule belongs to.
+9,STOCKPRICEGROUP,No,INTEGER,No,"If the price rule is defined against a price group rather than an individual product, this field stores the Stock price group."
+10,DISCOUNT,No,FLOAT(53),No,"The percentage discount to be applied, as per a price rule."
+11,FREIGHT_FREE,No,CHAR(1),Yes,
+12,POLICY_HDR,No,INTEGER,No,The Debtor price policy that the price rule belongs to.
+13,SELL_PRICE_BANDNO,No,INTEGER,Yes,Switch to this base sell price band (generally set if no discount/substitute price is applied).
+14,MASTER_JOBNO,No,INTEGER,No,"ID number of the master job that this price rule applies to, if relevant."
+15,JOBNO,No,INTEGER,No,"ID number of the job that this price rule applies to, if relevant."
+16,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"ID number of the campaign wave that this price rule applies to, if relevant."

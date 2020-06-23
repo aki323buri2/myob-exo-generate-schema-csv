@@ -1,0 +1,5 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,POLICY_HDR,No,INTEGER,Yes,The Debtor price policy that the account/account group belongs to.
+3,ACCNO,No,INTEGER,No,The relevant Debtor account.
+4,ACCGROUP,No,INTEGER,No,The relevant Debtor account group.

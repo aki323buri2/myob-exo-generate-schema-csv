@@ -1,0 +1,4 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,ACCGROUP,Yes,INTEGER,Yes,A unique ID for the Primary Creditor Group.
+2,GROUPNAME,No,VARCHAR(30),No,The name of the group.
+3,REPORTCODE,No,VARCHAR(15),No,A report code for the group.

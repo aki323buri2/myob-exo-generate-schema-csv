@@ -1,0 +1,20 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the resource.
+2,COSTRATE0,No,FLOAT(53),No,
+3,COSTRATE1,No,FLOAT(53),No,
+4,COSTRATE2,No,FLOAT(53),No,
+5,COSTRATE3,No,FLOAT(53),No,
+6,SELLRATE0,No,FLOAT(53),No,
+7,SELLRATE1,No,FLOAT(53),No,
+8,SELLRATE2,No,FLOAT(53),No,
+9,SELLRATE3,No,FLOAT(53),No,
+10,REVIEWDATE,No,DATETIME,No,
+11,NORMALHOURS,No,FLOAT(53),No,
+12,STAFFNO,No,INTEGER,No,"If the resource relates to an EXO Business staff member, their ID number is recorded here."
+13,RESOURCENAME,No,VARCHAR(30),Yes,The resource's name.
+14,TITLE,No,VARCHAR(30),No,The resource's title.
+15,ISACTIVE,No,CHAR(1),Yes,This field contains 'Y' if the resource is currently active.
+16,DEFAULT_STOCKCODE,No,VARCHAR(23),No,"If the resource has a default stockcode, it is recorded here."
+17,SHORTCODE,No,VARCHAR(3),No,A short (max. three characters) ID code for the resource.
+18,EMAIL_ADDRESS,No,VARCHAR(40),No,
+19,FILTERSQL,No,VARCHAR(100),No,"If the resource uses a SQL statement to filter stock item searches for times, it is recorded here."

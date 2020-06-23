@@ -1,0 +1,58 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique identifier for the quote line.
+2,QUOTE_QTY,No,FLOAT(53),No,The quantity on the quote line.
+3,QUOTE_UNITPR,No,FLOAT(53),No,The sell price for the Stock item on the quote line.
+4,ACTUAL_UNITCOST,No,FLOAT(53),No,The unit cost for the Stock item on the quote line.
+5,TRANSDATE,No,DATETIME,No,The date and time of the transaction.
+6,EXCHRATE,No,FLOAT(53),No,The currency exchange rate used for the quote.
+7,DISCOUNT,No,FLOAT(53),No,The percentage discount on the quote line.
+8,UNITPRICE_INCTAX,No,FLOAT(53),No,"The sell price of the Stock item on the quote line, including tax."
+9,HDR_SEQNO,No,INTEGER,Yes,The ID number of the Opportunity that this line relates to (OPPORTUNITY.SEQNO).
+10,SECTION,No,INTEGER,No,
+11,STOCKCODE,No,VARCHAR(23),No,The ID code of the stock item on this line.
+12,DESCRIPTION,No,VARCHAR(60),No,The description of the stock item on this line.
+13,SHOW_ON_INVOICE,No,CHAR(1),No,Set to 'Y' if this line should appear on invoices.
+14,COST_CENTRE,No,INTEGER,No,The Cost Type on the quote line.
+15,LINE_STATUS,No,VARCHAR(30),No,
+16,COST_CENTRE2,No,INTEGER,No,The Cost Group on the quote line.
+17,NARRATIVE,No,VARCHAR(1),No,Set to 'Y' if there is a narrative on this line.
+18,TAXNO,No,INTEGER,No,The ID number of the tax rate used on this line.
+19,BRANCHNO,No,INTEGER,No,The ID number of the branch used on this line.
+20,SUBCODE,No,INTEGER,No,The GL sub-account on this quote line.
+21,ANALYSIS,No,INTEGER,No,
+22,CURRENCYNO,No,INTEGER,No,The ID number of the currency that the Sales Order is in.
+23,ALINENO,No,INTEGER,No,A unique line number.
+24,GLCODE,No,INTEGER,No,The GL account on this quote line.
+25,NARRATIVE_SEQNO,No,INTEGER,No,The ID number of the narrative on this line.
+26,DIM_LENGTH,No,FLOAT(53),Yes,The Length value specified for the quote line.
+27,DIM_WIDTH,No,FLOAT(53),Yes,The Width value specified for the quote line.
+28,DIM_DEPTH,No,FLOAT(53),Yes,The Depth value specified for the quote line.
+29,TOTAL_QUANTITY,No,AS,No,The total quantity on the quote line.
+30,PRICE_OVERRIDDEN,No,CHAR(1),Yes,Set to 'Y' if the price has been overridden.
+31,BOMTYPE,No,CHAR(1),No,The type of Bill of Materials that the line relates to:N = Normal stock itemB = BuildK = KitL = Lookup
+32,BOMPRICING,No,CHAR(1),No,How the Bill of Materials is priced. Will be one of:C = pricing by Component T = Pricing by total
+33,SHOWLINE,No,CHAR(1),No,Set to 'Y' if the line should be printed on Clarity reports.
+34,LINKEDSTATUS,No,CHAR(1),No,The linked status of the Stock line. Will be one of:S = Stocked L = Lookup N = Not applicable
+35,LISTPRICE,No,FLOAT(53),No,The original sell price of the Stock item on this line.
+36,LINETYPE,No,INTEGER,Yes,The type of the line. Will be one of:0 = Not part of a BOM.1 = Header line of a BOM.2 = Line of a BOM.
+37,KITSEQNO,No,INTEGER,Yes,A Bill of Materials SEQNO used to group BOM lines together.
+38,KITCODE,No,VARCHAR(23),No,"The Bill of Materials code, if the line is part of a BOM."
+39,LINKED_STOCKCODE,No,VARCHAR(23),No,"The linked Stock code, if applicable."
+40,LINKED_QTY,No,FLOAT(53),No,"The linked quantity, if applicable."
+41,HIDDEN_COST,No,FLOAT(53),Yes,"This field applies to Bills of Materials. For kits that use pricing by components, this field stores header-level sell costs. For builds that use individual stocklines, this fields stores the lines' real costs."
+42,HIDDEN_SELL,No,FLOAT(53),Yes,"This field applies to Bills of Materials. For kits that use pricing by components, this field stores header-level sell prices. For builds that use individual stocklines, this fields stores the lines' real prices."
+43,SUPPLIERNO,No,INTEGER,No,The ID number of the supplier for the Stock item on this quote line.
+44,FROMLOC,No,INTEGER,No,The ID number of the location that the Stock item on this line is being supplied from.
+45,LINETOTAL,No,AS,No,A computed field showing the line total.
+46,NUNITPR,No,AS,No,A computed field showing the line total including GST.
+47,OPTION_NO,No,INTEGER,Yes,The option number of the Quote Option on this line (OPPORTUNITY_QUOTE_OPTION.OPTION_NO).
+48,SPREADVALUE,No,CHAR(1),Yes,Set to 'Y' if totals can be spread.
+49,TAXRATE,No,FLOAT(53),Yes,The percentage tax rate on the quote line.
+50,LINETOTAL_TAX,No,FLOAT(53),Yes,The total amount of tax on the quote line.
+51,LINE_TAX,No,FLOAT(53),Yes,The amount of tax on the quote line.
+52,HIDDEN_LINETOTAL,No,FLOAT(53),Yes,
+53,LINETOTAL_INCTAX,No,AS,No,The line total including tax.
+54,OPPLINEID,No,INTEGER,No,A unique ID number for the line.
+55,LINETAX_OVERRIDE,No,FLOAT(53),Yes,"If the tax on the line was manually overridden, this field contains the new value."
+56,LINETAX_OVERRIDDEN,No,CHAR(1),Yes,Set to 'Y' if the tax on the line was overridden.
+57,OPTION_NO_SEQNO,No,INTEGER,No,The ID number of the Quote Option on this line (OPPORTUNITY_QUOTE_OPTION.SEQNO).

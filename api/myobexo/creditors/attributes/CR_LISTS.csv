@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,LIST_NO,Yes,INTEGER,Yes,The ID number of the Account List that this line applies to (CR_LIST_NAMES.LIST_NO).
+2,ACCNO,Yes,INTEGER,Yes,The ID number of the Creditor account.

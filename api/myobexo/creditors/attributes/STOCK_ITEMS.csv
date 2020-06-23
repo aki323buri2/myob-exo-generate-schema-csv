@@ -1,0 +1,86 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STOCKCODE,Yes,VARCHAR(23),Yes,A unique ID code for the stock item.
+2,DESCRIPTION,No,VARCHAR(40),No,The stock item's description.
+3,STOCKGROUP,No,INTEGER,No,The Primary (Fine) Stock Group that the item belongs to.
+4,STATUS,No,CHAR(1),No,The stock item's status. Will be one of:S = Stock itemL = Lookup item
+5,SELLPRICE1,No,FLOAT(53),No,Sell price 1.
+6,SELLPRICE2,No,FLOAT(53),No,Sell price 2.
+7,SELLPRICE3,No,FLOAT(53),No,Sell price 3.
+8,SELLPRICE4,No,FLOAT(53),No,Sell price 4.
+9,SELLPRICE5,No,FLOAT(53),No,Sell price 5.
+10,SELLPRICE6,No,FLOAT(53),No,Sell price 6.
+11,SELLPRICE7,No,FLOAT(53),No,Sell price 7.
+12,SELLPRICE8,No,FLOAT(53),No,Sell price 8.
+13,SELLPRICE9,No,AS,No,Sell price 9.
+14,SELLPRICE10,No,FLOAT(53),No,Sell price 10.
+15,LATESTCOST,No,FLOAT(53),No,The stock item's Last Cost Price.
+16,AVECOST,No,FLOAT(53),No,The stock item's Average Cost Price.
+17,MINSTOCK,No,FLOAT(53),No,The minimum default stock level for each location.
+18,MAXSTOCK,No,FLOAT(53),No,The maximum default stock level for each location.
+19,SUPPLIERNO,No,INTEGER,No,The ID number (CR_ACCS.ACCNO) of the stock item's main supplier.
+20,MONTHUNITS,No,FLOAT(53),No,Sales totals in terms of quantity for the current month.
+21,YEARUNITS,No,FLOAT(53),No,Year to date sales totals in terms of quantity.
+22,LASTYEARUNITS,No,FLOAT(53),No,Units of stock item sold in for the previous year.
+23,MONTHVALUE,No,FLOAT(53),No,Sales value for the current month.
+24,YEARVALUE,No,FLOAT(53),No,Sales value for the current year.
+25,LASTYEARVALUE,No,FLOAT(53),No,Sales value for last year.
+26,BINCODE,No,VARCHAR(12),No,Bincode for the stock item.
+27,DISCOUNTLEVEL,No,INTEGER,No,
+28,DEFDAYS,No,INTEGER,No,
+29,BARCODE1,No,VARCHAR(30),No,Barcode/alternate code 1.
+30,BARCODE2,No,VARCHAR(30),No,Barcode/alternate code 2.
+31,BARCODE3,No,VARCHAR(30),No,Barcode/alternate code 3.
+32,LASTMONTHVALUE,No,FLOAT(53),No,Sales value for the previous month for the stock item.
+33,LASTMONTHUNITS,No,FLOAT(53),No,Units of stock item sold in the previous month.
+34,SALES_GL_CODE,No,INTEGER,No,The default GL code that sales transactions for this stock item are posted to.
+35,PURCH_GL_CODE,No,INTEGER,No,The GL code that purchase transactions for this stock are posted to.
+36,WEB_SHOW,No,CHAR(1),No,
+37,ISACTIVE,No,CHAR(1),No,"If this field is set to 'Y', the stock item is active."
+38,WEIGHT,No,FLOAT(53),No,Physical weight of the stock item.
+39,CUBIC,No,FLOAT(53),No,Cubic weight of the item.
+40,ALERT,No,VARCHAR(60),No,Text of the pop-up alert message that appears when the stock item is sold or purchased.
+41,NOTES,No,VARCHAR(4096),No,Any notes for the stock item.
+42,PQTY,No,FLOAT(53),No,
+43,PACK,No,VARCHAR(10),No,"Describes the unit of sale for pricing, e.g. EACH or PACK."
+44,HAS_SN,No,CHAR(1),No,This field is set to 'Y' if the stock item is serial number tracked.
+45,STDCOST,No,FLOAT(53),No,The stock item's standard cost.
+46,SUPPLIERNO2,No,INTEGER,No,Alternate supplier for the stock item.
+47,SUPPLIERNO3,No,INTEGER,No,Alternate supplier for the stock item.
+48,SALES_GLSUBCODE,No,INTEGER,No,The default GL sub-account code that sales transactions for this stock item are posted to.
+49,PURCH_GLSUBCODE,No,INTEGER,No,The default GL sub-account code that purchase transactions for this stock item are posted to.
+50,BRANCHNO,No,INTEGER,No,Branch number for the stock item.
+51,SALESTAXRATE,No,INTEGER,No,Default GST rate for sales transactions.
+52,PURCHTAXRATE,No,INTEGER,No,Default GST rate for purchase transactions.
+53,LAST_UPDATED,No,DATETIME,No,Date and time when the stock item record was last updated.
+54,UPDATEITEM_CODE,No,VARCHAR(23),No,Only applies to lookup items. The ID number of the stocked item that maintains the actual stock.
+55,UPDATEITEM_QTY,No,FLOAT(53),No,Only applies to lookup items. Quantity of the stocked item.
+56,COS_GL_CODE,No,INTEGER,No,The Cost of Sales account updated in the General Ledger when this stock item is sold.
+57,COS_GLSUBCODE,No,INTEGER,No,The Cost of Sales sub-account updated in the General Ledger when the stock item is sold.
+58,STOCKPRICEGROUP,No,INTEGER,No,The price group that the stock item belongs to.
+59,SUPPLIERCOST,No,FLOAT(53),Yes,The supplier cost price.
+60,ECONORDERQTY,No,FLOAT(53),No,The economic order quantity (EOQ) for the stock item.
+61,LINKED_BILLCODE,No,VARCHAR(23),No,
+62,STOCK_CLASSIFICATION,No,INTEGER,Yes,The stock classification that the item belongs to.
+63,STOCKGROUP2,No,INTEGER,No,The stock item's Secondary (Coarse) Stock Group.
+64,TOTALSTOCK,No,FLOAT(53),Yes,Total units of stock for the item.
+65,HAS_BN,No,CHAR(1),No,This field is set to 'Y' if the stock item is batch tracked.
+66,HAS_EXPIRY,No,CHAR(1),Yes,"This field is set to 'Y' if the stock item has an expiry date. This flag is only available in the UI if the ""Use expiry dates for batched & serial numbers"" profile setting is enabled."
+67,EXPIRY_DAYS,No,INTEGER,No,Number of days before expiry of the stock item.
+68,DUTY,No,FLOAT(53),Yes,The duty percentage on the stock item.
+69,SERIALNO_TYPE,No,INTEGER,Yes,How the stock item is serialised. Will be one of:0 = Not Serialised1 = Fully Tracked (In & Internal & Out)2 = Creditor & Internal (In & Internal)3 = Debtor Only (Out only)4 = Creditor & Debtor (In & Out Only)5 = Creditor Only (In Only)6 = Internal & Debtor (Internal & Out only)7 = Internal Only
+70,COSTTYPE,No,INTEGER,Yes,
+71,COSTGROUP,No,INTEGER,Yes,
+72,LABEL_QTY,No,INTEGER,Yes,
+73,IS_DISCOUNTABLE,No,CHAR(1),Yes,This field is set to 'Y' if the stock item is discountable.
+74,RESTRICTED_ITEM,No,CHAR(1),Yes,This field is set to 'Y' if the stock item is a restricted item.
+75,NUMDECIMALS,No,INTEGER,Yes,The number of decimal places that can be entered for the stock item's quantity.
+76,COGSMETHOD,No,INTEGER,Yes,
+77,DEFAULTWARRANTYNO,No,INTEGER,Yes,The default Warranty No for the stock item.
+78,DIMENSIONS,No,INTEGER,Yes,How the dimensions of the stock item are specified. Will be one of:0=None1=Length2=Square3=Cubic
+79,X_SIZEID,No,INTEGER,No,"Style size ID of the stock item. Used by the Style, Size Colour functionality."
+80,X_COLOURID,No,INTEGER,No,"Style colour ID of the stock item. Used by the Style, Size Colour functionality."
+81,AUTO_NARRATIVE,No,INTEGER,No,The setting of the stock item's Auto Narrative property. Will be one of:0=No1=Yes with Blank2=Yes with Notes
+82,VARIABLECOST,No,CHAR(1),Yes,The field is set to 'Y for Variable Cost stock items.
+83,PRICEQTY,No,FLOAT(53),No,The stock item's sell price per quantity.
+84,PRICEPERKG,No,FLOAT(53),No,The stock item's sell price per kg.
+85,LOOKUP_RECOVERABLE,No,CHAR(1),No,"If this field contains 'Y', the stock item is a recoverable expense in EXO Job Costing."

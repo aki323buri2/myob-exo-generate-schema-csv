@@ -1,0 +1,21 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,JOBNO,No,INTEGER,Yes,The job's ID number.
+2,INVOICEREADY,No,CHAR(1),Yes,This field contains 'Y' if the job's Invoice Ready flag is ticked.
+3,ISACTIVE,No,CHAR(1),Yes,This field contains 'Y' if the job's Active Job flag is ticked.
+4,ISCOMPLETE,No,CHAR(1),Yes,This field contains 'Y' if the job's Completed flag is ticked.
+5,ISARCHIVED,No,CHAR(1),Yes,This field contains 'Y' if the job's Archived Job flag is ticked.
+6,FLAG01,No,CHAR(1),Yes,This field contains 'Y' if custom flag 1 is ticked for the job.
+7,FLAG02,No,CHAR(1),Yes,This field contains 'Y' if custom flag 2 is ticked for the job.
+8,FLAG03,No,CHAR(1),Yes,This field contains 'Y' if custom flag 3 is ticked for the job.
+9,FLAG04,No,CHAR(1),Yes,This field contains 'Y' if custom flag 4 is ticked for the job.
+10,FLAG05,No,CHAR(1),Yes,This field contains 'Y' if custom flag 5 is ticked for the job.
+11,FLAG06,No,CHAR(1),Yes,This field contains 'Y' if custom flag 6 is ticked for the job.
+12,FLAG07,No,CHAR(1),Yes,This field contains 'Y' if custom flag 7 is ticked for the job.
+13,FLAG08,No,CHAR(1),Yes,This field contains 'Y' if custom flag 8 is ticked for the job.
+14,FLAG09,No,CHAR(1),Yes,This field contains 'Y' if custom flag 9 is ticked for the job.
+15,FLAG10,No,CHAR(1),Yes,This field contains 'Y' if custom flag 10 is ticked for the job.
+16,FLAG11,No,CHAR(1),Yes,This field contains 'Y' if custom flag 11 is ticked for the job.
+17,FLAG12,No,CHAR(1),Yes,This field contains 'Y' if custom flag 12 is ticked for the job.
+18,FLAG13,No,CHAR(1),Yes,This field contains 'Y' if custom flag 13 is ticked for the job.
+19,FLAG14,No,CHAR(1),Yes,This field contains 'Y' if custom flag 14 is ticked for the job.
+20,FLAG15,No,CHAR(1),Yes,This field contains 'Y' if custom flag 15 is ticked for the job.

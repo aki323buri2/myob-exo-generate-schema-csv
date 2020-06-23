@@ -1,0 +1,15 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique identifier for the record.
+2,CONTACT_SEQNO,No,INTEGER,No,The ID number of the associated Contact record.
+3,POSTTIME,No,DATETIME,No,The actual date and time that the record was posted.
+4,TRANSDATE,No,DATETIME,No,The transaction date against the History Note.
+5,COMTYPE,No,INTEGER,No,This field is used by the Serviceable Units add-on module - it is not set from the Creditor UI.
+6,SALESNO,No,INTEGER,No,The ID of the staff member selected on the History Note.
+7,NOTE,No,VARCHAR(4096),No,The main body of the History Note.
+8,SUBJECT,No,VARCHAR(80),No,The subject line of the History Note.
+9,ACCNO,No,INTEGER,No,The ID number of the Creditor account that the History Note is attached to.
+10,ACTIONSTATUS,No,INTEGER,No,This field is used by the Serviceable Units add-on module - it is not set from the Creditors UI.
+11,ACTIONDUEDATE,No,DATETIME,No,This field is used by the Serviceable Units add-on module - it is not set from the Creditors UI.
+12,JOBNO,No,INTEGER,Yes,This is a legacy field that is no longer used.
+13,EVENT_SEQNO,No,INTEGER,No,"If the History Note was created as a result of event logging, this field contains the ID number of the reason event from the REASONS table."
+14,OUTLOOK_LINK,No,VARCHAR(40),No,"If the History Note was emailed, this field contains a link to the email in MS Outlook."

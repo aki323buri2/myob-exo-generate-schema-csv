@@ -1,0 +1,8 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the workflow constraint.
+2,ISACTIVE,No,CHAR(1),Yes,"If this field contains 'Y', the constraint applies, so that users are permitted to change a job from the stage specified by the FROM_STATUS to the stage specified by the TO_STATUS."
+3,FROM_STATUS,No,CHAR(1),No,The source stage for the constraint.
+4,TO_STATUS,No,CHAR(1),No,The destination stage for the constraint.
+5,DESCRIPTION,No,VARCHAR(50),Yes,A description of the constraint.
+6,SHORTDESC,No,VARCHAR(5),Yes,A short code (5 characters max) for the constraint.
+7,TRACKEVENT,No,CHAR(1),No,"If this field contains 'Y', when a job is changed from the FROM_STATUS to the TO_STATUS, the stage change is recorded in the Event Log."

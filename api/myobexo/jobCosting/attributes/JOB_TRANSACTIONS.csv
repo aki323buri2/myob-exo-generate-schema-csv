@@ -1,0 +1,107 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the line.
+2,EXCHRATE,No,FLOAT(53),No,The exchange rate applicable to the line.
+3,DISCOUNT,No,FLOAT(53),No,The percentage discount on the line.
+4,UNITPRICE_INCTAX,No,FLOAT(53),No,The unit price inclusive of tax.
+5,FX_PRICE,No,FLOAT(53),No,
+6,RETENTION_RATE,No,FLOAT(53),No,"The retention rate on the line, if applicable."
+7,RETENTION_AMOUNT,No,FLOAT(53),No,"The retention amount on the line, if applicable."
+8,OVERHEAD,No,FLOAT(53),No,"The overhead amount on the line, if applicable."
+9,QUANTITY,No,FLOAT(53),No,The quantity on the line.
+10,UNITPRICE,No,FLOAT(53),No,The unit price of the item on the line.
+11,UNITCOST,No,FLOAT(53),No,The unit cost of the item on the line.
+12,ENDDATE,No,DATETIME,No,The end date on the line (applies to timesheets).
+13,TRANSDATE,No,DATETIME,No,"For timesheets, this field identifies the start date; otherwise it contains the transaction date on the line."
+14,SOURCE_SEQNO,No,INTEGER,Yes,"If the line originated from a job quote, this field contains the ID of the original quote line (from JOBCOST_LINES)."
+15,JOBNO,No,INTEGER,No,The ID number of the job that this line is on.
+16,MASTER_JOBNO,No,INTEGER,No,"If the line belongs to a sub-job, this field contains the ID of the master job."
+17,TRANSTYPE,No,VARCHAR(1),No,The transaction type. Will be one of:T = TimeC = Cost
+18,LINE_STATUS,No,VARCHAR(30),No,The line's status. Will be one of:R = Ready to invoiceW = WriteoffI = InvoicedX = CancelledA = AssetC = Committed Stock
+19,STOCKCODE,No,VARCHAR(23),No,The stockcode of the stock item on this line.
+20,DESCRIPTION,No,VARCHAR(60),No,The description of the stock item on this line.
+21,COST_TYPE,No,INTEGER,No,The ID number of the Cost Type on the line (from JOB_COSTTYPES).
+22,COST_GROUP,No,INTEGER,No,The ID number of the Cost Group on the line (from JOB_COSTGROUPS).
+23,LINE_SOURCE,No,VARCHAR(10),No,Where the line was sourced from. Will be one of:P = PurchaseQ = Quote
+24,SOURCE_ID,No,INTEGER,No,"If the line originated from a job quote, this field contains the ID of the original quote line (from JOBCOST_LINES)."
+25,NARRATIVE,No,VARCHAR(1),No,
+26,STAFFNO,No,INTEGER,No,ID number of the staff member on the line.
+27,STARTTIME,No,VARCHAR(15),No,Start time (only applies to timesheets).
+28,ENDTIME,No,VARCHAR(15),No,End Time (only applies to timesheets).
+29,FROMLOC,No,INTEGER,No,The location origin for stock movements.
+30,LOCATION,No,INTEGER,No,The location that the item moves to.
+31,GLCODE,No,INTEGER,No,The GL account code of the P&L revenue account.
+32,BRANCHNO,No,INTEGER,No,The ID number of the branch that the line belongs to (from BRANCHES).
+33,SUBCODE,No,INTEGER,No,The subcode of the P&L revenue account.
+34,LINESORT,No,INTEGER,No,
+35,TAXNO,No,INTEGER,No,The ID number of the tax rate on the line (from TAX_RATES).
+36,ANALYSIS,No,INTEGER,No,
+37,CURRENCYNO,No,INTEGER,No,The ID number of the currency on the line (from CURRENCIES).
+38,BILLING_ID,No,INTEGER,No,"The Billing ID, if one exists."
+39,BILLING_REF,No,VARCHAR(20),No,"The Billing Reference, if one exists."
+40,INVOICED,No,FLOAT(53),Yes,The amount invoiced.
+41,INVOICEDQTY,No,FLOAT(53),Yes,The quantity invoiced.
+42,ALINENO,No,INTEGER,Yes,A rank ID that determines the order in which lines are displayed.
+43,INVOICEDATE,No,DATETIME,No,The invoice date
+44,NARRATIVE_SEQNO,No,INTEGER,No,"The ID number of the narrative on the line, if there is one (from NARRATIVES)."
+45,DIM_LENGTH,No,FLOAT(53),Yes,Dimension length
+46,DIM_WIDTH,No,FLOAT(53),Yes,Dimension width
+47,DIM_DEPTH,No,FLOAT(53),Yes,Dimension depth
+48,TOTAL_QUANTITY,No,AS,No,The total quantity after considering the dimensions (if applicable).
+49,PRICE_OVERRIDDEN,No,CHAR(1),Yes,This field contains 'Y' if the unit price or discount has been overridden.
+50,NUNITPR,No,AS,No,The unit price after discount.
+51,LINETYPE,No,INTEGER,Yes,The type of line. Will be one of:0 = Normal1 = BOM header2 = Component4 = Comment line
+52,KITSEQNO,No,INTEGER,Yes,"The ID number of the Bill of Materials, if the stock line belongs to a one."
+53,KITCODE,No,VARCHAR(23),No,"The ID code of the Bill of Materials, if the stock line belongs to a one (from BILLOMAT_HDR)."
+54,LINKED_STOCKCODE,No,VARCHAR(23),No,Code of the linked stock item
+55,LINKED_QTY,No,FLOAT(53),No,Quantity (if the item is a linked stock item).
+56,JOBLINEID,No,INTEGER,Yes,ID of the job transaction line
+57,BOMTYPE,No,CHAR(1),No,Will be one of:N = Normal stock itemB = BuildK = KitL = Lookup item
+58,BOMPRICING,No,CHAR(1),No,Will be one of:N = normalC = pricing by component (BOMs)T= pricing by total (BOMs)
+59,SHOWLINE,No,CHAR(1),No,Flag to indicate if the BOM item line should be printed on Clarity reports or not.
+60,LINKEDSTATUS,No,CHAR(1),No,"S= Stocked, L= Lookup, N= Not Applicable"
+61,LISTPRICE,No,FLOAT(53),No,The original sell price of the item.
+62,HIDDEN_COST,No,FLOAT(53),Yes,"This field applies to Bills of Materials. For kits that use pricing by components, this field stores header-level cost prices. For builds that use individual stock lines, this field stores the real cost."
+63,HIDDEN_SELL,No,FLOAT(53),Yes,"This field applies to Bills of Materials. For kits that use pricing by components, this field stores header-level sell prices. For builds that use individual stock lines, this field stores the sell price."
+64,LINECOST,No,AS,No,Calculated field giving the cost of the transactions line.
+65,LINECHARGE,No,AS,No,Calculated field giving the total price of the transaction line (excluding discount).
+66,LINETOTAL,No,AS,No,Total price of the transaction line including discount.
+67,SOURCE_REF,No,VARCHAR(20),No,Source reference.
+68,BATCHCODE,No,VARCHAR(20),No,Batch code.
+69,SPREADVALUE,No,CHAR(1),Yes,"If this field contains 'Y', the line will be taken into account when using the spread function to alter the total."
+70,TAXRATE,No,FLOAT(53),Yes,The tax rate percentage on the line.
+71,LINETOTAL_TAX,No,FLOAT(53),Yes,The total tax value for line
+72,LINE_TAX,No,FLOAT(53),Yes,The tax value on the line.
+73,HIDDEN_LINETOTAL,No,FLOAT(53),Yes,"For Kit type BOMs, this field stores the line total against the header line."
+74,PO_LINESEQNO,No,INTEGER,Yes,"The related Purchase Order line ID, if applicable (from PURCHORD_LINES)."
+75,INVSEQNO,No,INTEGER,Yes,"The related Debtor Invoice ID, if applicable (from DR_TRANS)."
+76,INVLINE_SEQNO,No,INTEGER,Yes,"The related Debtor Invoice line ID, if applicable (from DR_INVLINES)."
+77,SCHEDULE_SEQNO,No,INTEGER,Yes,"The related Billing Schedule ID, if the line is allocated to a Billing Schedule (from JOB_CONTRACT_BILLINGS)."
+78,WIP_OUT_DATE,No,DATETIME,No,The date and time when the stock moved out of WIP.
+79,ALLOWANCE,No,FLOAT(53),Yes,Unit labour allowance associated with the stock item.
+80,PROGRESSINVOICE,No,CHAR(1),Yes,This field contains 'Y' if the line is allocated to a Billing Schedule.
+81,RATE_SEQNO,No,INTEGER,Yes,Timesheet Rate ID from JOB_TIMESHEETS_RATES)
+82,LINETOTAL_INCTAX,No,AS,No,Line total inclusive of discount and tax(Calculated field)
+83,PAYROLL_STATUS,No,CHAR(1),Yes,Only applicable when timesheets are integrated with MYOB EXO Payroll. Will be one of:Y = the line is ready to invoiceN = the line is not ready to postP = the line has been invoiced
+84,PAYROLL_HOURS,No,FLOAT(53),Yes,Payroll hours (only applicable when timesheets are integrated with MYOB EXO Payroll).
+85,PAYRATE_NO,No,INTEGER,Yes,Pay Rate ID (only applicable when timesheets are integrated with MYOB EXO Payroll).
+86,PAYRATE,No,FLOAT(53),Yes,Pay Rate percentage (only applicable when timesheets are integrated with MYOB EXO Payroll).
+87,PAYRATE_OVERRIDEN,No,FLOAT(53),Yes,This field contains 'Y' if the payrate has been modified; otherwise 'N' (only applicable when timesheets are integrated with MYOB EXO Payroll).
+88,WAGE_CODE,No,INTEGER,Yes,Wage code (only applicable when timesheets are integrated with MYOB EXO Payroll).
+89,COST_CENTRE,No,BIGINT,Yes,Cost Centre ID (only applicable when timesheets are integrated with MYOB EXO Payroll).
+90,ISSUPPLIED,No,CHAR(1),Yes,This field contains 'Y' if the line is supplied; otherwise 'N'.
+91,SNTYPE,No,INTEGER,No,Serial number type.
+92,SNEXPDAYS,No,INTEGER,No,Serial Number expiry days.
+93,SU_SEQNO,No,INTEGER,Yes,"The ID number of the Serviceable Unit that the line is associated with, if applicable."
+94,STDCOST_IN,No,FLOAT(53),No,The Standard cost of the item coming into the WIP location.
+95,STDCOST_OUT,No,FLOAT(53),No,The Standard cost of the item going out of the WIP location.
+96,AVECOST_IN,No,FLOAT(53),No,The Average cost of the item coming into the WIP location.
+97,AVECOST_OUT,No,FLOAT(53),No,The Average cost of the item going out of the WIP location
+98,LATESTCOST_IN,No,FLOAT(53),No,The Latest cost of the item coming into the WIP location.
+99,LATESTCOST_OUT,No,FLOAT(53),No,The Latest cost of the item going out of the WIP location.
+100,LOOKUP_RECOVERABLE,No,CHAR(1),No,This field contains 'Y' if lookups are recoverable against expenses in Job Costing.
+101,COST_LINENO,No,INTEGER,Yes,This field stores the COST_LINENO from DR_INVLINES.
+102,LINECHARGE_WRITEOFF,No,FLOAT(53),No,This field stores the value of LINECHARGE before the line was written off.
+103,CREDIT_SCHEDULE_SEQNO,No,INTEGER,Yes,This field stores the ID number of the Billing Schedule record that the current record was credited in.
+104,WIP_IN_PERIOD_SEQNO,No,INTEGER,Yes,PERIOD_SEQNO for WIP_IN_DATE
+105,WIP_OUT_PERIOD_SEQNO,No,INTEGER,Yes,PERIOD_SEQNO for WIP_OUT_DATE
+106,STOCK_TRANS_SEQ_IN,No,INTEGER,Yes,This field stores the STOCK_TRANS.SEQNO from the Purchase Order line that inserted the job transaction.

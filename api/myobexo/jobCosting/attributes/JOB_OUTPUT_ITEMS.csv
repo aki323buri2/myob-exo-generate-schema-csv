@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the item.
+2,JOBNO,No,INTEGER,No,The ID number of the job that the item belongs to.
+3,STOCKCODE,No,VARCHAR(23),Yes,The stockcode of the output stock item.
+4,DESCRIPTION,No,VARCHAR(60),Yes,The description of the output stock item.
+5,LOCATION,No,INTEGER,No,The location specified for the output item (from STOCK_LOCATIONS).
+6,QUANTITY,No,FLOAT(53),No,The quantity of the item that will be produced.

@@ -1,0 +1,91 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,ACCNO,Yes,INTEGER,Yes,The unique ID number for the Debtor account.
+2,NAME,No,VARCHAR(60),No,The Debtor's name.
+3,ADDRESS1,No,VARCHAR(30),No,Postal address line 1.
+4,ADDRESS2,No,VARCHAR(30),No,Postal address line 2.
+5,ADDRESS3,No,VARCHAR(30),No,Postal address line 3.
+6,ADDRESS4,No,VARCHAR(30),No,Postal address line 4
+7,ADDRESS5,No,VARCHAR(30),No,Postal address line 5. This line is only available on the Debtor Account Details screen if the Additional Postal Address Row profile setting is enabled.
+8,DELADDR1,No,VARCHAR(30),No,Delivery address line 1.
+9,DELADDR2,No,VARCHAR(30),No,Delivery address line 2.
+10,DELADDR3,No,VARCHAR(30),No,Delivery address line 3.
+11,DELADDR4,No,VARCHAR(30),No,Delivery address line 4.
+12,DELADDR5,No,VARCHAR(30),No,Delivery address line 5.
+13,DELADDR6,No,VARCHAR(30),No,Delivery address line 6.
+14,PHONE,No,VARCHAR(30),No,The Debtor's phone number.
+15,FAX,No,VARCHAR(30),No,The Debtor's fax number.
+16,EMAIL,No,VARCHAR(60),No,The Debtor's email address.
+17,CREDLIMIT,No,FLOAT(53),No,The credit limit for the Debtor account.
+18,ACCGROUP,No,INTEGER,No,The Debtor's primary Debtor Account Group.
+19,SALESNO,No,INTEGER,No,ID number of the salesperson assigned to the Debtor account.
+20,LASTMONTH,No,FLOAT(53),No,Turnover for last month.
+21,LASTYEAR,No,FLOAT(53),No,Turnover for last year.
+22,AGEDBAL0,No,FLOAT(53),No,Aged Balance for the current month.
+23,AGEDBAL1,No,FLOAT(53),No,Aged Balance for the previous month.
+24,AGEDBAL2,No,FLOAT(53),No,Aged Balance for two months back.
+25,AGEDBAL3,No,FLOAT(53),No,Aged Balance for three months back.
+26,CREDITSTATUS,No,INTEGER,No,Credit terms for the Debtor.
+27,DISCOUNTLEVEL,No,INTEGER,No,The Debtor's discount level - this is only populated via EXO APIs.
+28,OPENITEM,No,CHAR(1),No,"Contains ""Y"" if this is not a balance brought forward account."
+29,INVOICETYPE,No,INTEGER,No,"This field only applies to Australian databases where M-Powered Invoices are enabled. If set to 1, search results on the Transactions tab of the Debtor Account Details window will only include accounts with the M-Powered invoice type."
+30,NOTES,No,VARCHAR(4096),No,All notes entered for the Debtor on the Notes tab.
+31,MONTHVAL,No,FLOAT(53),No,Turnover for the current month.
+32,YEARVAL,No,FLOAT(53),No,Turnover for the current year.
+33,STARTDATE,No,DATETIME,No,The date that the Debtor account was created on.
+34,SORTCODE,No,VARCHAR(12),No,Banks National Clearing Code or Routing Number used by some banks. Expose as an Extra Field to use.
+35,BANK,No,VARCHAR(20),No,"The Bank detail from the last update of a payment header. Populated via right-clicking on a payment on the Transactions tab and selecting Edit Ref Field. This option is only available if the profile setting ""Permitted level of access to debtor transaction editing"" (EDITDRTRANS) is set to allow transaction editing."
+36,BANK_ACCOUNT,No,VARCHAR(40),No,"The Debtor's bank account number, used for Direct Debit payments."
+37,BANK_ACC_NAME,No,VARCHAR(40),No,"The Debtor's bank account name, used for Direct Debit payments."
+38,BSBNO,No,VARCHAR(40),No,The Debtor's Bank State Branch number (Australian databases only).
+39,D_DEBIT_FAX,No,CHAR(1),No,"If set to 'Y', Direct Debit payment advice will be sent to the Debtor by fax."
+40,D_DEBIT_PRINT,No,CHAR(1),No,"If set to 'Y', printed Direct Debit payment advice will be sent to the Debtor."
+41,D_DEBIT_EMAIL,No,CHAR(1),No,"If set to 'Y', Direct Debit payment advice will be sent to the Debtor by email."
+42,PAY_TYPE,No,INTEGER,No,The default payment method.
+43,BRANCH,No,VARCHAR(30),No,"The Branch detail from the last update of a payment header. Populated via right-clicking on a payment on the Transactions tab and selecting Edit Ref Field. This option is only available if the profile setting ""Permitted level of access to debtor transaction editing"" (EDITDRTRANS) is set to allow transaction editing."
+44,DRAWER,No,VARCHAR(30),No,"The Drawer detail from the last update of a payment header. Populated via right-clicking on a payment on the Transactions tab and selecting Edit Ref Field. This option is only available if the profile setting ""Permitted level of access to debtor transaction editing"" (EDITDRTRANS) is set to allow transaction editing."
+45,TAXSTATUS,No,INTEGER,No,The Override GST rate for the Debtor.
+46,PRICENO,No,INTEGER,No,The Base price for the Debtor.
+47,AUTOBILLCODE,No,VARCHAR(23),No,The Bill of Materials (Order Template) used by the Debtor.
+48,ALPHACODE,No,VARCHAR(15),No,"A non-unique alphanumeric ID code for the Debtor. Can be used for sorting accounts alphabetically, e.g. give ""The Warehouse"" the code ""WARE"" to sort under W instead of T. Sometimes used as an alternate account reference."
+49,HEAD_ACCNO,No,INTEGER,Yes,"The ACCNO of the Debtor's head office account. If no head office, this is set to -1."
+50,PASS_WORD,No,VARCHAR(30),No,Used for integrated web shops.
+51,CURRENCYNO,No,INTEGER,Yes,The currency of the Debtor account.
+52,ALERT,No,VARCHAR(60),No,Pop-up alert text to display when dealing with the Debtor.
+53,STATEMENT,No,CHAR(1),No,"How statements will be sent to the Debtor. P = print, E = email, B = both, N = none."
+54,INVFILENO,No,INTEGER,No,"The number that is used in the name of the invoice template that will be used for this Debtor, e.g. 1 for Invoice1.clf."
+55,PROMPTPAY_PC,No,FLOAT(53),No,Prompt payment discount percentage.
+56,PROMPTPAY_AMT,No,FLOAT(53),No,Prompt payment discount amount.
+57,ISACTIVE,No,CHAR(1),No,Whether the account is active (Y) or inactive (N).
+58,BAD_CHEQUE,No,CHAR(1),No,"If 'Y', cheques are not accepted from the Debtor. Set by the ""Do Not Accept Cheque"" flag on the Details 2 tab."
+59,BRANCHNO,No,INTEGER,No,Branch number - only used by specific sites.
+60,LAST_UPDATED,No,DATETIME,No,Time and date stamp when the Debtor's account details were last updated.
+61,TAXREG,No,VARCHAR(30),No,GST/ABN number of the Debtor.
+62,STOPCREDIT,No,CHAR(1),No,"If 'Y', the Debtor is on Stop Credit, and no further transactions will take place."
+63,POST_CODE,No,VARCHAR(12),No,The Debtor's postal code.
+64,GLCONTROLACC,No,INTEGER,No,Not currently used.
+65,GLCONTROLSUBACC,No,INTEGER,No,Not currently used.
+66,PRIOR_AGEDBAL0,No,FLOAT(53),No,Prior Aged Balance for the current month.
+67,PRIOR_AGEDBAL1,No,FLOAT(53),No,Prior Aged Balance for the previous month.
+68,PRIOR_AGEDBAL2,No,FLOAT(53),No,Prior Aged Balance for two months back.
+69,PRIOR_AGEDBAL3,No,FLOAT(53),No,Prior Aged Balance for three months back.
+70,BALANCE,No,AS,No,Current balance.
+71,PRIOR_BALANCE,No,AS,No,Balance as at the prior period.
+72,ACCGROUP2,No,INTEGER,No,The Debtor's secondary Debtor Account Group.
+73,FREIGHT_FREE,No,CHAR(1),Yes,Used to suppress the freight prompt on Invoices or Sales Orders for this Debtor account. Can be superseded by the FREIGHT_FREE settings in price rules.
+74,COURIER_DEPOT_SEQNO,No,INTEGER,No,Related to the courier add-on module. Not currently supported.
+75,KEEPTRANSACTIONS,No,CHAR(1),Yes,"If 'N', all branch transactions are transferred to head office account."
+76,NEED_ORDERNO,No,CHAR(1),Yes,"If set to 'Y', order numbers are checked against past order numbers to prevent duplication. Only applies when the profile setting ""Validate Debtor Order Numbers"" (VALIDATE_DR_ORDERNO) is enabled."
+77,PRICEGROUP,No,INTEGER,No,"Price Group for the Debtor. New accounts get this from profile setting ""Default debtor price group for new debtors"" (DEFDRPRICEGROUP)."
+78,ALLOW_RESTRICTED_STOCK,No,CHAR(1),Yes,"If 'Y', it is possible to sell stock items that have been flagged as restricted goods to this Debtor. If the profile setting ""Use customised customer stock restrictions logic"" (CUSTOM_STOCK_RESTRICTION) is enabled, a custom function (FN_RESTRICTED_ITEM) is used instead of this field."
+79,PRIVATE_ACC,No,CHAR(1),Yes,"If 'Y', the debtor account is classed as private. It can only be accessed by users who have the profile setting ""Allow access to private debtor accounts"" (ALLOW_ACCESS_TO_PRIVATE_DR_ACC) enabled."
+80,ISTEMPLATE,No,CHAR(1),Yes,"If 'Y', this Debtor account can be used as a template for Non Accounts and new POS accounts."
+81,WEBSITE,No,VARCHAR(50),No,URL of the Debtor's website.
+82,AVE_DAYS_TO_PAY,No,INTEGER,Yes,"Average Debtor days, calculated by the Stored Procedure DR_CR_ALLOCATION_AVE_DAYS_SP every time you access the Analysis tab."
+83,INVOICE_TYPE,No,VARCHAR(20),No,"The type of invoice to send to the Debtor: DEFAULT, STANDARD or M-POWERED. Only applies to Australian databases."
+84,STATEMENT_CONTACT_SEQNO,No,INTEGER,No,"When sending statements via email, the email will be sent to this address. If this field is blank, the email address of the Debtor account's default contact is used. If the account does not have a default Contact, the Debtor's email address (EMAIL) is used."
+85,LINKEDIN,No,VARCHAR(20),No,The Debtor's LinkedIn account ID.
+86,TWITTER,No,VARCHAR(500),No,The Debtor's Twitter username.
+87,FACEBOOK,No,VARCHAR(500),No,The Debtor's Facebook account ID or username.
+88,LATITUDE,No,FLOAT(53),No,The Debtor's latitude.
+89,LONGITUDE,No,FLOAT(53),No,The Debtor's longitude.
+90,GEOCODE_STATUS,No,INTEGER,No,Result of the geocode lookup. Will be one of:Null or -1 - lookup not yet attempted0 - lookup successful>0 - lookup failed

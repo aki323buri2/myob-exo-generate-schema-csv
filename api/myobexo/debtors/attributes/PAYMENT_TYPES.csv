@@ -1,0 +1,44 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,PTNO,Yes,INTEGER,Yes,A unique ID number for the Payment Type.
+2,PTDESC,No,VARCHAR(12),No,The Payment Type's name.
+3,PTKEY,No,CHAR(1),No,A one-character code for the Payment Type.
+4,IMG_FILE,No,VARCHAR(80),No,The filename of the image displayed for the Payment Type on websites.
+5,WEB_SHOW,No,CHAR(1),No,"This field is set to 'Y' if the Payment Type is set to appear on websites, i.e. if its ""Show on web site"" flag is ticked."
+6,LIVE_TRANS,No,CHAR(1),No,"This field is set to 'Y' if the Payment Type is set to be available on bank servers, i.e. if its ""On live bank server"" flag is ticked."
+7,SHORTNAME,No,VARCHAR(6),No,The short name used for the Payment Type on some displays.
+8,PTGROUP,No,INTEGER,No,The ID number of the Payment Group that the Payment Type belongs to. Taken from the PGNO field of the PAYMENT_GROUP table.
+9,CURRENCYNO,No,INTEGER,No,
+10,LISTSEQ,No,INTEGER,No,The value of this field determines the Payment Type's position in lists.
+11,REFUND,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type allows refunds, i.e. if its ""Permit use on refund/credit"" flag is enabled."
+12,OVER_TEND,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's ""Allow to be over tendered"" flag is enabled."
+13,MIN_TEND,No,FLOAT(53),No,
+14,MAX_TEND,No,FLOAT(53),No,
+15,MAX_PAYOUT,No,FLOAT(53),No,
+16,EFTPOS,No,INTEGER,No,The Payment Type's EFTPOS behaviour. This will be one of:0 = no EFT interface1 = validate only (cheque)2 = process EFT sale3 = process EFT cash out
+17,MEMBER_TYPE,No,INTEGER,No,
+18,ACC_MASK,No,VARCHAR(20),No,
+19,ROUND_AMT,No,INTEGER,No,This field specifies the number of cents that the Payment Type should round to.
+20,ROUND_UP,No,CHAR(1),No,"This field contains 'Y' if the Payment Type's ""Round up when midway"" flag is ticked."
+21,FEE_AMT,No,FLOAT(53),No,
+22,FEE_MAX,No,FLOAT(53),No,
+23,FEE_STOCKITEM,No,VARCHAR(40),No,
+24,IMAGE_FILE_INDEX,No,INTEGER,No,Specifies the Toolbar image to display on EXO Business interfaces for the Payment Type.
+25,ACTIVE_DR,No,CHAR(1),No,"This field is ticked if the Payment Type is active for Debtors, i.e. if its ""Active for debtors"" flag is ticked."
+26,ACTIVE_CR,No,CHAR(1),No,"This field is ticked if the Payment Type is active for Creditors, i.e. if its ""Active for creditors"" flag is ticked."
+27,ACTIVE_POS,No,CHAR(1),No,"This field is ticked if the Payment Type is active for the EXO POS module, i.e. if its ""Active for POS"" flag is ticked."
+28,CHEQUE_TYPE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's Payment behaviour is set to ""Cheque""."
+29,DIRECT_DEBIT_TYPE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's Payment behaviour is set to ""Direct Debit""."
+30,DIRECT_CREDIT_TYPE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's Payment behaviour is set to ""Direct Credit""."
+31,CASHOUTPTNO,No,INTEGER,Yes,This field contains the ID number of the Payment Type that this Payment Type uses as its Linked cash out payment type.
+32,BANKFEE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's ""Apply payment group bank fee"" flag is ticked."
+33,ZERO_TEND,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's ""Allow zero tender value"" flag is ticked."
+34,GATEWAY,No,INTEGER,No,This field specifies the Payment Type's Gateway Behaviour. This will be one of:0 = None1 = Purchase2 = Authorise
+35,POS_SALE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for sales in EXO Business POS, i.e. if its ""Sales"" flag is ticked in the Available on POS Transactions section."
+36,POS_RECEIPT,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for receipts in EXO Business POS, i.e. if its ""Receipts"" flag is ticked in the Available on POS Transactions section."
+37,POS_CREDIT,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for credits in EXO Business POS, i.e. if its ""Credits"" flag is ticked in the Available on POS Transactions section."
+38,POS_REFUND,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for refunds in EXO Business POS, i.e. if its ""Refunds"" flag is ticked in the Available on POS Transactions section."
+39,POS_QUOTE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for quote in EXO Business POS, i.e. if its ""Quotes"" flag is ticked in the Available on POS Transactions section."
+40,POS_LAYBY,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type can be used for lay-bys in EXO Business POS, i.e. if its ""Lay-bys"" flag is ticked in the Available on POS Transactions section."
+41,REFERENCELEVEL,No,INTEGER,No,This field specifies the Payment Type's Drawer/Reference level. This will be one of:0 = Not Editable1 = Editable2 = Must Fill
+42,INCASHDRAWER,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's ""Open Cash Drawer"" flag is ticked."
+43,MPOWERED_TYPE,No,CHAR(1),No,"This value is set to 'Y' if the Payment Type's Payment behaviour is set to ""M-Powered""."

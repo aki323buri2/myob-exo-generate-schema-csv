@@ -1,0 +1,19 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the transaction.
+2,SUPPLIERNAME,No,VARCHAR(70),No,The name of the supplier on the transaction.
+3,LOCNO,No,INTEGER,Yes,The ID number of the location on the transaction.
+4,SUPPLIERREF,No,VARCHAR(50),No,The shipping reference on the transaction.
+5,COMPLETE,No,CHAR(1),Yes,This field contains 'Y' if the receipt has been completed.
+6,NOTES,No,VARCHAR(500),No,Any receipt notes on the transaction.
+7,NUM_CARTONS,No,INTEGER,Yes,The number of cartons.
+8,INVOICED,No,CHAR(1),Yes,This field contains 'Y' if the receipt has been invoiced.
+9,GLBATCHNO,No,INTEGER,Yes,The GL batch number on the transaction.
+10,SHIPMENTNO,No,INTEGER,Yes,The shipment number on the transaction.
+11,TRANSDATE,No,DATETIME,No,The transaction date.
+12,SUPPLIERNO,No,INTEGER,Yes,The ID number of the supplier (Creditor) account.
+13,PACKSLIP,No,VARCHAR(50),No,The packing slip reference.
+14,REVERSALSTATUS,No,INTEGER,No,The reversal status. Will be one of:0 = Normal1 = Reversed2 = Reversal
+15,RELATED_SEQNO,No,INTEGER,No,"For reversals, this field contains the source Inwards Goods ID number."
+16,COSTED_PERIOD_SEQNO,No,INTEGER,No,The period to which the receipt belongs.
+17,SESSION_ID,No,INTEGER,No,The session ID for the record.
+18,LASTINVSEQNO,No,INTEGER,No,The ID number of the last invoice generated against the receipt.

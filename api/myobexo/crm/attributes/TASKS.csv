@@ -1,0 +1,43 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the activity.
+2,PARENTSEQNO,No,INTEGER,No,Identifies the activity that is the ancestor in a chain of recurrences.
+3,EVENTTYPE,No,INTEGER,No,"A number indicating the type of event, where 0 is for a normal activity and all other numbers are used reserved for recurring events."
+4,START_DATETIME,No,DATETIME,No,The date and time when the activity starts.
+5,END_DATETIME,No,DATETIME,No,The date and time when the activity ends.
+6,OPTIONS,No,INTEGER,No,2 = All day event3 = Not an all day event6 = Not an all day event with reminder7 = All day event with reminder
+7,SUBJECT,No,VARCHAR(60),No,The subject of the activity.
+8,COMPANYID,No,VARCHAR(50),No,The ID number of the company the activity relates to. Will the ACCNO preceded by a letter:D = Debtor accountC = Creditor accountP = Prospect (Non Account)
+9,CONTACTSEQNO,No,INTEGER,No,The ID number of the contact the activity is linked to.
+10,OPPORTUNITYSEQNO,No,INTEGER,No,The ID number of the Opportunity the activity is linked to.
+11,RECURRENCEINDEX,No,INTEGER,No,Specifies which one of the activity's recurrences this is.
+12,RECURRENCEINFO,No,IMAGE,No,Contains information about the recurrences of the activity.
+13,ASSIGNED_TO,No,INTEGER,No,The ID number of the staff member who the activity has been assigned to.
+14,ASSIGNED_BY,No,INTEGER,No,The ID number of the staff member who assigned the activity.
+15,REMINDERDATE,No,DATETIME,No,The date and time when a reminder for the activity should be displayed.
+16,REMINDERMINUTES,No,INTEGER,No,"When the reminder should be displayed, specified as the number of minutes before the start of the activity."
+17,COMPLETED,No,CHAR(1),Yes,"This field contains ""Y"" if the activity has been completed."
+18,COMPLETED_DATETIME,No,DATETIME,No,The date and time when the activity was completed.
+19,STATE,No,INTEGER,No,The availability status to be displayed while the activity is active. Will be one of:0 = Free1 = Tentative2 = Busy3 = Out of office
+20,TYPE,No,INTEGER,No,The ID number of the activity's type (links to TASK_TYPES).
+21,STATUS,No,INTEGER,No,The ID number of the activity's status (links to TASK_STATUSES).
+22,PRIORITY,No,VARCHAR(20),No,"The priority given to the activity. Can be ""Low"", ""Normal"" or ""High""."
+23,LABELCOLOR,No,INTEGER,No,The colour value for the colour used to highlight the activity on calendars.
+24,ACTUALSTART,No,DATETIME,No,The actual datetime stamp when the activity was started. For recurring events it contains the start date of the first occurrence
+25,ACTUALFINISH,No,DATETIME,No,The actual datetime stamp when the activity was finished.
+26,CREATEDBY,No,INTEGER,No,The ID number of the staff member who has created the activity.
+27,CREATEDATE,No,DATETIME,Yes,The date and time when the activity was created.
+28,MODIFIEDBY,No,INTEGER,No,The ID number of the staff member who last modified the activity.
+29,MODIFIEDDATE,No,DATETIME,No,The date and time when the activity was last edited.
+30,OUTLOOKENTRYID,No,VARCHAR(255),No,"If the activity has been synched to MS Outlook, this field contains the ID number of the corresponding task or appointment in Outlook."
+31,RESOURCEALLOC_SEQNO,No,INTEGER,No,The number ID of the resource allocation the activity has been created for (links to JOB_RESOURCE_ALLOCATION.SEQNO)
+32,DETAILS,No,VARCHAR(5500),No,Details relating to the activity.
+33,ACTIVITY_TYPE,No,INTEGER,Yes,"The field contains 0 if the activity is an appointment, or 1 if it is a task."
+34,COMPLETED_PERCENT,No,FLOAT(53),Yes,The percentage completion amount for the activity (only used for tasks).
+35,DELETED_FLAG,No,CHAR(1),Yes,"This field contains ""Y"" if the activity has been deleted."
+36,SYNC_ACTIVITY,No,CHAR(1),Yes,"This field contains ""Y"" if the activity will be synced to MS Outlook."
+37,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,The ID number of the campaign wave the activity relates to (links to CAMPAIGN_WAVE.SEQNO).
+38,CAMPAIGN_SEQNO,No,INTEGER,No,The ID number of the campaign the activity relates to (links to CAMPAIGN.SEQNO).
+39,JOBNO,No,INTEGER,Yes,The ID number of the job the activity relates to (links to JOBCOST_HDR.JOBNO).
+40,SU_SEQNO,No,INTEGER,Yes,The ID number of the serviceable unit the activity relates to (links to SU_MAIN.SEQNO).
+41,SUBS_HDR_SEQNO,No,INTEGER,Yes,The ID number of the subscription the activity relates to (links to SUBS_HDR.SEQNO)
+42,SOURCEID,No,INTEGER,No,"For recurring events, this is the ID number of the master/source event."

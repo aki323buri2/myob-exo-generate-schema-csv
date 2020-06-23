@@ -1,0 +1,54 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique transaction line ID.
+2,ACCNO,No,INTEGER,No,The account number of the Creditor that the transaction belongs to.
+3,INVNO,No,VARCHAR(20),No,The invoice number.
+4,HDR_SEQNO,No,INTEGER,No,The SEQNO of the record in the CR_TRANS table that this record related to.
+5,STOCKCODE,No,VARCHAR(23),No,Code of the Stock item on this line.
+6,DESCRIPTION,No,VARCHAR(40),No,Description of the Stock item on this line.
+7,QUANTITY,No,FLOAT(53),No,The quantity for this line.
+8,UNITPRICE,No,FLOAT(53),No,The unit price of the Stock item on this line.
+9,DISCOUNT,No,FLOAT(53),No,The percentage discount for the Stock item on this line.
+10,DISCOUNTAMT,No,FLOAT(53),No,The discount amount on a stock line.
+11,DISCOUNTPCT,No,FLOAT(53),No,The discount percentage on a stock line.
+12,ANALYSIS,No,INTEGER,No,"GL code for the Stock line. Can be overridden. The visibility of this column onscreen is controlled by the profile ""Enable display and override of GL code from stock item""."
+13,LOCATION,No,INTEGER,No,"The location that the Stock item will be moved out of. Generally, lines inherit the location from the invoice header."
+14,UNITPRICE_INCTAX,No,FLOAT(53),No,"The unit price of the Stock item on this line, inclusive of tax."
+15,UPDATE_STOCK,No,CHAR(1),No,"If this field is set to 'Y', stock movements are created via the trigger CR_INVLINES_POST. The field is then set to 'T'."
+16,JOBCODE,No,VARCHAR(15),No,"If the line originates from a job, the job's code is recorded in this field."
+17,CURRENCYNO,No,INTEGER,No,The ID number of the currency used on the line.
+18,EXCHRATE,No,FLOAT(53),No,The exchange rate for the line at the time of the transaction.
+19,TAXRATE,No,FLOAT(53),No,The percentage tax rate on the line at the time of the transaction.
+20,CODETYPE,No,CHAR(1),No,The type of code on the line. Will be one of:G - GL codeS - Stock code
+21,TAXRATE_NO,No,INTEGER,No,The ID number of the tax rate used by the transaction.
+22,LINETOTAL_TAX,No,FLOAT(53),No,The tax total for the line.
+23,LINETAX_OVERRIDDEN,No,CHAR(1),No,Contains 'Y' if the tax on the line has been manually modified.
+24,LINE_SOURCE,No,INTEGER,No,"The source SEQNO of the line, if it originated from a Sales Order or job."
+25,LINETOTAL,No,AS,No,"A computed field containing the total value for the line, excluding tax."
+26,LINETOTAL_INCTAX,No,AS,No,"A computed field containing the total value for the line, including tax."
+27,JOBNO,No,INTEGER,No,"If the line originates from a job, the job's ID number is recorded in this field."
+28,COST_TYPE,No,INTEGER,No,This field only applies if EXO Job Costing is installed. It identifies the Cost Type that the transaction belongs to.
+29,COST_GROUP,No,INTEGER,No,This field only applies if EXO Job Costing is installed. It identifies the Cost Group that the transaction belongs to.
+30,BRANCHNO,No,INTEGER,No,The branch number. Lines generally inherit the branch specified on the invoice header.
+31,GLACCNO,No,INTEGER,No,GL account number.
+32,GLSUBACC,No,INTEGER,No,SL sub-account number.
+33,BATCHCODE,No,VARCHAR(20),No,"The batch code on the line. The ""Enable stock batch codes"" Company-level profile setting must be enabled to be able to use batch codes."
+34,CRINVLINEID,No,INTEGER,No,"A unique ID for the invoice line, which should be used to link to other tables. Every time an invoice is edited, the lines are essentially removed and reinserted again, which changes the SEQNO. However, the CRINVLINEID field retains its value. Hence, any relationships built on this field are still valid in such a scenario."
+35,IGRLINESEQNO,No,INTEGER,No,ID number of the Inwards Goods receipt line (if the source of the line is from Inwards Goods).
+36,LINETYPE,No,INTEGER,No,This field indicates the type of line. Will be one of:0 = Normal stock line1 = BOM header line2 = BOM component line4 = Narrative line5 = GL code
+37,KITSEQNO,No,INTEGER,No,A Bill of Materials SEQNO used to group BOM lines together.
+38,KITCODE,No,VARCHAR(23),No,"The Bill of Materials code, if the line is part of a BOM."
+39,LINKED_STOCKCODE,No,VARCHAR(23),No,The physical stock unit.
+40,LINKED_QTY,No,FLOAT(53),No,The physical stock unit quantity.
+41,BOMTYPE,No,CHAR(1),No,The type of Bill of Materials that the line relates to:N = Normal stock itemB = BuildK = KitL = Lookup
+42,SHOWLINE,No,CHAR(1),No,"This field applies to Bills of Materials, and is used by Clarity to determine if the line can be printed."
+43,LINKEDSTATUS,No,CHAR(1),No,Will be one of:S = StockedL = LookupN = Not applicable
+44,BOMPRICING,No,CHAR(1),No,How Bills of Materials are priced. Will be one of:C = Pricing by ComponentT = Pricing by total
+45,NARRATIVE_SEQNO,No,INTEGER,No,The SEQNO for the narrative on this line.
+46,INTERCO_COMPANYNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Company ID number.
+47,INTERCO_BATCH_DESC,No,VARCHAR(80),No,This field only applies if EXO InterCompany is used. It contains the batch description.
+48,INTERCO_DR_BRANCHNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Debtor branch number.
+49,INTERCO_DR_ACCNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Debtor GL account number.
+50,INTERCO_DR_SUBACCNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Debtor GL sub-account number.
+51,INTERCO_CR_BRANCHNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Creditor branch number.
+52,INTERCO_CR_ACCNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Creditor GL account number.
+53,INTERCO_CR_SUBACCNO,No,INTEGER,No,This field only applies if EXO InterCompany is used. It contains the Creditor GL sub-account number.

@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the transfer request
+2,FROM_LOC,No,INTEGER,No,The ID number of the location that stock is to be transferred from.
+3,TO_LOC,No,INTEGER,No,The ID number of the location that stock is to be transferred to.
+4,REQUEST_DATE,No,DATETIME,No,The date and time when the request was created.
+5,REQUIRE_DATE,No,DATETIME,No,The date and time that the request must be completed by.
+6,STAFFNO,No,INTEGER,No,The ID number of the staff member assigned to the request.
+7,STATUS,No,INTEGER,No,The status of the stock transfer. Will be one of:0 = New Request1 = Picking2 = In Transit3 = Complete
+8,TRANSTYPE,No,INTEGER,No,The ID number of the Stock Request Type (from STOCK_REQUESTTYPES).
+9,CUSTORDERNO,No,VARCHAR(20),No,"The customer order number, if there is one."
+10,NARRATIVE_SEQNO,No,INTEGER,No,The ID number for the narrative on this request.
+11,ORIG_SEQNO,No,INTEGER,No,

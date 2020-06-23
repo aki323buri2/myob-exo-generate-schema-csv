@@ -1,0 +1,59 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique transaction ID.
+2,POSTTIME,No,DATETIME,No,The actual date/time the transaction was posted at.
+3,TRANSDATE,No,DATETIME,No,The date/time mentioned in the transaction itself.
+4,ACCNO,No,INTEGER,No,"The ID number of the Creditor account against which the transaction was generated. If the transaction is against a branch account, this field is set to the head account's ACCNO."
+5,TRANSTYPE,No,INTEGER,No,"1 = Postive amount is Invoice, Negative amount is Credit;4 = Negative amount is Payment, Positive amount is Refund"
+6,INVNO,No,VARCHAR(20),No,The invoice number.
+7,REF1,No,VARCHAR(20),No,"For payments, this field contains the payment type, e.g. CASH, CHEQUE.For invoices, this field contains whatever was entered into the Order no field."
+8,REF2,No,VARCHAR(20),No,"For payments, this field contains the payment reference/cheque number.For invoices, this field contains the ID number of the job selected for the Job no field."
+9,REF3,No,VARCHAR(30),No,"For payments, this field contains the text 'PAYMENT'.For invoices, this field contains the text 'Invoice'."
+10,NAME,No,VARCHAR(70),No,The ID number and name of the Creditor account against which the transaction was generated.
+11,SUBTOTAL,No,FLOAT(53),No,"The tax-exclusive amount, in the currency of the Creditor account."
+12,TAXTOTAL,No,FLOAT(53),No,The tax total in the currency of the Creditor account.
+13,TAXINC,No,CHAR(1),No,"Y = tax inclusive, N = tax exclusive."
+14,ANALYSIS,No,VARCHAR(12),No,"For payments, this field holds the payment type."
+15,ALLOCATEDBAL,No,FLOAT(53),No,The amount that has been allocated.
+16,ALLOCATED,No,CHAR(1),No,0 = Unallocated or partially allocated.1 = Allocated in the current period.2 = Allocated in any prior period.
+17,ALLOCAGE,No,INTEGER,No,The age in which the transaction was allocated.
+18,SALESNO,No,INTEGER,No,The ID number of the salesperson assigned to the transaction.
+19,GLPOSTED,No,CHAR(1),No,Y = the transaction has been posted to GL.N = the transaction has not been posted to GL.
+20,GLCODE,No,INTEGER,No,"For payments, this field contains the GL code of the bank account."
+21,DUEDATE,No,DATETIME,No,The payment due date.
+22,BRANCH_ACCNO,No,INTEGER,No,Only used in head account/branch account scenarios. This field contains the account number of the branch account.
+23,CONTACT_SEQNO,No,INTEGER,No,The SEQNO of the Contact assigned to this transaction.
+24,CURRENCYNO,No,INTEGER,No,The ID of the currency being used for the transaction.
+25,EXCHRATE,No,FLOAT(53),No,"The exchange rate being used for the transaction, as determined by the currency in use."
+26,GLSUBCODE,No,INTEGER,No,"For payments, this field contains the GL subcode of the bank account."
+27,BRANCHNO,No,INTEGER,No,The branch ID number.
+28,PO_SEQNO,No,INTEGER,No,"For invoices generated from Purchase Orders, this field holds the SEQNO of the Purchase Order."
+29,TAXRATE,No,FLOAT(53),No,"The tax rate used by the transaction, e.g. 12.5 = 12.5%."
+30,TAXRATE_NO,No,INTEGER,No,The ID number of the tax rate used by the transaction.
+31,PREV_PERIOD_OPEN,No,FLOAT(53),No,Balance as at the start of the previous period.
+32,PAYSTATUS,No,INTEGER,No,The pay status of the transaction. Will be one of:-1 = HELD0 = NOT RELEASED1 = RELEASED
+33,AUTHORISED,No,CHAR(1),No,"If this field contains 'Y', the transaction was authorised"
+34,AUTHORISEDBY,No,INTEGER,No,The ID number of the staff member who authorised the transaction.
+35,AUTH_DATE,No,DATETIME,No,The time and date when the transaction was authorised.
+36,UNREALISED_GAINS_GL_BATCH,No,INTEGER,Yes,The batch number for the unrealised gains journal that the transaction is a part of. Reset to zero when the journal is reversed.
+37,TAXRETCODE,No,VARCHAR(15),No,The tax return code for the GST return that this transaction applies to.
+38,N_TOTVENDISC,No,FLOAT(53),No,The total vendor discount.
+39,RELEASEDAMT,No,FLOAT(53),No,The released amount (applies to the Creditors Payment Processor).
+40,PURCH_ACCNO,No,INTEGER,No,"If the transaction is against a branch account, this field holds the account number for the branch account and the ACCNO field holds the account number of the head account. In all other cases, this field and the ACCNO field always have same number."
+41,RECEIPTNO,No,INTEGER,No,"If the transaction is sourced from Inwards Goods, this field contains the Inwards Goods receipt ID."
+42,N_TOTVENDISC_EXCLTAX,No,FLOAT(53),No,"The total vendor discount, excluding tax."
+43,GLBATCHNO,No,INTEGER,No,The batch number for the journals that have sourced from this transaction.
+44,TOAGEDBAL,No,INTEGER,No,Only applicable in case of balance brought forward accounts payments and adjustments. Used in the trigger POST_CR_TRANS to refresh the aged balances on the account.0 = current1 = 1 months2 = 2 months3 = 3 months4 = from oldest
+45,NARRATIVE_SEQNO,No,INTEGER,No,ID number of the narrative attached to the transaction.
+46,IMAGE_URL,No,VARCHAR(80),No,URL of the image.
+47,MANUAL_ROUNDING,No,FLOAT(53),Yes,This field contains the manual rounding amount (if any).
+48,AMOUNT,No,AS,No,"The amount of the transaction, including tax, in the currency of the Creditor account."
+49,PREV_PERIOD_CLOSE,No,FLOAT(53),No,Balance as at the end of the previous period.
+50,TXID,No,VARBINARY(256),No,"A unique transaction ID number, populated by the trigger TRG_TXID_CR_TRANS. Used to separate native transactions inserted by EXO Business from other transactions."
+51,PTNO,No,INTEGER,No,The payment number.
+52,SESSION_ID,No,INTEGER,No,The session ID number.
+53,PERIOD_SEQNO,No,INTEGER,Yes,ID number of the period that the transaction is in.
+54,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+55,AGE,No,AS,No,The transaction's age. This is calculated based on PERIOD_SEQNO.
+56,BANKNO,No,INTEGER,No,The Bank ID number (entered via payment entry).
+57,PP_BATCHREF,No,VARCHAR(20),No,This field contains the Creditors Payment Processor batch reference.
+58,CITP,No,CHAR(1),Yes,"Australian companies only. This field is set to 'Y' if the transaction should be tracked for reporting to the ATO on the ""Taxable payments annual report""."

@@ -1,0 +1,20 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the campaign wave.
+2,WAVE_NO,No,INTEGER,No,An ID number that uniquely identifies the campaign wave within the campaign.
+3,CAMPAIGN_SEQNO,No,INTEGER,Yes,The ID number of the campaign that the campaign wave is part of.
+4,DESCRIPT,No,VARCHAR(50),No,A short written description of the campaign wave.
+5,STARTDATE,No,DATETIME,No,The start date for the period that the campaign wave runs over.
+6,ENDDATE,No,DATETIME,No,The end date for the period that the campaign wave runs over.
+7,COMMUNICATION_METHOD,No,INTEGER,No,This field specifies the Communication Method selected for the campaign wave. Will be one of:0 = no Communication Method selected1 = Mailshot Process2 = Bulk Activity Creation3 = Execute SQL4 = Social Media Post5 = Export List6 = Execute External Program
+8,TRACKER_KEY,No,VARCHAR(150),No,"For campaign waves with the ""Mailshot Process"" Communication Method, this field contains any text entered into the Tracker ID field."
+9,OPT_IN_URL,No,VARCHAR(150),No,"For campaign waves with the ""Mailshot Process"" Communication Method, this field contains any text entered into the Opt in URL field."
+10,OPT_OUT_URL,No,VARCHAR(150),No,"For campaign waves with the ""Mailshot Process"" Communication Method, this field contains any text entered into the Opt out URL field."
+11,LANDING_SITE,No,VARCHAR(150),No,"For campaign waves with the ""Mailshot Process"" Communication Method, this field contains any text entered into the Landing site field."
+12,PROCESSED,No,CHAR(1),No,This field is set to 'Y' if the campaign wave's Processed flag is ticked.
+13,COMPLETE,No,CHAR(1),No,This field is set to 'Y' if the campaign wave's Complete flag is ticked.
+14,DOC_BATCH_HDR_SEQNO,No,INTEGER,No,"For campaign waves with the ""Mailshot Process "" Communication Method that include email attachments, this field contains the ID number of the documentation batch in the DOC_BATCH_HDR table that relates to the attachments."
+15,SOCIAL_MEDIA_TEXT,No,VARCHAR(500),No,"For campaign waves with the ""Social Media Post"" Communication Method, this field contains the text that is posted to the social media network(s)."
+16,FACEBOOK_POST_ID,No,VARCHAR(100),No,"For campaign waves with the ""Social Media Post"" Communication Method, this field contains the ID number of the Facebook post."
+17,TWITTER_POST_ID,No,VARCHAR(100),No,"For campaign waves with the ""Social Media Post"" Communication Method, this field contains the ID number of the Twitter post."
+18,LINKEDIN_POST_DATE,No,DATETIME,No,"For campaign waves with the ""Social Media Post"" Communication Method, this field contains the date of the LinkedIn post."
+19,SETTINGS,No,VARCHAR(4096),No,"This field is used by campaign waves where the Communication Method is ""Execute SQL"" or ""Execute External Program""."

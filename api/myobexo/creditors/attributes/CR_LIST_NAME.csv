@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,LIST_NO,Yes,INTEGER,Yes,A unique ID number for the list.
+2,LIST_NAME,No,VARCHAR(50),No,The name of the list.

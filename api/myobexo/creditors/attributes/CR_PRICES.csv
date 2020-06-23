@@ -1,0 +1,13 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the price record.
+2,ACCNO,No,INTEGER,No,The Creditor account that the price rule is defined for. Has the value -1 if the price rule belongs to a generic price policy.
+3,STOCKCODE,No,VARCHAR(23),No,"If the price rule is defined for an individual Stock item, this field stores the item's stockcode."
+4,STOCKPRICEGROUP,No,INTEGER,No,"If the price rule is defined against a price group rather than an individual product, this field stores the Stock price group."
+5,PRICE,No,FLOAT(53),No,The substitute price to be applied to the stockcode/group.
+6,DISCOUNT,No,FLOAT(53),No,"The percentage discount to be applied, as per a price rule."
+7,STARTDATE,No,DATETIME,No,Date from which the price rule is active.
+8,STOPDATE,No,DATETIME,No,Date to which the price rule remains active.
+9,MINQTY,No,FLOAT(53),No,Minimum quantity for the price rule to apply.
+10,ISACTIVE,No,CHAR(1),No,This field is set to 'Y' if the pricing rule is active.
+11,NARRATIVE_SEQNO,No,INTEGER,No,Not used.
+12,FIXED,No,CHAR(1),Yes,This field contains 'Y' if the rule is a fixed price rule.

@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,CATNO,Yes,INTEGER,Yes,A unique ID number for the Job Category.
+2,CATDESC,No,VARCHAR(40),No,A descriptive name for the category.
+3,DISP_COLOUR,No,VARCHAR(15),No,Not used.
+4,SHORTCODE,No,VARCHAR(3),No,A short (max. three characters) ID code for the category.
+5,GANTTBAR_COLOUR,No,INTEGER,No,A colour code that determines how jobs of this category should appear on the diagram on the Job Overview tab.

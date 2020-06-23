@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Allowance Type.
+2,ALLOWANCE_ID,No,VARCHAR(5),No,A short ID code for the type.
+3,ALLOWANCE_FACTOR,No,INTEGER,No,
+4,DESCRIPTION,No,VARCHAR(50),No,Descriptive text for the Allowance Type.
+5,UNIT_OF_MEASURE,No,VARCHAR(50),No,"The unit of measure that the type uses. Will be HOURS, KILOMETERS or CURRENCY."
+6,PAYROLL_ALLOWANCE_ID,No,VARCHAR(5),No,An ID number for mapping Allowances and Deductions with those defined in your payroll via your timecard data file.

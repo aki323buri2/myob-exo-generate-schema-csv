@@ -1,0 +1,27 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STOCKCODE,No,VARCHAR(23),Yes,The stock item's ID code.
+2,LOCNO,No,INTEGER,No,The ID number of the stock item's location (from STOCK_LOCATIONS).
+3,DESCRIPTION,No,VARCHAR(40),No,The stock item's description.
+4,ACCNO,No,INTEGER,No,The ID number of the stock item's supplier (from CRACCS).
+5,STOCKGROUP,No,INTEGER,No,The ID number of the stock item's Primary Stock Group.
+6,MINSTOCK,No,FLOAT(53),No,The minimum stock level for the stock item.
+7,MAXSTOCK,No,FLOAT(53),No,The maximum stock level for the stock item.
+8,INSTOCKQTY,No,FLOAT(53),No,Physical stock.
+9,PURCHORDQTY,No,FLOAT(53),No,Incoming stock.
+10,SALESORDQTY,No,FLOAT(53),No,Committed stock.
+11,VIRTSTOCK,No,FLOAT(53),No,Free stock taking into account the incoming and committed stock.
+12,CALCREORD,No,FLOAT(53),No,"Reorder quantity, calculated taking into account minimum stock, maximum stock and available free stock."
+13,ACTUALREORD,No,FLOAT(53),No,Actual reorder quantity for the stock item.
+14,SALES0,No,FLOAT(53),No,Current month sales quantity for the stock item.
+15,SALES1,No,FLOAT(53),No,Sales quantity for the stock item for the month prior to current month.
+16,SALES2,No,FLOAT(53),No,Sales quantity for the stock item two months prior to current month.
+17,SALES3,No,FLOAT(53),No,Sales quantity for the stock item three months prior to current month.
+18,SALES4,No,FLOAT(53),No,Sales quantity for the stock item four months prior to current month.
+19,SALES5,No,FLOAT(53),No,Sales quantity for the stock item five months prior to current month.
+20,SALES6,No,FLOAT(53),No,Sales quantity for the stock item six months prior to current month.
+21,SALES7,No,FLOAT(53),No,Sales quantity for the stock item seven months prior to current month.
+22,SALES8,No,FLOAT(53),No,Sales quantity for the stock item eight months prior to current month.
+23,SALES9,No,FLOAT(53),No,Sales quantity for the stock item nine months prior to current month.
+24,SALES10,No,FLOAT(53),No,Sales quantity for the stock item ten months prior to current month.
+25,SALES11,No,FLOAT(53),No,Sales quantity for the stock item eleven months prior to current month.
+26,SALES12,No,FLOAT(53),No,Sales quantity for the stock item twelve months prior to current month.

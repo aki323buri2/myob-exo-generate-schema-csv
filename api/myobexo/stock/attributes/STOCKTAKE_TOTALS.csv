@@ -1,0 +1,22 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the stocktake line.
+2,STOCKCODE,No,VARCHAR(23),No,The ID code of the stock item being counted.
+3,DESCRIPTION,No,VARCHAR(40),No,The description of the stock item being counted.
+4,LOCATION,No,INTEGER,No,The ID number of the location where the stock was counted.
+5,BINCODE,No,VARCHAR(12),No,The Bin Code for the stock item being counted.
+6,SYSTEMQTY,No,FLOAT(53),No,The quantity recorded in the EXO Business system for the item at this location.
+7,COUNTQTY,No,FLOAT(53),No,The physical count taken for the item at this location.
+8,VARIANCE,No,FLOAT(53),No,The difference between the system quantity and the counted quantity. Populated automatically when the Stocktake Variance Report is run for the Stock Take utility.
+9,SUPPLIERNO,No,INTEGER,No,The ID number of the Creditor who supplies the stock item.
+10,STOCKGROUP,No,INTEGER,No,The Stock Group that the stock item belongs to.
+11,BATCHCODE,No,VARCHAR(20),No,The batchcode for the stock item.
+12,UNITCOST,No,FLOAT(53),No,"The unit cost for the stock item. Unit costs are only entered during stock take if the ""Initialise cost prices"" stock take option is enabled."
+13,STOCKGROUP2,No,INTEGER,No,The Alternative Stock Group
+14,HAS_BN,No,CHAR(1),Yes,This field is set to 'Y' if the stock item is batch tracked.
+15,SERIALNO_TYPE,No,INTEGER,No,How the stock item is serialised. Will be one of:0 = Not Serialised1 = Fully Tracked (In & Internal & Out)2 = Creditor & Internal (In & Internal)3 = Debtor Only (Out only)4 = Creditor & Debtor (In & Out Only)5 = Creditor Only (In Only)6 = Internal & Debtor (Internal & Out only)7 = Internal Only
+16,HAS_EXPIRY,No,CHAR(1),Yes,This field is set to 'Y' if the stock item has an expiry date.
+17,EXPIRY_DAYS,No,INTEGER,No,The number of days until the stock item batch expires.
+18,EXPIRY_DATE,No,DATETIME,No,The date when the stock item batch expires.
+19,STOCKGROUP_REPC,No,VARCHAR(15),No,The report code of the stock item's Primary Stock Group.
+20,STOCKGROUP2_REPC,No,VARCHAR(15),No,The report code of the stock item's Secondary Stock Group.
+21,BARCODE1,No,VARCHAR(30),No,Barcode/alternate code 1.

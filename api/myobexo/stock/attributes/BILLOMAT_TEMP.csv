@@ -1,0 +1,14 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,TRANSDATE,No,DATETIME,No,The date and time when the transaction occurred.
+3,COMPONENTLOCATION,No,INTEGER,No,The location of the BOM component stock item.
+4,PRODUCTLOCATION,No,INTEGER,No,The location of the BOM product stock item.
+5,REFERENCECODE,No,VARCHAR(30),No,A reference code for the record.
+6,BATCHQUANTITY,No,FLOAT(53),No,The batch quantity on the record.
+7,STAFFNO,No,INTEGER,Yes,The ID number of the staff member on the record.
+8,BILLCODE,No,VARCHAR(23),No,The BOM code.
+9,STOCKCODE,No,VARCHAR(23),No,The stock code of the BOM component item.
+10,QUANTITY,No,FLOAT(53),No,The quantity of the BOM component item.
+11,UNITPRICE,No,FLOAT(53),No,The unit price of the BOM component item.
+12,KITSEQNO,No,INTEGER,No,The ID number of the BOM.
+13,BOMBATCHSEQNO,No,INTEGER,No,The BOM batch ID number.

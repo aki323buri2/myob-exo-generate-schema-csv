@@ -1,0 +1,49 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,HDR_SEQNO,No,INTEGER,Yes,The ID number of the header Inwards Goods record.
+3,PO_NUMBER,No,INTEGER,Yes,The ID number of the related Purchase Order header.
+4,PO_LINE_NUM,No,INTEGER,Yes,The ID number of the related Purchase Order line.
+5,SHIPMENTNO,No,INTEGER,Yes,The shipment number on the record.
+6,LOCNO,No,INTEGER,Yes,The ID of the location on the record.
+7,BATCHNO,No,INTEGER,Yes,The batch number on the record.
+8,BRANCHNO,No,INTEGER,Yes,The ID number of the branch on the record.
+9,JOBNO,No,INTEGER,Yes,"If the order originates from a job, this field records the ID number of the job."
+10,COST_TYPE,No,INTEGER,Yes,"If the order originates from a job, this field records the ID number of the job's cost type."
+11,COST_GROUP,No,INTEGER,Yes,"If the order originates from a job, this field records the ID number of the job's cost group."
+12,STOCKCODE,No,VARCHAR(23),No,The stock code of the stock item on the line.
+13,DESCRIPTION,No,VARCHAR(40),No,The description of the stock item on the line.
+14,QUANTITY,No,FLOAT(53),No,The receipt quantity on the line.
+15,UNITPRICE,No,FLOAT(53),No,The unit price of the stock item on the line.
+16,DUTYCOST,No,FLOAT(53),No,The duty cost on the line.
+17,FIXEDCOST,No,FLOAT(53),No,The fixed cost on the line.
+18,LCOST,No,FLOAT(53),Yes,The landed cost on the line.
+19,FXCOST,No,FLOAT(53),Yes,The cost on the line in local currency.
+20,INV_QUANT,No,FLOAT(53),Yes,The invoiced quantity on the line.
+21,BATCHCODE,No,VARCHAR(20),No,The batch code on the line.
+22,EXPIRY_DATE,No,DATETIME,No,"The expiry date of the stock item, if there is one."
+23,SUPPLIERCODE,No,VARCHAR(50),No,The supplier code on the line.
+24,PURCHPACKQUANT,No,FLOAT(53),Yes,The purchase pack quantity on the line.
+25,PURCHPACKPRICE,No,FLOAT(53),Yes,The purchase pack price on the line.
+26,EXCHRATE,No,FLOAT(53),No,The exchange rate on the line.
+27,LINETYPE,No,INTEGER,No,The line type. Will be one of:0 = Normal line1 = BOM header2 = BOM component4 = Comment
+28,KITSEQNO,No,INTEGER,No,The ID number of the Bill of Materials on the line.
+29,KITCODE,No,VARCHAR(23),No,The ID code of the Bill of Materials on the line.
+30,LINKED_STOCKCODE,No,VARCHAR(23),No,The linked stock item code on the line.
+31,LINKED_QTY,No,FLOAT(53),No,The linked quantity on the line.
+32,BOMTYPE,No,CHAR(1),No,The Bill of Materials type on the line. Will be one of:N = NormalK = KitB = BuildL = Linked
+33,SHOWLINE,No,CHAR(1),No,This field is used to control the visibility of the line on Clarity forms.
+34,LINKEDSTATUS,No,CHAR(1),No,"S = Stock item, L = Lookup item."
+35,BOMPRICING,No,CHAR(1),No,"C = BOM priced by Component, T = BOM priced by total, N = Normal"
+36,COMPLETE,No,CHAR(1),No,This field contains 'Y' if the inwards goods receipt has been completed (and therefore cannot be altered).
+37,DISCOUNT,No,FLOAT(53),No,The discount percentage on the line.
+38,INV_FC_COST,No,FLOAT(53),No,The cost as on the related invoice.
+39,INV_EXCHRATE,No,FLOAT(53),No,The exchange rate applicable to the invoice line.
+40,INV_COST,No,FLOAT(53),No,"The cost as on the related invoice, in local currency."
+41,INV_COMPLETE,No,CHAR(1),No,This field contains 'Y' if the invoice is complete.
+42,VAR_GLPOSTED,No,CHAR(1),No,This field contains 'Y' if variance has been posted against this line.
+43,FX_VAR,No,FLOAT(53),No,The foreign exchange variance applicable to the line at the time of invoicing.
+44,INV_TRANSDATE,No,DATETIME,No,The transaction date of the invoice related to this line.
+45,INWGLID,No,INTEGER,No,An ID number for the inwards goods lines record.
+46,PERIOD_SEQNO,No,INTEGER,Yes,The ID number of the period on the invoice linked to this record.
+47,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+48,INV_AGE,No,AS,No,The invoice's age. This is calculated based on PERIOD_SEQNO.

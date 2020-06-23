@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the narrative.
+2,NARRATIVE,No,VARCHAR(4096),No,The text of the narrative.

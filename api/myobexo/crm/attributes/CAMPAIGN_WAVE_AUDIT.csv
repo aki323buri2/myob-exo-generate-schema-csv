@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,No,INTEGER,Yes,A unique ID number for the audit line.
+2,CAMPAIGN_WAVE_SEQNO,No,INTEGER,Yes,The ID number of the campaign wave.
+3,CONTACT_SEQNO,No,INTEGER,Yes,The ID number of the Contact that the wave was sent to.
+4,LOGDATETIME,No,DATETIME,Yes,The date and time that the campaign wave was sent.
+5,COMMUNICATION_METHOD,No,INTEGER,No,The campaign wave's communication method. Will be one of:0 = no Communication Method selected1 = Mailshot Process2 = Bulk Activity Creation3 = Execute SQL4 = Social Media Post5 = Export List6 = Execute External Program
+6,EXECUTE_TYPE,No,VARCHAR(15),No,"How communication was sent to the contact - ""EMAILED"" or ""PRINTED""."

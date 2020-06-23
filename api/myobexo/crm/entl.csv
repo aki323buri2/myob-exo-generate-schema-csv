@@ -1,0 +1,40 @@
+,Name,Primary key columns,Number of columns,Comment
+1,CAMPAIGN,SEQNO,15,This table contains details of all marketing campaigns in EXO CRM.
+2,CAMPAIGN_CONTACT_LISTS,,3,This table contains records of the contact lists that are assigned to campaigns.
+3,CAMPAIGN_HIST,SEQNO,7,This table contains details of History Notes on campaigns.
+4,CAMPAIGN_STAGE,SEQNO,9,This table records details of the Campaign Stages that are assigned to campaigns in EXO CRM.
+5,CAMPAIGN_STAGE_CONSTRAINT,SEQNO,7,This table contains details of Campaign Stage workflow constraints.
+6,CAMPAIGN_TYPE,,2,This table contains details of the campaign types used by campaigns in EXO CRM.
+7,CAMPAIGN_WAVE,SEQNO,19,This table contains details of all campaign waves setup in EXO Business CRM.
+8,CAMPAIGN_WAVE_AUDIT,,6,This table contains a record of which Contacts each campaign wave was sent to.
+9,CAMPAIGN_WAVE_CONTACT_LISTS,,3,This table contains records of the contact lists that are used by campaign waves.
+10,CONTACTS,SEQNO,68,This table contains information about Contacts.
+11,CONTACT_LIST,SEQNO,11,This table contains details of the contact lists used by EXO CRM.
+12,CONTACT_LIST_ITEM,SEQNO,5,This table contains details of the members of the contact lists used by EXO CRM.
+13,CONTACT_LIST_TYPE,,2,This table contains details of the List Types used by contact lists in EXO CRM.
+14,CRM_BUDGET,SEQNO,17,This table contains details of Sales Team Budgets in EXO CRM.
+15,CRM_BUDGET_EXCLUDED_ACCGROUP2S,,2,This table records any Alternate Account Groups that are excluded from Sales Team Budgets.
+16,CRM_BUDGET_EXCLUDED_ACCGROUPS,,2,This table records any Account Groups that are excluded from Sales Team Budgets.
+17,CRM_BUDGET_EXCLUDED_BRANCHES,,2,This table records any branches that are excluded from Sales Team Budgets.
+18,CRM_BUDGET_EXCLUDED_DR_ACCS,,2,This table records any Debtor accounts that are excluded from Sales Team Budgets.
+19,CRM_BUDGET_EXCLUDED_STAFF,,2,This table records any staff members who are excluded from Sales Team Budgets.
+20,CRM_BUDGET_EXCLUDED_STOCK_GROUP2S,,2,This table records any Stock Groups that are excluded from Sales Team Budgets.
+21,CRM_BUDGET_EXCLUDED_STOCK_GROUPS,,2,This table records any Alternate Stock Groups that are excluded from Sales Team Budgets.
+22,CRM_BUDGET_EXCLUDED_STOCK_ITEMS,,2,This table records any Stock items that are excluded from Sales Team Budgets.
+23,CRM_BUDGET_HDR,SEQNO,5,This table contains header information for Sales Team Budgets in EXO CRM.
+24,CRM_BUDGET_LINE,SEQNO,21,This table contains line information for Sales Team Budgets in EXO CRM.
+25,MANREP_PERIOD,PERIOD_SEQNO,6,This table contains details of the sales periods (years and months) set up in EXO Business Analytics.
+26,OPPORTUNITY,SEQNO,30,This table contains details of all Opportunities used by the EXO CRM module.
+27,OPPORTUNITY_HIST,SEQNO,7,This table contains details of History Notes on Opportunities.
+28,OPPORTUNITY_LEAD,SEQNO,2,This table records all Opportunity Lead Sources.
+29,OPPORTUNITY_LINES,SEQNO,10,This table records line-level information for Opportunities.
+30,OPPORTUNITY_QUOTE,SEQNO,57,This table contains details of the quote lines attached to Opportunities (EXO CRM).
+31,OPPORTUNITY_QUOTE_OPTIONS,SEQNO,5,This table records details of the Quote Options available for Opportunity quotes.
+32,OPPORTUNITY_STAGE,SEQNO,12,This table records all Opportunity Stages.
+33,OPPORTUNITY_STAGE_CONSTRAINT,SEQNO,7,This table contains details of Opportunity workflow constraints.
+34,OPPORTUNITY_TYPE,SEQNO,2,This table records all Opportunity Types.
+35,PERIOD_STATUS,SEQNO,18,This table contains details of the age periods set up in the system.
+36,STAFF,STAFFNO,36,This table stores details of all EXO Business staff members. These are the people who are authorised to log in to and use the EXO Business system.
+37,TASKS,SEQNO,42,This table contains details of all activities (tasks and appointments) in the EXO Business system.
+38,TASK_STATUSES,SEQNO,2,This table contains details of the statues that can be assigned to activities.
+39,TASK_TYPES,SEQNO,2,This table contains the types that can be assigned to activities.

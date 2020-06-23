@@ -1,0 +1,69 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique identifier for the Contact record.
+2,SALUTATION,No,VARCHAR(4),No,"The Contact's preferred salutation, e.g. Mr, Mrs."
+3,FIRSTNAME,No,VARCHAR(30),No,The Contact's first name.
+4,LASTNAME,No,VARCHAR(30),No,The Contact's last/family name.
+5,TITLE,No,VARCHAR(30),No,The Contact's job title.
+6,MOBILE,No,VARCHAR(30),No,The Contact's mobile phone number.
+7,DIRECTPHONE,No,VARCHAR(30),No,The Contact's direct telephone number.
+8,DIRECTFAX,No,VARCHAR(30),No,The Contact's fax number.
+9,HOMEPHONE,No,VARCHAR(30),No,The Contact's home phone number.
+10,EMAIL,No,VARCHAR(60),No,The Contact's email address.
+11,NOTES,No,VARCHAR(4096),No,All notes entered for the Contact on the Notes tab.
+12,ADDRESS1,No,VARCHAR(30),No,Postal address line 1.
+13,ADDRESS2,No,VARCHAR(30),No,Postal address line 2.
+14,ADDRESS3,No,VARCHAR(30),No,Postal address line 3.
+15,ADDRESS4,No,VARCHAR(30),No,Postal address line 4.
+16,ADDRESS5,No,VARCHAR(30),No,Postal address line 5. This line is only available on the Contacts window if the Additional Postal Address Row profile setting is enabled.
+17,POST_CODE,No,VARCHAR(12),No,The Contact's post code.
+18,DELADDR1,No,VARCHAR(30),No,Delivery address line 1.
+19,DELADDR2,No,VARCHAR(30),No,Delivery address line 2.
+20,DELADDR3,No,VARCHAR(30),No,Delivery address line 3.
+21,DELADDR4,No,VARCHAR(30),No,Delivery address line 4.
+22,DELADDR5,No,VARCHAR(30),No,Delivery address line 5.
+23,DELADDR6,No,VARCHAR(30),No,Delivery address line 6.
+24,ISACTIVE,No,CHAR(1),No,Whether the Contact is active (Y) or inactive (N).
+25,ADVERTSOURCE,No,INTEGER,No,The Contact's Advertising Source - corresponds to the SEQNO of the type in the ADVERT_TYPES table.
+26,SALESNO,No,INTEGER,No,The STAFFNO of staff member who is set as the Sales person for the Contact.
+27,FULLNAME,No,AS,No,"The Contact's full name, formed by joining the FIRSTNAME and LASTNAME fields."
+28,COMPANY_ACCNO,No,INTEGER,No,"If the Contact is associated with a company (Debtor, Creditor or Non Account) the company's ID number is recorded here."
+29,COMPANY_ACCTYPE,No,INTEGER,No,"If the Contact is associated with a company (Debtor, Creditor or Non Account) the type of company account is recorded here:1 = Debtor account2 = Creditor account3 = Non Account"
+30,MSN_ID,No,VARCHAR(45),No,The Contact's MSN ID number.
+31,YAHOO_ID,No,VARCHAR(45),No,The Contact's Yahoo! ID number.
+32,SKYPE_ID,No,VARCHAR(45),No,The Contact's Skype ID number.
+33,LAST_UPDATED,No,DATETIME,No,The date and time when the Contact record was last updated.
+34,SUB1,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 1 is ticked on the Marketing tab.
+35,SUB2,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 2 is ticked on the Marketing tab.
+36,SUB3,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 3 is ticked on the Marketing tab.
+37,SUB4,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 4 is ticked on the Marketing tab.
+38,SUB5,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 5 is ticked on the Marketing tab.
+39,SUB6,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 6 is ticked on the Marketing tab.
+40,SUB7,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 7 is ticked on the Marketing tab.
+41,SUB8,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 8 is ticked on the Marketing tab.
+42,SUB9,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 9 is ticked on the Marketing tab.
+43,SUB10,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 10 is ticked on the Marketing tab.
+44,SUB11,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 11 is ticked on the Marketing tab.
+45,SUB12,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 12 is ticked on the Marketing tab.
+46,SUB13,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 13 is ticked on the Marketing tab.
+47,SUB14,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 14 is ticked on the Marketing tab.
+48,SUB15,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 15 is ticked on the Marketing tab.
+49,SUB16,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 16 is ticked on the Marketing tab.
+50,SUB17,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 17 is ticked on the Marketing tab.
+51,SUB18,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 18 is ticked on the Marketing tab.
+52,SUB19,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 19 is ticked on the Marketing tab.
+53,SUB20,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 20 is ticked on the Marketing tab.
+54,SUB21,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 21 is ticked on the Marketing tab.
+55,SUB22,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 22 is ticked on the Marketing tab.
+56,SUB23,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 23 is ticked on the Marketing tab.
+57,SUB24,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 24 is ticked on the Marketing tab.
+58,SUB25,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 25 is ticked on the Marketing tab.
+59,SUB26,No,CHAR(1),No,This field is set to 'Y' if Marketing Class number 26 is ticked on the Marketing tab.
+60,SYNC_CONTACTS,No,CHAR(1),Yes,This field is set to 'Y' if the Contact is set to sync with Microsoft Outlook.
+61,LINKEDIN,No,VARCHAR(20),No,The Contact's LinkedIn account ID.
+62,TWITTER,No,VARCHAR(500),No,The Contact's Twitter username.
+63,FACEBOOK,No,VARCHAR(500),No,The Contact's Facebook username or ID number.
+64,OPTOUT_EMARKETING,No,CHAR(1),No,"This field is set to 'Y' if the Contact's Opt-Out eMarketing flag is ticked. Contacts who have opted out of eMarketing will not be included in campaign waves for campaigns whose Campaign Type is set to ""Marketing"" (EXO Business CRM)."
+65,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"If the Contact is included in a campaign wave (EXO Business CRM), the wave's ID number is stored here."
+66,LATITUDE,No,FLOAT(53),No,The Contact's latitude.
+67,LONGITUDE,No,FLOAT(53),No,The Contact's longitude.
+68,GEOCODE_STATUS,No,INTEGER,No,Result of the geocode lookup. Will be one of:Null or -1 - lookup not yet attempted0 - lookup successful>0 - lookup failed

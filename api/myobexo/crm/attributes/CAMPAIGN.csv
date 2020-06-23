@@ -1,0 +1,16 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the campaign.
+2,TITLE,No,VARCHAR(60),No,A title/description for the campaign.
+3,REFERENCE,No,VARCHAR(15),No,"A short, user-defined reference code for the campaign."
+4,DESCRIPT,No,VARCHAR(5000),No,Any notes entered for the campaign.
+5,OWNER,No,INTEGER,No,The ID number of the staff member who is assigned as the campaign's owner.
+6,CREATEDATE,No,DATETIME,No,The date the campaign was created on.
+7,STARTDATE,No,DATETIME,No,The Start Date specified for the campaign.
+8,LAST_UPDATED,No,DATETIME,No,The date that the campaign was last edited on.
+9,ENDDATE,No,DATETIME,No,The End Date specified for the campaign.
+10,CAMPAIGN_STAGE,No,INTEGER,No,"The ID number of the Stage specified for the campaign, from the CAMPAIGN_STAGE table."
+11,EST_COST,No,FLOAT(53),No,The Estimated Cost entered for the campaign.
+12,EST_REVENUE,No,FLOAT(53),No,The Estimated Revenue amount entered for the campaign.
+13,EST_RESPONSE,No,FLOAT(53),No,The Estimated Response entered for the campaign.
+14,CAMPAIGN_TYPE,No,INTEGER,Yes,"The ID number of the Type specified for the campaign, from the CAMPAIGN_TYPE table."
+15,JOB_LINK,No,INTEGER,No,"If campaign costs are being tracked by linking the campaign to a job in the EXO Job Costing system, the linked job's ID number is recorded here."

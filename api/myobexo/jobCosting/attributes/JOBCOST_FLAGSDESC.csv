@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,FLAGCODE,Yes,VARCHAR(8),Yes,The Job Flag's ID number.
+2,FLAGDESC,No,VARCHAR(60),No,The Job Flag's description.

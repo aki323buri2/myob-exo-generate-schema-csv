@@ -1,0 +1,19 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the period.
+2,AGE,No,INTEGER,Yes,The age of the period. The current period has an age of 0.
+3,LEDGER,No,CHAR(1),Yes,The ledger for a specific age.
+4,LOCKED,No,CHAR(1),No,"If set to 'Y', the period is locked, implying that this age in a specific ledger is closed and no more transactions should take place"
+5,PERIOD_SEQNO,No,INTEGER,Yes,The period's sequence number within fiscal year.
+6,PERIODNAME,No,VARCHAR(20),No,The name/description for the period.
+7,PERIOD_SHORTNAME,No,VARCHAR(8),No,A short name for the period.
+8,REPORTCODE,No,VARCHAR(8),No,A code used for reporting purposes.
+9,YEARAGE,No,INTEGER,Yes,The ageing of the year that the period falls in. The current year has an age of 0.
+10,STARTDATE,No,DATETIME,No,The start date for the period.
+11,STOPDATE,No,DATETIME,No,The end date for the period.
+12,MINSTOCKSEQNO,No,INTEGER,No,The first transaction for the period found in the Stock ledger.
+13,MINGLSEQNO,No,INTEGER,No,The first transaction for the period found in the GLTRANS table.
+14,MINTRANSEQNO,No,INTEGER,No,"For the Debtors ledger, this specifies the first transaction for the period found in the DR_TRANS table.For the Creditors ledger, this specifies the first transaction for the period found in the CR_TRANS table."
+15,MINTRANLINESEQNO,No,INTEGER,No,"For the Debtors ledger, this specifies the first transaction for the period found in the DR_INVLINES table.For the Creditors ledger, this specifies the first transaction for the period found in the CR_INVLINES table."
+16,MINORDSEQNO,No,INTEGER,No,"For the Debtors ledger, this specifies the first transaction for the period found in the SALESORD_HDR table.For the Creditors ledger, this specifies the first transaction for the period found in the PURCHORD_HDR table."
+17,MINORDLINESEQNO,No,INTEGER,No,"For the Debtors ledger, this specifies the first transaction for the period found in the SALESORD_LINES table.For the Creditors ledger, this specifies the first transaction for the period found in the PURCHORD_LINES table."
+18,FIN_QTR,No,INTEGER,Yes,The financial quarter that the period belongs to.

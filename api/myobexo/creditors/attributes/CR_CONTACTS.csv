@@ -1,0 +1,56 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique identifier for the Creditor Contact. The identifier for the Contact record is specified by the CONTACT_SEQNO field.
+2,ACCNO,No,INTEGER,No,The account number of the Creditor account that the Contact is associated with.
+3,DEFCONTACT,No,CHAR(1),No,This field is set to 'Y' if the Contact is set as the default Contact for the Creditor account.
+4,SALUTATION,No,VARCHAR(4),No,Taken from the associated record in the CONTACTS table.
+5,FIRSTNAME,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+6,LASTNAME,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+7,TITLE,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+8,MOBILE,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+9,DIRECTPHONE,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+10,DIRECTFAX,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+11,EMAIL,No,VARCHAR(60),No,Taken from the associated record in the CONTACTS table.
+12,HOMEPHONE,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+13,NOTES,No,VARCHAR(4096),No,Taken from the associated record in the CONTACTS table.
+14,ADDRESS1,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+15,ADDRESS2,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+16,ADDRESS3,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+17,DELADDR1,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+18,DELADDR2,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+19,DELADDR3,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+20,DELADDR4,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+21,ISACTIVE,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+22,SUB1,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+23,SUB2,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+24,SUB3,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+25,SUB4,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+26,ADVERTSOURCE,No,INTEGER,No,Taken from the associated record in the CONTACTS table.
+27,POST_CODE,No,VARCHAR(12),No,Taken from the associated record in the CONTACTS table.
+28,SUB5,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+29,SUB6,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+30,SUB7,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+31,SUB8,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+32,SUB9,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+33,SUB10,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+34,SUB11,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+35,SUB12,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+36,SUB13,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+37,SUB14,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+38,SUB15,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+39,SUB16,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+40,SUB17,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+41,SUB18,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+42,SUB19,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+43,SUB20,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+44,ADDRESS4,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+45,DELADDR5,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+46,DELADDR6,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.
+47,CONTACT_SEQNO,No,INTEGER,No,The ID number of the Contact record in the CONTACTS table.
+48,SUB21,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+49,SUB22,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+50,SUB23,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+51,SUB24,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+52,SUB25,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+53,SUB26,No,CHAR(1),No,Taken from the associated record in the CONTACTS table.
+54,DEFACCOUNT,No,CHAR(1),Yes,"This field is set to 'Y' if the Creditor account is the default company for the Contact, i.e. if it is the company specified in the Company field on the Details tab of the Contacts window."
+55,ADDRESS5,No,VARCHAR(30),No,Taken from the associated record in the CONTACTS table.

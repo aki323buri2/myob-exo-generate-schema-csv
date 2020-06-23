@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,COLOURID,Yes,INTEGER,Yes,A unique ID number for the colour.
+2,COLOURCODE,No,VARCHAR(5),Yes,A user-defined ID code for the colour.
+3,COLOURNAME,No,VARCHAR(30),No,A descriptive name for the colour.
+4,SWATCHID,No,INTEGER,No,The colour value of the colour record's swatch.
+5,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the colour is currently active.
+6,SORTORDER,No,INTEGER,No,"This field contains the sort order value, which is used to order colours on the Style Picker window."

@@ -1,0 +1,40 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,GROUPNO,Yes,INTEGER,Yes,A unique ID code for the group.
+2,GROUPNAME,No,VARCHAR(30),No,The group's name/description.
+3,BRANCHNO,No,INTEGER,No,The ID number of the group's branch (from BRANCHES).
+4,AUTOCODE,No,VARCHAR(10),No,The One-off Stock Item autocode prefix for the group.
+5,AUTOCODENO,No,INTEGER,No,The One-off Stock Item autocode suffix for the group.
+6,STATUS,No,CHAR(1),No,This field contains 'Y' if the 'Display on website option' for the group is ticked.
+7,FILENAME,No,VARCHAR(50),No,This field contains the filename of the website picture for the group.
+8,GROUP2_SEQNO,No,INTEGER,No,The ID number of the related Alternate Stock Group.
+9,REPORTCODE,No,VARCHAR(15),No,A report code for the group.
+10,EXPECTEDPROFIT,No,FLOAT(53),No,The expected profit margin for the group.
+11,PROFITVARIANCE,No,FLOAT(53),No,The expected margin variance for the group.
+12,SALES_GL_CODE,No,INTEGER,No,The code of the GL account for Sales.
+13,SALES_GLSUBCODE,No,INTEGER,No,The code of the GL subaccount for Sales.
+14,PURCH_GL_CODE,No,INTEGER,No,The code of the GL account for Purchases Clearing.
+15,PURCH_GLSUBCODE,No,INTEGER,No,The code of the GL subaccount for Purchases Clearing.
+16,COS_GL_CODE,No,INTEGER,No,The code of the GL account for Cost of Sales.
+17,COS_GLSUBCODE,No,INTEGER,No,The code of the GL subaccount for Cost of Sales.
+18,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the group is currently active.
+19,X_ISSTYLE,No,CHAR(1),No,This field contains 'Y' if the group is a style.
+20,X_SIZEIDS,No,VARCHAR(255),No,This field contains a comma-separated list of size IDs applicable to the style.
+21,X_COLOURIDS,No,VARCHAR(255),No,This field contains a comma-separated list of colour IDs applicable to the style.
+22,X_PRICEGROUP,No,CHAR(1),No,This field contains 'Y' if the style has a matching Price Group.
+23,X_STOCKCODE_FORMULA,No,VARCHAR(23),No,The stock item code formula for the group.
+24,X_DESCRIPTION_FORMULA,No,VARCHAR(40),No,The stock item description formula for the group.
+25,X_SUPPLIERNO,No,INTEGER,No,The ID number of the main supplier of the style.
+26,X_SUPPLIERCOST,No,FLOAT(53),No,The supplier cost in the currency of the supplier account.
+27,X_MINSTOCK,No,FLOAT(53),No,The minimum stock level for the style.
+28,X_MAXSTOCK,No,FLOAT(53),No,The maximum stock level for the style.
+29,X_BINCODE,No,VARCHAR(12),No,The bin code for the style.
+30,X_SELLPRICE1,No,FLOAT(53),No,Sell price 1 for the style.
+31,X_SELLPRICE2,No,FLOAT(53),No,Sell price 2 for the style.
+32,X_SELLPRICE3,No,FLOAT(53),No,Sell price 3 for the style.
+33,X_SELLPRICE4,No,FLOAT(53),No,Sell price 4 for the style.
+34,X_SELLPRICE5,No,FLOAT(53),No,Sell price 5 for the style.
+35,X_SELLPRICE6,No,FLOAT(53),No,Sell price 6 for the style.
+36,X_SELLPRICE7,No,FLOAT(53),No,Sell price 7 for the style.
+37,X_SELLPRICE8,No,FLOAT(53),No,Sell price 8 for the style.
+38,X_SELLPRICE9,No,FLOAT(53),No,Sell price 9 for the style.
+39,X_SELLPRICE10,No,FLOAT(53),No,Sell price 10 for the style.

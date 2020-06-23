@@ -1,0 +1,10 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the campaign stage.
+2,DESCRIPT,No,VARCHAR(60),No,The stage's name/description.
+3,STATUSKEY,No,CHAR(1),No,A one-character code for the stage.
+4,ADMIN_STAT,No,CHAR(1),Yes,"If this field is set to 'Y', the campaign stage does not allow the entry of new transactions."
+5,LOCK_CAMPAIGN,No,CHAR(1),Yes,"If this field is set to 'Y', the campaign stage makes campaigns locked, i.e. read-only."
+6,ISARCHIVED,No,CHAR(1),Yes,"If this field is set to 'Y', campaigns at this stage will be archived."
+7,ISCOMPLETE,No,CHAR(1),Yes,"If this field is set to 'Y', campaigns at this stage are complete."
+8,ISACTIVE,No,CHAR(1),Yes,"If this field is set to 'Y', campaigns at this stage are active."
+9,WORKFLOW_CONSTRAINED,No,CHAR(1),Yes,"If this field is set to 'Y', workflow constraints (defined in the CAMPAIGN_STAGE_CONSTRAINT) apply to the campaign stage."

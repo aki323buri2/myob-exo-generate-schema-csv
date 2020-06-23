@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number of the line.
+2,RTN_2_MIN,No,FLOAT(53),No,The Minimum Value for the Level 2 Retention.
+3,RTN_2_RATE,No,FLOAT(53),No,The % Rate for the Level 2 Retention.
+4,RTN_3_MIN,No,FLOAT(53),No,The Minimum Value for the Level 3 Retention.
+5,RTN_3_RATE,No,FLOAT(53),No,The % Rate for the Level 3 Retention.

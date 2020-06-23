@@ -1,0 +1,16 @@
+{
+  "name": "business",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }, 
+  "scripts": {
+    "start": "nodemon --config nodemon.config.json"
+  }
+}

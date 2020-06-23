@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,POLICY_HDR,Yes,INTEGER,Yes,A unique ID number for the policy record.
+2,CUSTOMER_REF,No,VARCHAR(30),No,Reference field for the customer's reference.
+3,POLICY_REF,No,VARCHAR(30),No,Reference field for the policy
+4,START_DATE,No,DATETIME,Yes,Date from which the policy becomes active.
+5,END_DATE,No,DATETIME,Yes,Date to which the price rule remains active.
+6,PRICE_MODE,No,CHAR(1),Yes,
+7,IS_ACTIVE,No,CHAR(1),Yes,This field contains 'Y' if the policy is active.
+8,NOTES,No,VARCHAR(4096),No,Any notes that have been recorded for the policy.
+9,FREIGHT_FREE,No,CHAR(1),Yes,
+10,FIXED,No,CHAR(1),Yes,This field contains 'Y' if the policy is fixed
+11,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"The ID number of the campaign wave that the policy relates to, if relevant."

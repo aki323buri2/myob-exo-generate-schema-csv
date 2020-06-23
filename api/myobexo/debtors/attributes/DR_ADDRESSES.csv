@@ -1,0 +1,10 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,ACCNO,No,INTEGER,No,The account number of the Debtor record that the address applies to.
+3,DELADDR1,No,VARCHAR(30),No,Delivery address line 1.
+4,DELADDR2,No,VARCHAR(30),No,Delivery address line 2.
+5,DELADDR3,No,VARCHAR(30),No,Delivery address line 3.
+6,DELADDR4,No,VARCHAR(30),No,Delivery address line 4.
+7,DELADDR5,No,VARCHAR(30),No,Delivery address line 5.
+8,DELADDR6,No,VARCHAR(30),No,Delivery address line 6.
+9,COURIER_DEPOT_SEQNO,No,INTEGER,No,This field is no longer used - it relates to the old couriers module.

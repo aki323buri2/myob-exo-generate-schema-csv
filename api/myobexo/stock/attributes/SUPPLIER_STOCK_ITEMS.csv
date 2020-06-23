@@ -1,0 +1,13 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STOCKCODE,No,VARCHAR(23),Yes,The stock item's ID code in EXO Business.
+2,SUPPLIERCODE,Yes,VARCHAR(23),Yes,The supplier's ID code for the stock item.
+3,DESCRIPTION,No,VARCHAR(40),No,The supplier's description for the stock item.
+4,LATESTCOST,No,FLOAT(53),No,The supplier's latest cost for the stock item.
+5,ACCNO,Yes,INTEGER,Yes,The ID number of the supplier (Creditor) account.
+6,ECONORDERQTY,No,FLOAT(53),No,The Minimum Order Quantity for the stock item.
+7,PURCHPACKQUANT,No,FLOAT(53),Yes,The Qty per Pack when purchasing the stock item from the supplier.
+8,PURCHPACKPRICE,No,FLOAT(53),Yes,The Pack Cost when purchasing the stock item from the supplier.
+9,PACKREFERENCE,No,VARCHAR(20),No,An optional reference code for the pack.
+10,LAST_UPDATE,No,DATETIME,No,The date when the record was last updated (not set automatically - it must be specified on the Alternate Suppliers / Stock Codes window).
+11,DISCOUNT,No,FLOAT(53),No,The percentage discount when purchasing the stock item from the supplier.
+12,IS_DEFAULT,No,CHAR(1),Yes,

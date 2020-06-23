@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,GROUPNO,Yes,INTEGER,Yes,A unique ID number for the Price Group.
+2,GROUPNAME,No,VARCHAR(30),No,The Price Group's name.

@@ -1,0 +1,3 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Lead Source.
+2,DESCRIPTION,No,VARCHAR(60),No,The Lead Source's name/description.

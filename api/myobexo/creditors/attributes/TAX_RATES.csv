@@ -1,0 +1,9 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the tax rate.
+2,RATE,No,FLOAT(53),No,The percentage taxation rate.
+3,NAME,No,VARCHAR(30),No,The full name of the taxation rate.
+4,SHORTNAME,No,VARCHAR(6),No,A short name for the taxation rate.
+5,BASE,No,FLOAT(53),No,
+6,GLACC,No,INTEGER,No,The GL account used for the tax rate (if it is not using the default control account).
+7,GLSUBACC,No,INTEGER,No,The GL subaccount used for the tax rate (if it is not using the default control subaccount).
+8,KEY_POINT,No,VARCHAR(5),No,The tax return key point that applies to the tax rate.

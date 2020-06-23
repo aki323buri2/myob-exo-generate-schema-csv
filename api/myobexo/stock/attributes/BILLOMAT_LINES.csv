@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the line.
+2,BILLCODE,No,VARCHAR(23),No,The ID code of the BOM header (BILLOMAT_HDR.BILLCODE).
+3,STOCKCODE,No,VARCHAR(23),No,The stock code of the stock item on this line.
+4,QUANTITY,No,FLOAT(53),No,The quantity on this line.
+5,DESCRIPTION,No,VARCHAR(40),No,The description of the stock item on this line.
+6,VARIANTLINE,No,CHAR(1),No,This field contains 'Y' if the line is not included in the BOM by default.

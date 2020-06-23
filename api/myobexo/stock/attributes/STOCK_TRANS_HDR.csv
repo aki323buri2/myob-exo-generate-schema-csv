@@ -1,0 +1,10 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID for the record.
+2,TRANSDATE,No,DATETIME,Yes,The date and time when the transaction took place.
+3,TRANSTYPE,No,INTEGER,Yes,The transaction type. Will be one of:0=Sales1=Receipt2=Transfer3=Adjust Out4=Adjust In5=Average Cost Adjustment
+4,REFERENCE,No,VARCHAR(30),No,Reference text for the transaction.
+5,STAFFNO,No,INTEGER,Yes,ID number of the staff member who entered the transaction.
+6,NARRATIVE_SEQNO,No,INTEGER,No,ID of the narrative on the transaction (entered via manual stock movement).
+7,PERIOD_SEQNO,No,INTEGER,Yes,ID number of the period that the record belongs to.
+8,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+9,AGE,No,AS,No,Calculated field that indicates the age the record belongs to.

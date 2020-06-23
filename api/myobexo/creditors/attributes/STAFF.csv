@@ -1,0 +1,37 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STAFFNO,Yes,INTEGER,Yes,A unique identifier for the staff record.
+2,NAME,No,VARCHAR(30),No,The staff member's full name.
+3,JOBTITLE,No,VARCHAR(30),No,The staff member's job title.
+4,EXTENSION,No,VARCHAR(12),No,The staff member's telephone extension.
+5,PHONE,No,VARCHAR(30),No,The staff member's work telephone number.
+6,HOMEPHONE,No,VARCHAR(30),No,The staff member's home telephone number.
+7,ISACTIVE,No,CHAR(1),No,"This field is set to 'Y' if the staff member is currently active, i.e. if their Active flag is ticked in EXO Business Configurator."
+8,APP_PASSWORD,No,VARCHAR(30),No,"The staff member's password, used when logging in to the EXO Business system. Passwords are stored in an encrypted format."
+9,MENU_NO,No,INTEGER,No,The ID number of the Menu Definition specified for the staff member. Corresponds to the menu's SEQNO field in the MENU_COLLECTION table.
+10,AUTH_AMT,No,FLOAT(53),No,The staff member's Credit Invoice Authorisation Limit.
+11,STOCK_AUTH_AMT,No,FLOAT(53),No,The staff member's Stock Purchase Order Authorisation Limit.
+12,NON_STOCK_AUTH_AMT,No,FLOAT(53),No,The staff member's Non-Stock Purchase Order Authorisation Limit.
+13,SECURITYPROFILEID,No,INTEGER,Yes,The ID number of the staff member's Security profile. Corresponds to the profile's ID field in the PROFILE table.
+14,USERPROFILEID,No,INTEGER,Yes,The ID number of the staff member's User profile. Corresponds to the profile's ID field in the PROFILE table.
+15,LOGINID,No,VARCHAR(30),Yes,The staff member's login ID. This is the ID used to log in to the EXO Business system.
+16,PASSWORD_CHANGED,No,DATETIME,Yes,The date and time when the staff member's password was last changed.
+17,LAST_BAD_LOGIN,No,DATETIME,No,The date and time when the staff member last attempted to log in but failed.
+18,BAD_LOGIN_COUNT,No,INTEGER,Yes,The number of times the staff member has attempted to log in but failed.
+19,LAST_LOGIN,No,DATETIME,No,The date and time when the staff member last successfully logged in.
+20,ACCOUNT_STATUS,No,INTEGER,Yes,The staff member's account status. Will be one of:0 = Account OK1 = Account Locked2 = Password Expired
+21,EMAIL_ADDRESS,No,VARCHAR(50),No,The staff member's email address.
+22,DISCOUNTRATE,No,FLOAT(53),Yes,The staff member's Discount Rate Limit.
+23,PAYROLL_ID,No,VARCHAR(15),No,"The staff member's Employee ID (Payroll) number. This field is used when EXO Business is integrating with an external payroll system, e.g. MYOB EXO Payroll. It must contain the employee's corresponding ID number in the payroll system."
+24,IS_SUPERVISOR,No,CHAR(1),Yes,"This field is set to 'Y' if the staff member is designated as a supervisor, i.e. if their Has supervisory override authority flag is ticked."
+25,NICKNAME,No,VARCHAR(15),No,A short nickname for the employee.
+26,ABSENT,No,CHAR(1),Yes,"This field is set to 'Y' if the staff member is currently absent, i.e. if their Absent flag is ticked in EXO Business Configurator."
+27,EMPLOYEE_CODE,No,INTEGER,Yes,This field is used by the payroll integration functionality.
+28,SMTP_SEQNO,No,INTEGER,No,"Where emails are sent via SMTP using the EXO Business Email Sender, this field contains the ID of the SMTP settings that apply to the staff member (SMTP_ACCOUNT.SEQNO). Set up via the SMTP Server Settings window."
+29,HAS_BUDGETS,No,CHAR(1),No,"This field is set to 'Y' if the staff member has been assigned a Sales Team Budget, i.e. if their Has Budget flag is ticked in EXO Business Configurator."
+30,REPORTS_TO_STAFFNO,No,INTEGER,No,The ID number of the staff member that this staff member reports to.
+31,FACEBOOK_ACCESS_TOKEN,No,VARCHAR(max),No,"If the staff member uses their own Facebook account when using the EXO Business social media functions, their encrypted access token is stored here."
+32,LINKEDIN_TOKEN_KEY,No,VARCHAR(max),No,"If the staff member uses their own LinkedIn account when using the EXO Business social media functions, their encrypted access token key is stored here."
+33,LINKEDIN_TOKEN_SECRET,No,VARCHAR(max),No,"If the staff member uses their own LinkedIn account when using the EXO Business social media functions, their encrypted access token secret is stored here."
+34,TWITTER_TOKEN_KEY,No,VARCHAR(max),No,"If the staff member uses their own Twitter account when using the EXO Business social media functions, their encrypted access token key is stored here."
+35,TWITTER_TOKEN_SECRET,No,VARCHAR(max),No,"If the staff member uses their own Twitter account when using the EXO Business social media functions, their encrypted access token secret is stored here."
+36,API_ACCESS,No,CHAR(1),No,This field contains 'Y' if the staff member is authorised to use the EXO API.

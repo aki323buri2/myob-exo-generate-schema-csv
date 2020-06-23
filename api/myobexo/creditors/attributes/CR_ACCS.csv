@@ -1,0 +1,81 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,ACCNO,Yes,INTEGER,Yes,The unique ID number for the Creditor account.
+2,NAME,No,VARCHAR(60),No,The Creditor's name.
+3,ADDRESS1,No,VARCHAR(30),No,Postal address line 1.
+4,ADDRESS2,No,VARCHAR(30),No,Postal address line 2.
+5,ADDRESS3,No,VARCHAR(30),No,Postal address line 3.
+6,ADDRESS4,No,VARCHAR(30),No,Postal address line 4.
+7,ADDRESS5,No,VARCHAR(30),No,Postal address line 5. This line is only available on the Creditor Account Details screen if the Additional Postal Address Row profile setting is enabled.
+8,PHONE,No,VARCHAR(30),No,The Creditor's phone number.
+9,FAX,No,VARCHAR(30),No,The Creditor's fax number.
+10,EMAIL,No,VARCHAR(60),No,The Creditor's email address.
+11,CREDLIMIT,No,FLOAT(53),No,The credit limit for the Creditor account.
+12,ACCGROUP,No,INTEGER,No,The Creditor's Primary Group.
+13,LASTMONTH,No,FLOAT(53),No,Turnover for the last month.
+14,LASTYEAR,No,FLOAT(53),No,Turnover for the last year
+15,AGEDBAL0,No,FLOAT(53),No,Aged Balance for the current month.
+16,AGEDBAL1,No,FLOAT(53),No,Aged Balance for the previous month.
+17,AGEDBAL2,No,FLOAT(53),No,Aged Balance for two months back.
+18,AGEDBAL3,No,FLOAT(53),No,Aged Balance for three months back.
+19,BALANCE,No,AS,No,The total of all aged balances.
+20,CREDITSTATUS,No,INTEGER,No,Credit terms for the Creditor.
+21,OPENITEM,No,CHAR(1),No,This field contains 'Y' if this is not a balance brought forward account.
+22,DELADDR1,No,VARCHAR(30),No,Delivery address line 1.
+23,DELADDR2,No,VARCHAR(30),No,Delivery address line 2.
+24,DELADDR3,No,VARCHAR(30),No,Delivery address line 3.
+25,DELADDR4,No,VARCHAR(30),No,Delivery address line 4.
+26,DELADDR5,No,VARCHAR(30),No,Delivery address line 5.
+27,DELADDR6,No,VARCHAR(30),No,Delivery address line 6.
+28,SALESNO,No,INTEGER,No,ID number of the staff member assigned to the Creditor account.
+29,DISCOUNTLEVEL,No,INTEGER,No,The Creditor's discount level - this is only populated via EXO APIs.
+30,INVOICETYPE,No,INTEGER,No,"This field only applies to Australian databases where M-Powered Invoices are enabled. If set to 1, search results on the Transactions tab of the Creditor Account Details window will only include accounts with the M-Powered invoice type."
+31,AUTOFREIGHT,No,FLOAT(53),No,Not used.
+32,NOTES,No,VARCHAR(4096),No,All notes entered for the Creditor on the Notes tab.
+33,MONTHVAL,No,FLOAT(53),No,Turnover for the current month.
+34,YEARVAL,No,FLOAT(53),No,Turnover for the current year.
+35,ALPHACODE,No,VARCHAR(15),No,"A non-unique alphanumeric ID code for the Creditor. Can be used for sorting accounts alphabetically, e.g. give ""The Warehouse"" the code ""WARE"" to sort under W instead of T. Sometimes used as an alternate account reference."
+36,TAXSTATUS,No,INTEGER,No,The Override GST rate for the Creditor.
+37,HEAD_ACCNO,No,INTEGER,Yes,"The ACCNO of the Creditor's head office account. If no head office, this is set to -1."
+38,CURRENCYNO,No,INTEGER,Yes,The ID number of the currency used by the Creditor account.
+39,ALERT,No,VARCHAR(60),No,Pop-up alert text to display when dealing with the Creditor.
+40,ISACTIVE,No,CHAR(1),No,Whether the account is active (Y) or inactive (N).
+41,BANK_ACCOUNT,No,VARCHAR(40),No,"The Creditor's bank account number, used for Direct Credit payments."
+42,DEFAULT_CODE,No,VARCHAR(15),No,The default GL code on a Creditors Invoice (when in GL mode).
+43,BANK_ACC_NAME,No,VARCHAR(40),No,"The Creditor's bank account name, used for Direct Credit payments."
+44,LAST_UPDATED,No,DATETIME,No,Time and date stamp when the Creditor's account details were last updated.
+45,LEADTIME,No,INTEGER,No,"The Primary Lead Time defined for the Creditor, i.e. the number of days between placing an order and its arrival."
+46,TAXREG,No,VARCHAR(30),No,GST/ABN number of the Creditor.
+47,POST_CODE,No,VARCHAR(12),No,The Creditor's postal code.
+48,N_CR_DISC,No,FLOAT(53),No,The stock line discount for the account on invoice. This is only applicable if manual entry of discounts is allowed on Creditors Invoices (controlled by the profile setting 'Allow manual entry of discounts on creditor invoice and purchase order lines').
+49,GLCONTROLACC,No,INTEGER,No,Not currently used.
+50,GLCONTROLSUBACC,No,INTEGER,No,Not currently used.
+51,BRANCHNO,No,INTEGER,No,Branch number - only used by specific sites.
+52,PRIOR_AGEDBAL0,No,FLOAT(53),No,Prior Aged Balance for the current month.
+53,PRIOR_AGEDBAL1,No,FLOAT(53),No,Prior Aged Balance for the previous month.
+54,PRIOR_AGEDBAL2,No,FLOAT(53),No,Prior Aged Balance for two months ago.
+55,PRIOR_AGEDBAL3,No,FLOAT(53),No,Prior Aged Balance for three months ago.
+56,PROMPT_PAY_DISC,No,FLOAT(53),No,The prompt payment discount percentage for the Creditor.
+57,BSBNO,No,VARCHAR(40),No,The Creditor's Bank State Branch number (Australian databases only).
+58,AUTO_AUTH_AMT,No,FLOAT(53),No,The amount that can be automatically authorised by the trigger AUTHORISE_TRANS on the CR_TRANS table.
+59,PAY_TYPE,No,INTEGER,No,The default payment method.
+60,PRIOR_BALANCE,No,AS,No,The sum of all Prior Aged Balances.
+61,ACCGROUP2,No,INTEGER,No,The Creditor's Secondary Group.
+62,LEADTIME2,No,INTEGER,No,The Secondary Lead Time defined for the Creditor (the alternate lead delivery time in days).
+63,N_LAND_COST_PROVN,No,FLOAT(53),No,This value is used to calculate the Fixed cost for any Inwards Goods for the account.
+64,PP_TOPAY,No,CHAR(1),No,The pay status from the Creditors Payment Processor.
+65,STOPCREDIT,No,CHAR(1),No,"If 'Y', the Creditor is on Stop Credit, and no further transactions will take place."
+66,DEF_INVMODE,No,INTEGER,Yes,The Default Invoice Mode for the Creditor. Will be one of:0 = GL1 = STOCK
+67,PRIVATE_ACC,No,CHAR(1),Yes,"If 'Y', the Creditor account is classed as private. It can only be accessed by users who have the profile setting ""Allow access to private creditor accounts"" (ALLOW_ACCESS_TO_PRIVATE_CR_ACC) enabled."
+68,WEBSITE,No,VARCHAR(30),No,URL of the Creditor's website.
+69,AVE_DAYS_TO_PAY,No,INTEGER,Yes,"Average Creditor days, calculated by the Stored Procedure DR_CR_ALLOCATION_AVE_DAYS_SP every time you access the Analysis tab."
+70,STATEMENT_TEXT,No,VARCHAR(256),No,This field is used for M-Powered Payments (AU only). Its value is copied to the REF3 field on CR_TRANS for M-Powered transactions.
+71,REMITTANCE_METHOD,No,VARCHAR(20),No,How remittance advice should be sent to the Creditor. Will be one of:NoneE-MailPrintBoth
+72,SEND_PAYMENT_REMITTANCE,No,CHAR(1),Yes,"If this field contains 'Y', remittance advice will be sent to this Creditor whenever payments are made to them via the MYOB M-Powered Payments system."
+73,STATEMENT_CONTACT_SEQNO,No,INTEGER,No,The ID number of the Contact who is assigned as the Creditor's Remittance Contact.
+74,LINKEDIN,No,VARCHAR(20),No,The Creditor's LinkedIn account ID.
+75,TWITTER,No,VARCHAR(500),No,The Creditor's Twitter username.
+76,FACEBOOK,No,VARCHAR(500),No,The Creditor's Facebook account ID or username.
+77,TRACK_CITP,No,CHAR(1),Yes,"Australian companies only. This field is set to 'Y' if payments to the Creditor should be tracked for reporting to the ATO on the ""Taxable payments annual report""."
+78,LATITUDE,No,FLOAT(53),No,The Creditor's latitude.
+79,LONGITUDE,No,FLOAT(53),No,The Creditor's longitude.
+80,GEOCODE_STATUS,No,INTEGER,No,Result of the geocode lookup. Will be one of:Null or -1 - lookup not yet attempted0 - lookup successful>0 - lookup failed

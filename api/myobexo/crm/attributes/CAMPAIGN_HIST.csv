@@ -1,0 +1,8 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the History Note.
+2,CAMPAIGN_SEQNO,No,INTEGER,Yes,The ID number of the campaign that the History Note is attached to.
+3,SALESNO,No,INTEGER,No,The ID number of the staff member who entered the History Note.
+4,TRANSDATE,No,DATETIME,No,The date and time that the History Note was created on.
+5,SUBJECT,No,VARCHAR(80),No,The subject line of the History Note.
+6,NOTE,No,VARCHAR(4096),No,The body of the History Note.
+7,OUTLOOK_LINK,No,VARCHAR(40),No,"If the History Note was emailed, this field contains a link to the email in MS Outlook."

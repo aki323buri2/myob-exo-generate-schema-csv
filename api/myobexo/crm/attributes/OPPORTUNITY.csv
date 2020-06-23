@@ -1,0 +1,31 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Opportunity.
+2,DESCRIPTION,No,VARCHAR(60),No,Description text for the Opportunity.
+3,OPPORTUNITY_TYPE,No,INTEGER,No,"The Opportunity's type, taken from OPPORTUNITY_TYPE.SEQNO."
+4,OPPORTUNITY_LEAD,No,INTEGER,No,"The Opportunity's lead source, taken from OPPORTUNITY_LEAD.SEQNO."
+5,OPPORTUNITY_STAGE,No,INTEGER,No,"The Opportunity's stage, taken from OPPORTUNITY_STAGE.SEQNO."
+6,PROBABILITY,No,INTEGER,No,The Probability value entered for the Opportunity.
+7,ASSIGNED_TO,No,INTEGER,No,The ID of the staff member to whom the Opportunity has been assigned.
+8,ASSIGNED_BY,No,INTEGER,No,The ID of the staff member who assigned the Opportunity.
+9,COMPANYID,No,VARCHAR(50),No,"The ID number of the company (Debtor, Creditor or Non Account) that the Opportunity is assigned to."
+10,CONTACTSEQNO,No,INTEGER,No,The ID number of the Contact that the Opportunity is assigned to.
+11,AMOUNT,No,FLOAT(53),No,The quote value for the Opportunity.
+12,START_DATE,No,DATETIME,No,The start date of the Opportunity.
+13,DETAILS,No,VARCHAR(4096),No,Any details or notes entered for the Opportunity.
+14,CREATEDBY,No,INTEGER,No,The ID number of the staff member who created the Opportunity.
+15,CREATEDATE,No,DATETIME,No,The date and time that the Opportunity was created.
+16,MODIFIEDBY,No,INTEGER,No,The ID number of the staff member who most recently modified the Opportunity.
+17,MODIFIEDDATE,No,DATETIME,No,The date and time that the Opportunity was most recently modified.
+18,DUE_DATE,No,DATETIME,No,The due date for the Opportunity.
+19,CLOSE_DATE,No,DATETIME,No,The date and time when the Opportunity was changed to Closed status.
+20,IS_CLOSE,No,AS,No,Set to 'Y' if the Opportunity has been changed to Closed status.
+21,ESTIMATE,No,FLOAT(53),Yes,The estimated value entered for the Opportunity.
+22,LOST_VALUE,No,FLOAT(53),Yes,The total value of all lost lines on the Opportunity.
+23,CLOSED_VALUE,No,FLOAT(53),Yes,The total value of all closed lines on the Opportunity.
+24,TAXTOTAL,No,FLOAT(53),Yes,The total tax amount on the Opportunity.
+25,TAXROUNDING,No,FLOAT(53),Yes,The difference between the tax on the header and the sum of the tax on the individual lines.
+26,CURRENCYNO,No,INTEGER,No,The ID number of the currency that the Sales Order is in.
+27,EXCHRATE,No,FLOAT(53),No,The exchange rate for the currency that the Opportunity is in.
+28,WEIGHTED_VALUE,No,AS,No,The Opportunity's weighted value.
+29,WEIGHTED_ESTIMATE,No,AS,No,The Opportunity's weighted estimate.
+30,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"If the Opportunity is associated with a campaign wave (EXO Business CRM), the wave's ID number is stored here."

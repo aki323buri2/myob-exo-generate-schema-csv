@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the budget record.
+2,NAME,No,VARCHAR(1024),Yes,The budget's name.
+3,MANREP_PERIOD_SEQNO,No,INTEGER,Yes,The ID number of the Sales Year that the budget belongs to (Sales Years are set up using the EXO Business Analytics module).
+4,ISPRIMARY,No,BIT,Yes,This field is set to 1 if the budget is a primary budget; 0 otherwise.
+5,ISACTIVE,No,BIT,Yes,This field is set to 1 if the budget is active or 0 if it is inactive.

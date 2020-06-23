@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the project.
+2,PROJ_CODE,No,VARCHAR(15),Yes,An alphanumerical ID code for the project.
+3,PROJ_TITLE,No,VARCHAR(60),No,A descriptive title for the project.
+4,ISACTIVE,No,CHAR(1),Yes,This field contains 'Y' if the project is currently active.
+5,DESCRIPTION,No,TEXT,No,Descriptive text for the project.

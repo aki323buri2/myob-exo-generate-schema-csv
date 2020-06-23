@@ -1,0 +1,11 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,CURRENCYNO,Yes,INTEGER,Yes,A unique ID code for the currency.
+2,CURRCODE,No,VARCHAR(3),No,"The three-letter currency code, e.g. AUD, NZD."
+3,CURRNAME,No,VARCHAR(30),No,The descriptive name for the currency.
+4,BUYRATE,No,FLOAT(53),No,The buy rate (for purchases).
+5,SELLRATE,No,FLOAT(53),No,The sell rate (for sales).
+6,CURRSYMBOL,No,VARCHAR(5),No,"The symbol for the currency, e.g. $, ï¿½."
+7,AVERAGE_RATE,No,FLOAT(53),No,This field relates to the Intercompany module.
+8,CLOSING_RATE,No,FLOAT(53),No,This field relates to the Intercompany module.
+9,RE_MOVEMENTS,No,FLOAT(53),No,This field relates to the Intercompany module.
+10,ALERTPC,No,INTEGER,Yes,"The % Change Alert for the currency - when editing currencies, the user will be alerted if the currency is changed by a percentage greater than this."

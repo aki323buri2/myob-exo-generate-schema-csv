@@ -1,0 +1,4 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STOCKCODE,No,CHAR(23),Yes,The stock code of the stock item that this record applies to.
+2,SALES_HTML,No,VARCHAR(4096),No,The Sales text (HTML) for the specified stock item.
+3,PICTURE_URL,No,VARCHAR(80),No,The URL of the picture to be displayed for the stock item.

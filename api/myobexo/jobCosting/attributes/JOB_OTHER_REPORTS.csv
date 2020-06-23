@@ -1,0 +1,4 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,REPORTNO,Yes,INTEGER,Yes,No longer used.
+2,REPORTDESC,No,VARCHAR(40),No,No longer used.
+3,REPORT_PARAMS,No,VARCHAR(200),No,No longer used.

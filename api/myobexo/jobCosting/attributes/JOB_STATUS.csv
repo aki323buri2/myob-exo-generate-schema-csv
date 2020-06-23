@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,STATUSKEY,Yes,VARCHAR(1),Yes,A unique one letter ID code for the Job Status.
+2,STATUSDESC,No,VARCHAR(30),Yes,A descriptive name for the status.
+3,ADMIN_STAT,No,VARCHAR(1),No,"If this field contains 'Y', the status prevents entry of new transactions."
+4,LOCK_JOB,No,VARCHAR(1),No,"If this field contains 'Y', the status makes the job read-only."
+5,ISARCHIVED,No,CHAR(1),Yes,"If this field contains 'Y', the status causes the job to be archived."
+6,ISCOMPLETE,No,CHAR(1),Yes,"If this field contains 'Y', the status causes the job to be marked as Complete."
+7,ISACTIVE,No,CHAR(1),Yes,"If this field contains 'Y', the status causes the job to be marked as Active."
+8,ISINVOICEREADY,No,CHAR(1),Yes,"If this field contains 'Y', the status causes the job to be marked as Ready for Invoice."
+9,ISLOCKQUOTE,No,CHAR(1),Yes,"If this field contains 'Y', the status causes quotations on the job to be read-only."
+10,WORKFLOW_CONSTRAINED,No,CHAR(1),Yes,"If this field contains 'Y', workflow constraints (defined in the JOB_STATUS_CONSTRAINT table) apply to the status."
+11,GANTTBAR_COLOUR,No,INTEGER,No,A colour code that determines how jobs of this status should appear on the diagram on the Job Overview tab.

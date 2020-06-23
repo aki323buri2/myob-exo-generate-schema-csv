@@ -1,0 +1,5 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,TYPENO,Yes,INTEGER,Yes,A unique ID number for the Job Type.
+2,TYPEDESC,No,VARCHAR(40),No,Descriptive text for the type.
+3,SHORTCODE,No,VARCHAR(3),No,A short (max. three characters) ID code for the type.
+4,GANTTBAR_COLOUR,No,INTEGER,No,A colour code that determines how jobs of this type should appear on the diagram on the Job Overview tab.

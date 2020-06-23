@@ -1,0 +1,56 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Sales Order.
+2,STATUS,No,INTEGER,No,The status of the Sales Order. Will be one of:0 = Not Processed 1 = Partly Processed2 = Fully Processed 3 = Quotation 4 = Standing Order 5 = Layby 6 = Lost Quote
+3,ACCNO,No,INTEGER,No,The ID number of the Debtor account that the Sales Order was created for.
+4,ORDERDATE,No,DATETIME,No,The date and time when the Sales Order was created.
+5,DUEDATE,No,DATETIME,No,The date and time when the Sales Order is due to the customer.
+6,CUSTORDERNO,No,VARCHAR(20),No,The customer's order number.
+7,REFERENCE,No,VARCHAR(20),No,An additional reference number for the Sales Order.
+8,ADDRESS1,No,VARCHAR(30),No,Delivery address line 1.
+9,ADDRESS2,No,VARCHAR(30),No,Delivery address line 2.
+10,ADDRESS3,No,VARCHAR(30),No,Delivery address line 3.
+11,ADDRESS4,No,VARCHAR(30),No,Delivery address line 4.
+12,INSTRUCTIONS,No,VARCHAR(255),No,Not used.
+13,SUBTOTAL,No,FLOAT(53),No,The subtotal amount on the Sales Order.
+14,TAXTOTAL,No,FLOAT(53),No,The total tax amount on the Sales Order.
+15,SALESNO,No,INTEGER,No,The ID number of the salesperson assigned to the Sales Order.
+16,CONTACT_SEQNO,No,INTEGER,No,The ID number of the Contact assigned to the Sales Order.
+17,CURRENCYNO,No,INTEGER,No,The ID number of the currency that the Sales Order is in.
+18,EXCHRATE,No,FLOAT(53),No,The exchange rate for the currency that the Sales Order is in.
+19,CONSIGNTOLOC,No,INTEGER,No,The ID number of the consignment location.
+20,BRANCHNO,No,INTEGER,No,The Branch number on the Sales Order.
+21,TAXINC,No,CHAR(1),No,Set to 'Y' if the Sales Order is tax-inclusive.
+22,BACKORDER,No,CHAR(1),No,Set to 'Y' if the Sales Order is on back order.
+23,MANIFEST,No,INTEGER,No,
+24,DISPATCH_INFO,No,VARCHAR(70),No,The dispatch method for the Sales Order.
+25,HSTATUS,No,INTEGER,No,Not used
+26,LAST_UPDATED,No,DATETIME,No,The date and time when the Sales Order was last updated.
+27,ADDRESS5,No,VARCHAR(30),No,Delivery address line 5.
+28,ADDRESS6,No,VARCHAR(30),No,Delivery address line 6.
+29,PAYMENT_STATUS,No,INTEGER,No,Not used.
+30,ORDTOTAL,No,AS,No,The total amount for the Sales Order.
+31,DELIVERYCOUNT,No,INTEGER,Yes,A count of the number of times the order has been supplied.
+32,INVOICECOUNT,No,INTEGER,Yes,A count of the number of invoices generated for the order.
+33,NARRATIVE_SEQNO,No,INTEGER,No,The ID number of the narrative attached to the Sales Order header.
+34,HAS_UNRELEASED,No,CHAR(1),Yes,Set to 'Y' if there are quantities on the Sales Order that have not been released yet.
+35,HAS_BACKORDERS,No,CHAR(1),Yes,Set to 'Y' if there are quantities on the Sales Order that are on back order.
+36,HAS_UNSUPPLIED,No,CHAR(1),Yes,Set to 'Y' if there are quantities on the Sales Order that have not been supplied yet.
+37,HAS_UNINVOICED,No,CHAR(1),Yes,Set to 'Y' if there are quantities on the Sales Order that have not been invoiced yet.
+38,HAS_UNPICKED,No,CHAR(1),Yes,Set to 'Y' if there are quantities on the Sales Order that have not been picked yet.
+39,PICKEDCOUNT,No,INTEGER,No,The amount of items on the Sales Order that have been picked.
+40,RELEASECOUNT,No,INTEGER,No,The amount of items on the Sales Order that have been released.
+41,ORDSTATUS,No,INTEGER,No,Additional status information for the Sales Order. Will be one of:10 = Quote20 = Order30 = Acknowledged Order40 = Pick In Progress50 = Pick Confirmed70 = Supplied80 = Invoiced90 = Complete 100 = Lost Quote 160 = Force Fully Processed
+42,DEFLOCNO,No,INTEGER,No,The default location that stock is being supplied from.
+43,PROCESSFINALISATION,No,INTEGER,No,Will be one of:0 = Normal1 = Deleted2 = Forced Fully Processed 3 = Lost Quote
+44,MAXCOURIERCHARGE,No,FLOAT(53),No,Not used.
+45,SHIP_COMPLETE,No,CHAR(1),Yes,
+46,TXID,No,VARBINARY(256),No,The Transaction ID assigned to the Sales Order - this applies when using a payment gateway.
+47,ONHOLD,No,CHAR(1),No,Set to 'Y' if the Sales Order is on hold.
+48,TAXROUNDING,No,FLOAT(53),Yes,The difference between the tax calculated on header and the sum of the tax on all lines.
+49,CREATE_DATE,No,DATETIME,No,The date and time when the Sales Order was created.
+50,ACTIVATION_DATE,No,DATETIME,No,The date and time when the Sales Order was activated.
+51,FINALISATION_DATE,No,DATETIME,No,The date and time when the Sales Order was finalised.
+52,WAS_BACKORDERED,No,CHAR(1),No,Set to 'Y' if the Sales Order has been placed in back order status at any time.
+53,OPPORTUNITY_SEQNO,No,INTEGER,No,"If the Sales Order is associated with an Opportunity (EXO Business CRM), the Opportunity's ID number is stored here."
+54,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"If the Sales Order is associated with a campaign wave (EXO Business CRM), the wave's ID number is stored here."
+55,LOCALVALUE,No,AS,No,The value of the Sales Order in the local currency.

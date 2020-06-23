@@ -1,0 +1,18 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,The ID number of the budget record.
+2,NAME,No,VARCHAR(1024),Yes,The period name.
+3,HEADER_SEQNO,No,INTEGER,Yes,The ID number of the budget this line belongs to (links to CRM_BUDGET_HDR.SEQNO)
+4,MANREP_PERIOD_SEQNO,No,INTEGER,Yes,The ID number of the period as set up in EXO Business Analytics (links to MANREP_PERIOD.PERIOD_SEQNO).
+5,ACTUAL_PERIOD_STATUS_SEQNO,No,INTEGER,No,"The ID number of the corresponding period in the current year, as set up in EXO Business Config (links to PERIOD_STATUS.SEQNO)."
+6,LYACTUAL_PERIOD_STATUS_SEQNO,No,INTEGER,No,"The ID number of the corresponding period last year, as set up in EXO Business Config (links to PERIOD_STATUS.SEQNO)."
+7,STARTDATE,No,DATETIME,No,The start date of the period.
+8,ENDDATE,No,DATETIME,No,The end date of the period.
+9,LEVEL_ACCGROUP,No,BIT,Yes,This field contains 1 if the budget applies at the Account Group level; 0 otherwise.
+10,LEVEL_ACCGROUP2,No,BIT,Yes,This field contains 1 if the budget applies at the Alternate Account Group level; 0 otherwise.
+11,LEVEL_ACCNO,No,BIT,Yes,This field contains 1 if the budget applies at the Debtor account level; 0 otherwise.
+12,LEVEL_STOCKGROUP,No,BIT,Yes,This field contains 1 if the budget applies at the Stock Group level; 0 otherwise.
+13,LEVEL_STOCKGROUP2,No,BIT,Yes,This field contains 1 if the budget applies at the Alternate Stock Group level; 0 otherwise.
+14,LEVEL_STOCKCODE,No,BIT,Yes,This field contains 1 if the budget applies at the Stock item level; 0 otherwise.
+15,LEVEL_BRANCH,No,BIT,Yes,This field contains 1 if the budget applies at the Branch level; 0 otherwise.
+16,LEVEL_STAFF,No,BIT,Yes,This field contains 1 if the budget applies at the staff member level; 0 otherwise.
+17,RECALC_LASTRUN,No,DATETIME,No,The date and time when the budget was last calculated.

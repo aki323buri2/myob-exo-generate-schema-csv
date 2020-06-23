@@ -1,0 +1,9 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Timesheet Rate.
+2,SHORTCODE,No,VARCHAR(5),No,A short ID code for the rate.
+3,RATENAME,No,VARCHAR(30),No,The rate's name.
+4,COSTRATE,No,FLOAT(53),No,The factor by which the cost of transactions entered with this rate type will be multiplied when posting to a job.
+5,SELLRATE,No,FLOAT(53),No,The factor by which the charge-out rate of transactions entered with this rate type will be multiplied when posting to a job.
+6,PAYROLLRATE,No,FLOAT(53),No,"The factor by which the pay rate of transactions exported via a timecard data file to your payroll base rate may be multiplied, e.g. where an employee is to be paid time-and-a-half or double time."
+7,RATECOLOR,No,INTEGER,No,A colour code that determines how timesheet lines of this rate should appear on the EXO Job Costing Timesheets window.
+8,PAYROLL_ALLOWANCE_ID,No,VARCHAR(5),No,An ID number for mapping Allowances and Deductions with those defined in your payroll via your timecard data file.

@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the line.
+2,STAFFNO,No,INTEGER,No,The ID number of the staff member that the line relates to.
+3,WEEK_START_DATE,No,DATETIME,No,The start date of the week that the line belongs to.
+4,ALLOWANCE_ID,No,VARCHAR(5),No,The short ID code of the allowance type on this line.
+5,DESCRIPTION,No,VARCHAR(50),No,The description of the allowance type on this line.
+6,UNIT,No,FLOAT(53),No,"The unit of the allowance (unit type, e.g. hours, KM, is determined by the allowance type)."

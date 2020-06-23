@@ -1,0 +1,39 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Purchase Order.
+2,STATUS,No,INTEGER,No,The status of the Purchase Order. Will be one of:0 = Not Processed1 = Partly Processed2 = Fully Processed3 = Quotation4 = Awaiting Authorisation
+3,ACCNO,No,INTEGER,No,The ID number of the Creditor account that the Purchase Order was created for.
+4,ORDERDATE,No,DATETIME,No,The date and time when the Purchase Order was created.
+5,DUEDATE,No,DATETIME,No,The date and time when the Purchase Order is due.
+6,REFERENCE,No,VARCHAR(20),No,An additional reference code for the Purchase Order.
+7,ADDRESS1,No,VARCHAR(30),No,Delivery address line 1.
+8,ADDRESS2,No,VARCHAR(30),No,Delivery address line 2.
+9,ADDRESS3,No,VARCHAR(30),No,Delivery address line 3.
+10,ADDRESS4,No,VARCHAR(30),No,Delivery address line 4.
+11,INSTRUCTIONS,No,VARCHAR(255),No,This field is set via the On-Demand Purchase Orders function of the EXO Distribution Advantage module.
+12,SUBTOTAL,No,FLOAT(53),No,The subtotal amount on the Purchase Order.
+13,TAXTOTAL,No,FLOAT(53),No,The total tax amount on the Purchase Order.
+14,SALESNO,No,INTEGER,No,The ID number of the staff member assigned to the Purchase Order.
+15,CONTACT_SEQNO,No,INTEGER,No,The ID number of the Contact assigned to the Purchase Order.
+16,CURRENCYNO,No,INTEGER,No,The ID number of the currency that the Purchase Order is in.
+17,EXCHRATE,No,FLOAT(53),No,The exchange rate for the currency that the Purchase Order is in.
+18,TAXINC,No,CHAR(1),No,Set to 'Y' if the Purchase Order is tax-inclusive.
+19,LAST_UPDATED,No,DATETIME,No,The date and time when the Purchase Order was last updated.
+20,BRANCHNO,No,INTEGER,No,The Branch number on the Purchase Order.
+21,AUTH_STAFFNO,No,INTEGER,No,The ID number of the staff member who authorised the Purchase Order.
+22,AUTH_DATE,No,DATETIME,No,The date and time when the Purchase Order was authorised.
+23,ORDTOTAL,No,AS,No,The total amount for the Sales Order.
+24,ISCONFIRMED,No,CHAR(1),No,"If this field is set to 'Y', this means that all lines in the Purchase Order have been confirmed, i.e. the supplier/creditor has acknowledged the order."
+25,LEADTIMEUSED,No,INTEGER,No,Specifies which of the Lead Times defined for the Creditor the Purchase Order uses. Will be one of:0 = Primary Lead Time1 = Secondary Lead Time
+26,ADDRESS5,No,VARCHAR(30),No,Delivery address line 5.
+27,ADDRESS6,No,VARCHAR(30),No,Delivery address line 6.
+28,NARRATIVE_SEQNO,No,INTEGER,No,The ID number of the narrative attached to the Sales Order header.
+29,HSTATUS,No,INTEGER,No,"For On-Demand Purchase orders, this field contains the line status. Comes from the profile setting 'B2B new purchase line status'."
+30,DEFLOCNO,No,INTEGER,No,The default location that stock is being supplied from.
+31,PROCESSFINALISATION,No,INTEGER,No,Will be one of:0 = Normal1 = Deleted2 = Forced Fully Processed
+32,TXID,No,VARBINARY(256),No,The Transaction ID assigned to the Purchase Order - this applies when using a payment gateway.
+33,SO_SOURCE_REF,No,VARCHAR(20),No,"If the Purchase Order was generated from a Sales Order, the Sales Order's ID number is recorded here."
+34,CREATE_DATE,No,DATETIME,No,The date and time when the Purchase Order was created.
+35,ACTIVATION_DATE,No,DATETIME,No,The date and time when the Purchase Order was activated.
+36,FINALISATION_DATE,No,DATETIME,No,The date and time when the Purchase Order was finalised.
+37,LOCALVALUE,No,AS,No,The value of the Purchase Order in the local currency.
+38,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"If the Purchase Order is associated with a campaign wave (EXO CRM), its ID number is recorded here."

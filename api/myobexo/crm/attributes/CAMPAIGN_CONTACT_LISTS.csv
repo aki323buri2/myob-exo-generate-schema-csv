@@ -1,0 +1,4 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,No,INTEGER,Yes,A unique ID number for the record.
+2,CAMPAIGN_SEQNO,No,INTEGER,Yes,The ID number of the campaign that the contact list is assigned to.
+3,CONTACT_LIST_SEQNO,No,INTEGER,Yes,The ID number of the contact list that is assigned to the campaign.

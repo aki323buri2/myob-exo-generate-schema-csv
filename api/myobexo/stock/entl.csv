@@ -1,0 +1,32 @@
+,Name,Primary key columns,Number of columns,Comment
+1,BILLOMAT_HDR,BILLCODE,23,This table contains header information for Bills of Materials (BOMs).
+2,BILLOMAT_LINES,SEQNO,6,This table contains line-level information for Bills of Materials (BOMs).
+3,BILLOMAT_TEMP,SEQNO,13,This table is used in Bill of Materials batch entry.
+4,CR_INVLINES,SEQNO,53,This table contains line information for all Creditor transactions.
+5,DR_INVLINES,SEQNO,55,This table contains line information for all Debtor transactions.
+6,GLACCS,ACCNO,20,This table contains details of all General Ledger accounts.
+7,INWARDS_GOODS,SEQNO,18,This table contains header information on Inwards Goods transactions.
+8,INWARDS_GOODS_COSTS,SEQNO,23,This table contains information on Inwards Good Costing.
+9,INWARDS_GOODS_LINES,SEQNO,48,This table contains line-level information on Inwards Goods transactions.
+10,STAFF,STAFFNO,36,This table stores details of all EXO Business staff members. These are the people who are authorised to log in to and use the EXO Business system.
+11,STOCKREQUIREMENT,,26,This table contains the data used by the Forecast Based Purchasing feature.
+12,STOCKTAKE_CTRL,LOCNO,8,This table contains information on the status of stocktake locations.
+13,STOCKTAKE_TOTALS,SEQNO,21,This table contains the stock totals entered as part of a stocktake.
+14,STOCK_CLASSIFICATIONS,CLASSNO,2,This table stores the Stock Classifications that are assigned to stock items.
+15,STOCK_COLOUR,COLOURID,6,"This table contains details of the colours used by the Style, Colour, Size feature."
+16,STOCK_GROUP2S,GROUPNO,12,This table contains details of Alternate (Coarse) Stock Groups.
+17,STOCK_GROUPS,GROUPNO,39,"This table contains details of Primary (Fine) Stock Groups. Note: All fields prefixed with X_ relate to the Style, Colour, Size feature."
+18,STOCK_ITEMS,STOCKCODE,85,This table contains details of all stock items.
+19,STOCK_LOCATIONS,LOCNO,14,This table contains details of all stock locations.
+20,STOCK_LOC_INFO,STOCKCODE,6,This table records stock levels at various locations.
+21,STOCK_PRICEGROUPS,GROUPNO,2,This table stores the Price Groups that are assigned to stock items.
+22,STOCK_REQUESTLINES,SEQNO,23,This table is used by the Stock Transfer Requests feature of the Distribution Advantage module.
+23,STOCK_REQUESTS,SEQNO,11,This table is used by the Stock Transfer Requests feature of the Distribution Advantage module.
+24,STOCK_REQUESTTYPES,SEQNO,2,This table is used by the Stock Transfer Requests feature of the Distribution Advantage module. It stores the Stock Request Types used by stock transfer requests.
+25,STOCK_SERIALNOS,SEQNO,45,This table contains details of serialised stock items.
+26,STOCK_SIZE,SIZEID,5,"This table contains details of the sizes used by the Style, Colour, Size feature."
+27,STOCK_TRANS,SEQNO,51,This table records details of all stock transactions.
+28,STOCK_TRANS_ARCHIVE,SEQNO,41,This table is used for archived stock transactions.
+29,STOCK_TRANS_HDR,SEQNO,9,This table contains header information for stock transactions.
+30,STOCK_WEB,,3,"This table stores information relating to how stock items should appear on a website, as displayed on the Web tab of the Stock Item Details window."
+31,SUPPLIER_STOCK_ITEMS,"SUPPLIERCODE, ACCNO",12,This table contains details of any Alternate Suppliers/Stock Codes set up for stock items.

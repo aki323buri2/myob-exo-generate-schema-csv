@@ -1,0 +1,15 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,LOCNO,Yes,INTEGER,Yes,A unique ID number for the location.
+2,LCODE,No,VARCHAR(8),No,A short alphanumeric ID code for the location.
+3,LNAME,No,VARCHAR(30),No,A descriptive name for the location.
+4,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the location is active.
+5,EXCLUDE_FROMVALUATION,No,CHAR(1),No,"This field contains 'Y' if the location's ""Exclude from Valuation"" option is ticked."
+6,EXCLUDE_FROMFREE_STOCK,No,CHAR(1),No,"This field contains 'Y' if the location's ""Exclude from Free Stock"" option is ticked."
+7,EXCLUDE_FROMSALES,No,CHAR(1),No,"This field contains 'Y' if the location's ""Exclude from Sales"" option is ticked."
+8,DELADDR1,No,VARCHAR(30),No,Line 1 of the location's address.
+9,DELADDR2,No,VARCHAR(30),No,Line 2 of the location's address.
+10,DELADDR3,No,VARCHAR(30),No,Line 3 of the location's address.
+11,DELADDR4,No,VARCHAR(30),No,Line 4 of the location's address.
+12,DELADDR5,No,VARCHAR(30),No,Line 5 of the location's address.
+13,DELADDR6,No,VARCHAR(30),No,Line 6 of the location's address.
+14,IS_WIPLOCATION,No,CHAR(1),Yes,This field contains 'Y' if the location represents Work in Progress in EXO Job Costing.

@@ -1,0 +1,46 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,STOCKCODE,No,VARCHAR(23),Yes,The stock code of the serialised stock item.
+3,SERIALNO,No,VARCHAR(50),No,The serial number assigned to the stock item.
+4,REFERENCE,No,VARCHAR(30),No,A reference code for the record.
+5,EXPIRY_DATE,No,DATETIME,Yes,The expiry date on the record.
+6,LOCNO,No,INTEGER,Yes,The location of the serialised stock item.
+7,ACTUAL_COST,No,FLOAT(53),Yes,The actual cost of the item when moved into stock.
+8,PURCHORDNO,No,INTEGER,Yes,The ID number of the Purchase Order that the item has been receipted in against.
+9,SALESORDNO,No,INTEGER,Yes,The ID number of the Sales Order ID that the item has been committed against.
+10,CRINVSEQNO,No,INTEGER,Yes,The ID number of the Creditors Invoice that the item has been receipted in against.
+11,INVSEQNO,No,INTEGER,Yes,The ID number of the Debtors Invoice ID the item has been sold against.
+12,JOBNO,No,INTEGER,Yes,The ID number of the job that the serial number belongs to (if there is one).
+13,STOCKINSEQNO,No,INTEGER,Yes,The ID number of the stock transaction that the item was receipted in against.
+14,STOCKOUTSEQNO,No,INTEGER,Yes,The ID number of the stock transaction against which the item was moved out of inventory.
+15,CR_ACCNO,No,INTEGER,Yes,The ID number of the related Creditor account.
+16,DR_ACCNO,No,INTEGER,Yes,The ID number of the related Debtor account.
+17,IGRLINESEQNO,No,INTEGER,Yes,The ID number of the Inwards Goods line that the item is linked to.
+18,JOBLINESEQNO,No,INTEGER,Yes,The ID number of the job line that the item is linked to.
+19,SALESORDLINESEQNO,No,INTEGER,Yes,The ID number of the Sales Order line that the item is linked to.
+20,PURCHORDLINESEQNO,No,INTEGER,Yes,The ID number of the Purchase Order line that the item is linked to.
+21,CRINVLINESEQNO,No,INTEGER,Yes,The ID number of the Creditors Invoice line that the item is linked to.
+22,DRINVLINESEQNO,No,INTEGER,Yes,The ID number of the Debtors Invoice line that the item is linked to.
+23,INSTOCK,No,CHAR(1),Yes,This field contains 'Y' if the serial number is in stock.
+24,UNITNO,No,INTEGER,Yes,The ID number of the serviceable unit that the item is linked to.
+25,LASTUPDATED,No,DATETIME,Yes,The date and time when the record was last updated.
+26,COMPNO,No,INTEGER,Yes,
+27,KITCODE,No,VARCHAR(50),No,
+28,KITID_SERIAL,No,VARCHAR(50),No,
+29,IGRSEQNO,No,INTEGER,No,
+30,ISASSIGNED,No,CHAR(1),Yes,N = Not assignedo = assigned to a Sales Orderi = assigned to inwards goodsj = assigned to Job Costingq = assigned to a stock requestp = assigned to a POS parked Sales OrderP = assigned to a POS parked invoice
+31,SO_INVLINESEQNO,No,INTEGER,Yes,The invoice line ID linked to the Sales Order for the serial number.
+32,SO_INVSEQNO,No,INTEGER,Yes,The invoice ID linked to the Sales Order for the serial number.
+33,PO_INVLINESEQNO,No,INTEGER,Yes,The invoice line ID linked to the Purchase Order for the serial number.
+34,PO_INVSEQNO,No,INTEGER,Yes,The invoice ID linked to the Purchase Order for the serial number.
+35,ASSIGNED_SEQNO,No,INTEGER,Yes,The header ID of the record that the serial number is linked to. The details of type of record can be determined from the ISASSIGNED field.
+36,ASSIGNED_LINESEQNO,No,INTEGER,Yes,The line ID of the record that the serial number is linked to. The details of type of record can be determined from the ISASSIGNED field.
+37,REQUESTSEQNO,No,INTEGER,No,Stock request ID
+38,REQUESTLINESEQNO,No,INTEGER,No,Stock request Line ID
+39,RMASEQNO,No,INTEGER,No,
+40,RMALINESEQNO,No,INTEGER,No,
+41,STKMOVSEQNO,No,INTEGER,No,Stock transaction header ID
+42,STKMOVLINESEQNO,No,INTEGER,No,Stock transaction ID
+43,WORKSORDSEQNO,No,INTEGER,No,Works order ID
+44,WORKSORDLINESEQNO,No,INTEGER,No,Works Order Line ID
+45,SU_SEQNO,No,INTEGER,No,Serviceable Unit ID

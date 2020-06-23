@@ -1,0 +1,13 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Opportunity Stage.
+2,DESCRIPTION,No,VARCHAR(60),No,A description of the stage.
+3,DEF_PROBABILITY,No,INTEGER,No,The default probability percentage for the stage.
+4,STATUSKEY,No,CHAR(1),No,"A unique, one-character short code for the stage."
+5,ADMIN_STAT,No,CHAR(1),Yes,"If this field contains 'Y', the stage prevents entry of new transactions."
+6,LOCK_JOB,No,CHAR(1),Yes,"If this field contains 'Y', the stage makes the Opportunity read-only."
+7,ISARCHIVED,No,CHAR(1),Yes,"If this field contains 'Y', the stage causes the Opportunity to be archived."
+8,ISCOMPLETE,No,CHAR(1),Yes,"If this field contains 'Y', the stage causes the Opportunity to be marked as Complete."
+9,ISACTIVE,No,CHAR(1),Yes,"If this field contains 'Y', the stage causes the Opportunity to be marked as Active."
+10,ISINVOICEREADY,No,CHAR(1),Yes,"If this field contains 'Y', the stage causes the Opportunity to be marked as Ready for Invoice."
+11,ISLOCKQUOTE,No,CHAR(1),Yes,"If this field contains 'Y', the stage causes quotations on the Opportunity to be read-only."
+12,WORKFLOW_CONSTRAINED,No,CHAR(1),Yes,"If this field contains 'Y', workflow constraints (defined in the OPPORTUNITY_STAGE_CONSTRAINT table) apply to the stage."

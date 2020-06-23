@@ -1,0 +1,7 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,PERIOD_SEQNO,Yes,INTEGER,Yes,A unique ID number for the period.
+2,STARTDATE,No,DATETIME,No,The start date for the period.
+3,ENDDATE,No,DATETIME,No,The end date for the period.
+4,PERIOD_NAME,No,VARCHAR(20),No,The period's name.
+5,PARENT_PERIOD_SEQNO,No,INTEGER,No,"The ID number of the parent period that this period belongs to. For years, this is set to 0; for months it is set to the ID number of the relevant year."
+6,CALENDAR,No,CHAR(1),No,"Contains ""Y"" if the period is a calendar period. In a calendar period, the months for the year are set up according to the calendar year."

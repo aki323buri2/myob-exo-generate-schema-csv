@@ -1,0 +1,9 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the History Note.
+2,JOBNO,No,INTEGER,No,The ID number of the job that the History Note is attached to.
+3,SUBJECT,No,VARCHAR(80),No,The History Note's subject line.
+4,NOTE,No,VARCHAR(4096),No,The text of the History Note.
+5,POSTTIME,No,DATETIME,No,The actual date and time that the record was posted.
+6,TRANSDATE,No,DATETIME,No,The transaction date against the History Note.
+7,SALESNO,No,INTEGER,No,The ID number of the EXO Business staff member who added the History Note.
+8,OUTLOOK_LINK,No,VARCHAR(40),No,"If the History Note was emailed, this field contains a link to the email in MS Outlook."

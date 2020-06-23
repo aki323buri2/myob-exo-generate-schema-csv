@@ -1,0 +1,5 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the line.
+2,SERIALNO,No,VARCHAR(50),No,The serial number.
+3,INVLINEID,No,INTEGER,No,The associated Debtors Invoice line - links to DR_INVLINES.DRINVLINEID.
+4,POSTTIME,No,DATETIME,No,

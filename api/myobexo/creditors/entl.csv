@@ -1,0 +1,22 @@
+,Name,Primary key columns,Number of columns,Comment
+1,CONTACTS,SEQNO,68,This table contains information about Contacts.
+2,CR_ACCGROUP2S,ACCGROUP,3,This table stores the Secondary Groups for Creditors (a grouping on top of the primary grouping - see CR_ACCGROUPS).
+3,CR_ACCGROUPS,ACCGROUP,3,This table stores the Primary Groups for Creditors (the finer level of grouping - compare CR_ACCGROUP2S).
+4,CR_ACCS,ACCNO,80,This table contains information about Creditor accounts.
+5,CR_ALLOCATIONS,"SEQNO, ALLOCNO",11,This table stores details of Creditor allocations.
+6,CR_CONTACTS,SEQNO,55,This table contains details of Contact records that are associated with Creditor accounts. Contact details are taken from the relevant entry in the CONTACTS table.
+7,CR_CONT_HIST,SEQNO,14,This table contains information about the History Notes attached to Creditor accounts.
+8,CR_INVLINES,SEQNO,53,This table contains line information for all Creditor transactions.
+9,CR_INVLINES_SERIALS,SEQNO,4,This table contains details of serial numbers on Creditor Invoice lines.
+10,CR_LISTS,"LIST_NO, ACCNO",2,This table defines the members of the Account Lists used by the Creditors Payment Processor.
+11,CR_LIST_NAME,LIST_NO,2,This table defines the Account Lists used by the Creditors Payment Processor.
+12,CR_PRICES,SEQNO,12,This table contains information on Creditor price rules.
+13,CR_TRANS,SEQNO,58,This table contains header information for all Creditor transactions.
+14,CURRENCIES,CURRENCYNO,10,This table contains details of all currencies used in the EXO Business system.
+15,GLACCS,ACCNO,20,This table contains details of all General Ledger accounts.
+16,NARRATIVES,SEQNO,2,This table contains the narratives attached to transactions.
+17,PERIOD_STATUS,SEQNO,18,This table contains details of the age periods set up in the system.
+18,PURCHORD_HDR,SEQNO,38,This table contains header information for all Purchase Orders.
+19,STAFF,STAFFNO,36,This table stores details of all EXO Business staff members. These are the people who are authorised to log in to and use the EXO Business system.
+20,STOCK_ITEMS,STOCKCODE,85,This table contains details of all stock items.
+21,TAX_RATES,SEQNO,8,This table contains all tax rates used by the system.

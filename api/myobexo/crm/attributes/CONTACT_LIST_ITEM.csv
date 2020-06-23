@@ -1,0 +1,6 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the record.
+2,HDR_SEQNO,No,INTEGER,Yes,The ID number of the contact list (CONTACT_LIST.SEQNO).
+3,ITEM_TYPE,No,INTEGER,Yes,The type of item.1 = Contact
+4,ITEM_SEQNO,No,INTEGER,No,"The item's ID number. For contacts, this is CONTACTS.SEQNO."
+5,QUERY_INSERTED,No,CHAR(1),No,This field contains 'Y' if the item was added to the list using a query on the List Building Criteria tab of the Contact Lists window; it contains 'N' if the item was added manually.

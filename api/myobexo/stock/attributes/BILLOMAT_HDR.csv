@@ -1,0 +1,24 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,BILLCODE,Yes,VARCHAR(23),Yes,The BOM's unique ID code.
+2,DESCRIPTION,No,VARCHAR(40),No,A descriptive name for the BOM.
+3,SELLPRICE1,No,FLOAT(53),No,Sell price 1.
+4,SELLPRICE2,No,FLOAT(53),No,Sell price 2.
+5,SELLPRICE3,No,FLOAT(53),No,Sell price 3.
+6,SELLPRICE4,No,FLOAT(53),No,Sell price 4.
+7,COSTPRICE,No,FLOAT(53),No,Cost price for the BOM.
+8,PRICING_MODE,No,INTEGER,No,How the output item is priced. 0 = Priced by total. 1 = Priced by components.
+9,OUTPUT_CODE,No,VARCHAR(23),No,Stock code of the BOM's output item.
+10,BATCH_QTY,No,FLOAT(53),No,The BOM's Batch Quantity.
+11,HIDE_LINES,No,CHAR(1),No,"This field is set to 'Y' if the BOM's ""Hide lines on reports"" option is ticked."
+12,WASTAGE,No,FLOAT(53),No,The BOM's Overhead Allocation percentage.
+13,NOTES,No,VARCHAR(2048),No,Any notes recorded for the BOM.
+14,SELLPRICE5,No,FLOAT(53),No,Sell price 5.
+15,SELLPRICE6,No,FLOAT(53),No,Sell price 6.
+16,SELLPRICE7,No,FLOAT(53),No,Sell price 7.
+17,SELLPRICE8,No,FLOAT(53),No,Sell price 8.
+18,SELLPRICE9,No,FLOAT(53),No,Sell price 9.
+19,SELLPRICE10,No,FLOAT(53),No,Sell price 10.
+20,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the BOM is active; otherwise it is inactive.
+21,KIT_TYPE,No,INTEGER,Yes,
+22,BOMTYPE,No,CHAR(1),Yes,The type of BOM. Will be one of:K = KitB = BuildO = Order Template
+23,AUTOBUILD,No,CHAR(1),Yes,"Applies to Build type BOMs. This field is set to 'Y' if the BOM's ""AutoBuild"" option is ticked. This gives the option of building an out-of-stock BOM immediately instead of placing it on backorder."

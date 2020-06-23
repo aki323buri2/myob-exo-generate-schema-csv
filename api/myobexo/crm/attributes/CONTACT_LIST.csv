@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the contact list.
+2,TITLE,No,VARCHAR(60),No,The contact list's name.
+3,DESCRIPT,No,VARCHAR(1000),No,The text entered into the contact list's Notes field.
+4,CONTACT_LIST_TYPE,No,INTEGER,No,"The ID number of the contact list's List Type, taken from CONTACT_LIST_TYPE."
+5,IS_PRIVATE,No,CHAR(1),No,"This field contains 'Y' if the contact list is private, i.e. only available to its owner (see the OWNER field)."
+6,IS_ACTIVE,No,CHAR(1),No,This field contains 'Y' if the contact list is active.
+7,CREATED_BY,No,INTEGER,Yes,The ID number of the staff member who created the contact list.
+8,CREATEDATE,No,DATETIME,Yes,The date when the contact list was created.
+9,LAST_MODIFIED,No,DATETIME,Yes,The date when the contact list was last edited.
+10,SETTINGS,No,VARCHAR(max),No,SQL settings used by the contact list.
+11,OWNER,No,INTEGER,Yes,The ID number of the staff member who is designated as the contact list's owner.

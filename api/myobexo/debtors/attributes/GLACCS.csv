@@ -1,0 +1,21 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,ACCNO,Yes,INTEGER,Yes,The unique GL account number.
+2,NAME,No,VARCHAR(40),No,The account name.
+3,DRCR,No,CHAR(1),No,This field is set to 'C' for Credit accounts or 'D' for Debit accounts.
+4,SECTION,No,INTEGER,No,This field is set to 0 for Profit and loss accounts or 1 for Balance sheet accounts.
+5,OPENINGBAL,No,FLOAT(53),No,The account's opening balance.
+6,BALANCE,No,FLOAT(53),No,The account's balance.
+7,USESUBCODES,No,CHAR(1),No,Not used.
+8,REPORTCODE,No,VARCHAR(15),No,The report code used by the GL account.
+9,TAXSTATUS,No,INTEGER,No,The Override GST rate specified for the GL account. A value of -1 corresponds to the AUTO SELECT RATE option.
+10,CURRENCYNO,No,INTEGER,No,The ID number of the currency that the GL account is in.
+11,ISACTIVE,No,CHAR(1),No,This field contains 'Y' if the GL account is active.
+12,ACCGROUP,No,INTEGER,No,The GL account's Account Group.
+13,ALLOWJOURNAL,No,CHAR(1),No,This field is set to 'Y' if the GL account allows journals.
+14,LAST_UPDATED,No,DATETIME,No,The date and time when the GL account was last updated.
+15,BALSHEETACCTOT,No,AS,No,The balance sheet total for the account.
+16,BALANCE_SHEET_TYPE,No,INTEGER,Yes,"For balance sheet accounts, this field indicates the balance sheet type. Will be one of:-1 = Not a balance sheet account0 = Asset1 = Liability2 = Equity"
+17,NOTES,No,VARCHAR(4096),No,Any notes on the GL account.
+18,EXCLUDE_FROM_REVAL,No,CHAR(1),No,"If this field is set to 'Y', the account is excluded from revaluation."
+19,PRIVATE_ACC,No,CHAR(1),Yes,This field is set to 'Y' if the GL account is a private account.
+20,CREATED_DATE,No,DATETIME,No,The date and time that the GL account was created.

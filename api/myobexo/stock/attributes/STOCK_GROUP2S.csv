@@ -1,0 +1,13 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,GROUPNO,Yes,INTEGER,Yes,A unique ID number for the group.
+2,GROUPNAME,No,VARCHAR(30),No,The group's name/description.
+3,BRANCHNO,No,INTEGER,No,The ID number of the group's branch (from BRANCHES).
+4,STATUS,No,VARCHAR(1),No,This field contains 'Y' if the 'Display on website option' for the group is ticked.
+5,FILENAME,No,VARCHAR(50),No,This field contains the filename of the website picture for the group.
+6,DATAX_EXCHANGE_FLAG,No,CHAR(1),Yes,
+7,DATAX_SOURCE_SITE,No,INTEGER,Yes,
+8,DATAX_EXCHNO,No,INTEGER,Yes,
+9,DATAX_SITE_NO2,No,INTEGER,Yes,
+10,AUTOCODE,No,VARCHAR(10),No,The One-off Stock Item autocode prefix for the group.
+11,AUTOCODENO,No,INTEGER,No,The One-off Stock Item autocode suffix for the group.
+12,REPORTCODE,No,VARCHAR(15),No,A report code for the group.

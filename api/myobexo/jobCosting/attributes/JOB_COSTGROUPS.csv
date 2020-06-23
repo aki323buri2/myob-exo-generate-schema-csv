@@ -1,0 +1,9 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the Cost Group.
+2,DEF_MARKUP,No,FLOAT(53),No,The default markup on the group.
+3,DEF_OVERHEAD,No,FLOAT(53),No,The default overhead on the group.
+4,COSTDESC,No,VARCHAR(50),No,A descriptive name for the group.
+5,SHORTCODE,No,VARCHAR(3),No,A short (max. three characters) code for the group.
+6,SHOWONQUOTE,No,CHAR(1),No,"This field contains 'T' if the group's ""Show on quote"" option is ticked; otherwise 'F'."
+7,CONSOLIDATE,No,CHAR(1),No,"This field contains 'T' if the group's ""Consolidate"" option is ticked; otherwise 'F'."
+8,COPY_FROM_QUOTE,No,CHAR(1),No,"This field indicates what the group's ""Copy from quote to:"" option is set to. Will be one of:N = NoneC = CostsT = TimesheetP = Purchase"

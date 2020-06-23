@@ -1,0 +1,79 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique transaction ID.
+2,POSTTIME,No,DATETIME,No,The actual date/time the transaction was posted at.
+3,TRANSDATE,No,DATETIME,No,The date/time mentioned in the transaction itself.
+4,ACCNO,No,INTEGER,No,"The ID number of the Debtor account against which the transaction was generated. If the transaction is against a branch account, this field is set to the head account's ACCNO."
+5,TRANSTYPE,No,INTEGER,No,"1 = Postive amount is Invoice, Negative amount is Credit;4 = Negative amount is Payment, Positive amount is Refund"
+6,INVNO,No,VARCHAR(20),No,"The invoice number. For credit notes, the invoice number is prefixed with CR."
+7,REF1,No,VARCHAR(20),No,"For invoices, this field contains whatever was entered into the Reference field. If the invoice is for an asset created from Job Costing, this field holds the stockcode for the asset.For payments, this field contains the payment type, e.g. CASH, CHEQUE."
+8,REF2,No,VARCHAR(20),No,"For payments, this filed contains the payment reference/cheque number.For invoices, when coming from Sales Order, this field contains the customer orderno Extra Field value."
+9,REF3,No,VARCHAR(30),No,"For payments, this field contains the payment bank and branch.For invoices, this field contains the text 'Invoice'."
+10,NAME,No,VARCHAR(70),No,The name of the Debtor account against which the transaction was generated.
+11,SALESNO,No,INTEGER,No,The ID number of the salesperson.
+12,SUBTOTAL,No,FLOAT(53),No,"The tax-exclusive amount, in the currency of the Debtor account."
+13,TAXTOTAL,No,FLOAT(53),No,The tax total in the currency of the Debtor account.
+14,TAXINC,No,CHAR(1),No,"Y = tax inclusive, N = tax exclusive."
+15,ANALYSIS,No,VARCHAR(12),No,"For payments, this field holds the payment type."
+16,ALLOCATEDBAL,No,FLOAT(53),No,The amount that has been allocated.
+17,ALLOCATED,No,CHAR(1),No,0 = Unallocated or partially allocated.1 = Allocated in the current period.2 = Allocated in any prior period.
+18,ALLOCAGE,No,INTEGER,No,The age in which the transaction was allocated.
+19,GLPOSTED,No,CHAR(1),No,Y = the transaction has been posted to GL.N = the transaction has not been posted to GL.
+20,GLCODE,No,INTEGER,No,"For payments, this field contains the GL code of the bank account."
+21,DUEDATE,No,DATETIME,No,The payment due date.
+22,BRANCH_ACCNO,No,INTEGER,No,Only used in head account/branch account scenarios. This field contains the account number of the branch account.
+23,DELIVADDR1,No,VARCHAR(30),No,Delivery address line 1.
+24,DELIVADDR2,No,VARCHAR(30),No,Delivery address line 2.
+25,DELIVADDR3,No,VARCHAR(30),No,Delivery address line 3.
+26,DELIVADDR4,No,VARCHAR(30),No,Delivery address line 4.
+27,CONTACT_SEQNO,No,INTEGER,No,The SEQNO of the Contact assigned to this transaction.
+28,CURRENCYNO,No,INTEGER,No,The ID of the currency being used for the transaction.
+29,EXCHRATE,No,FLOAT(53),No,"The exchange rate being used for the transaction, as determined by the currency in use."
+30,BATCHNO,No,INTEGER,No,"If the transaction was a part of a Debtors receipt batch, the batch number is stored here."
+31,SHIFTNO,No,INTEGER,No,The shift number for EXO Business POS.
+32,GLSUBCODE,No,INTEGER,No,"For payments, this field contains the GL subcode of the bank account."
+33,BRANCHNO,No,INTEGER,No,The branch ID number.
+34,ORD_REF,No,VARCHAR(20),No,"For invoices generated from Sales Orders, this field holds the order's reference field value."
+35,DISPATCH_INFO,No,VARCHAR(70),No,"The dispatch method. The profile setting ""Prompt for dispatch information for debtor invoices and sales orders"" must be enabled for users to be able to enter a dispatch method."
+36,SO_SEQNO,No,INTEGER,No,"For invoices generated from Sales Orders, this field holds the SEQNO of the Sales Order."
+37,TAXRATE,No,FLOAT(53),No,"The tax rate used by the transaction, e.g. 12.5 = 12.5%."
+38,TAXRATE_NO,No,INTEGER,No,The ID number of the tax rate used by the transaction.
+39,DELIVADDR5,No,VARCHAR(30),No,Delivery address line 5.
+40,DELIVADDR6,No,VARCHAR(30),No,Delivery address line 6.
+41,PREV_PERIOD_OPEN,No,FLOAT(53),No,Balance as at the start of the previous period.
+42,TERMINAL_ID,No,VARCHAR(30),No,The terminal ID for a shift in EXO Business POS.
+43,DEPOSIT_STATUS,No,INTEGER,No,This value is set to 1 if the payment is a deposit.
+44,AMOUNT,No,AS,No,"The amount of the transaction, including tax, in the currency of the Debtor account."
+45,UNREALISED_GAINS_GL_BATCH,No,INTEGER,Yes,The batch number for the unrealised gains journal that the transaction is a part of. Reset to zero when the journal is reversed.
+46,TAXRETCODE,No,VARCHAR(15),No,The tax return code for the GST return that this transaction applies to.
+47,WEEK_NO,No,INTEGER,No,The week number. Populated by the SET_DR_TRANS_WEEK_NO trigger - week dates must be set up first.
+48,DDNO,No,INTEGER,No,Direct debit number.
+49,RELEASEDAMT,No,FLOAT(53),Yes,This field is populated by the Direct Debits functionality.
+50,SALES_ACCNO,No,INTEGER,No,"If the transaction is against a branch account, this field holds the account number for the branch account and the ACCNO field holds the account number of the head account. In all other cases, this field and the ACCNO field always have same number."
+51,FREIGHT_FREE,No,CHAR(1),Yes,Set to 'Y' if this transaction is freight free. This is determined by a combination of the FREIGHT_FREE properties on Debtor accounts and Price Policies.
+52,CONTRACT_HDR,No,INTEGER,Yes,"This field links to price policies to indicate that a price rule was used belonging to this price contract, e.g. it could be a promotion."
+53,BANKACCNO,No,VARCHAR(20),No,
+54,BANKACCNAME,No,VARCHAR(20),No,
+55,GLBATCHNO,No,INTEGER,No,The batch number for the journals that have sourced from this transaction.
+56,JOBNO,No,INTEGER,Yes,"Where Job Costing is in use, this field contains the ID number of the job associated with the transaction."
+57,NARRATIVE_SEQNO,No,INTEGER,No,ID number of the narrative attached to the transaction.
+58,TOAGEDBAL,No,INTEGER,No,Only applicable in case of balance brought forward accounts payments and adjustments. Used in the trigger POST_DR_TRANS to refresh the aged balances on the account.0 = current1 = 1 months2 = 2 months3 = 3 months4 = from oldest
+59,EFTCAID,No,VARCHAR(15),No,Only applies to EFTPOS transactions. The CAID (entered in EXO Business Config) is stamped to every payment transaction in EXO Business when that transaction is processed via EFTPOS. The CAID is used when a settlement is performed to compute settlement totals and produce a settlement report.
+60,EFTSTAN,No,INTEGER,No,"For EFTPOS payment transactions, the journal number (often know as a STAN) is stamped to each transaction in EXO Business and directly correlates to the journal entry in the EFTPOS software."
+61,PAY_STATUS,No,INTEGER,No,This value is set by the Toggle Query Status right-click menu option on the Allocations screen.
+62,PHYS_BRANCH,No,INTEGER,No,ID of the Physical branch.
+63,PHYS_STAFF,No,INTEGER,No,The staff ID of the person logged in.
+64,SESSION_ID,No,INTEGER,No,ID number of the session.
+65,PREV_PERIOD_CLOSE,No,FLOAT(53),No,The balance as at the end of the previous period.
+66,EFTAUTH,No,VARCHAR(30),No,Only applies to EFTPOS transactions. The authorisation code for EFTPOS integration.
+67,GATEWAYNO,No,INTEGER,No,Only applies to EFTPOS transactions. The gateway number for EFTPOS integration.
+68,SOURCEINV_SEQNO,No,INTEGER,Yes,"For credit notes, this field stores the SEQNO of the source invoice transaction."
+69,TXID,No,VARBINARY(256),No,"A unique transaction ID number, populated by the trigger TRG_TXID_DR_TRANS. Used to separate native transactions inserted by EXO Business from other transactions."
+70,PTNO,No,INTEGER,No,The payment number.
+71,CUSTORDERNO,No,VARCHAR(20),No,"For invoices generated from Sales Orders, this field holds the value of the Extra Field customer Order number."
+72,PERIOD_SEQNO,No,INTEGER,Yes,ID number of the period that the transaction is in.
+73,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+74,AGE,No,AS,No,The transaction's age. This is calculated based on PERIOD_SEQNO.
+75,TAXROUNDING,No,FLOAT(53),Yes,"The tax rounding amount, where the tax on the header doesn't match the sum of the tax on the lines.Whereï¿½theï¿½taxï¿½rateï¿½isï¿½consistentï¿½acrossï¿½allï¿½linesï¿½ofï¿½anï¿½invoiceï¿½andï¿½noneï¿½ofï¿½theï¿½linesï¿½haveï¿½beenï¿½overridden, ï¿½taxï¿½isï¿½calculatedï¿½basedï¿½onï¿½theï¿½subtotal.ï¿½Ifï¿½anyï¿½lineï¿½onï¿½theï¿½invoiceï¿½hasï¿½aï¿½variedï¿½taxï¿½rate, ï¿½orï¿½anyï¿½lineï¿½isï¿½recordedï¿½asï¿½TAX_OVERRIDDEN='Y'ï¿½thenï¿½theï¿½taxï¿½totalï¿½onï¿½theï¿½invoiceï¿½isï¿½theï¿½sumï¿½ofï¿½theï¿½taxï¿½onï¿½eachï¿½line.The difference between the sumï¿½ofï¿½the rounded tax on the lines andï¿½theï¿½applicationï¿½ofï¿½theï¿½taxï¿½rateï¿½to theï¿½subtotalï¿½is recorded in this field."
+76,OPPORTUNITY_SEQNO,No,INTEGER,No,"If the transaction is associated with an Opportunity (EXO Business CRM), the Opportunity's ID number is stored here."
+77,CAMPAIGN_WAVE_SEQNO,No,INTEGER,No,"If the transaction is associated with a campaign wave (EXO Business CRM), the wave's ID number is stored here."
+78,JOB_CONTRACT_BILLINGS_SEQNO,No,INTEGER,Yes,

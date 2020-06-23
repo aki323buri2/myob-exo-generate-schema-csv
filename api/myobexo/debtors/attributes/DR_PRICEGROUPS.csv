@@ -1,0 +1,4 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,GROUPNO,Yes,INTEGER,Yes,A unique identifier for the Debtor Price Policy Group.
+2,GROUPNAME,No,VARCHAR(30),Yes,The Debtor Price Policy Group's name.
+3,REPORTCODE,No,VARCHAR(15),No,A reporting code for the Debtor Price Policy Group.

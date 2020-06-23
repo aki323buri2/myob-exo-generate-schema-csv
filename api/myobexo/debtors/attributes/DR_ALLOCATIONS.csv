@@ -1,0 +1,12 @@
+,Column name,Primary key,Data type,Not NULL,Comment
+1,SEQNO,Yes,INTEGER,Yes,A unique ID number for the allocation.
+2,ALLOCNO,Yes,INTEGER,Yes,A unique ID number for the allocation set.
+3,TRANS_SEQNO,No,INTEGER,No,This field is a link back to the original transaction line in DR_TRANS table (DR_TRANS.seqno).
+4,AMOUNT,No,FLOAT(53),No,The amount allocated.
+5,CURRENCY,No,INTEGER,No,The ID number of the currency in which the transaction took place.
+6,TAKENUP,No,CHAR(1),No,This field is a flag that specify whether or not the allocation has been a part of realised gain/losses.
+7,ALLOCTIME,No,DATETIME,No,The date and time of the allocation.
+8,PERIOD_SEQNO,No,INTEGER,Yes,The period in which the allocation took place.
+9,AGE_STAMP,No,INTEGER,No,This is a historical field that has been superseded by the AGE calculated field.
+10,AGE,No,AS,No,The allocation's age. This is calculated based on PERIOD_SEQNO.
+11,EXCHRATE,No,FLOAT(53),Yes,The exchange rate used for conversion at the time of the allocation.
